@@ -307,7 +307,7 @@ export default function DentalLanding() {
             </h2>
           </div>
           <div className="grid md:grid-cols-3 gap-6">
-            {["DYXW3jhok3R", "DXpCCMsDGTN", "DXPNTC2jDuE"].map((id) => (
+            {["DYjtwGVSVjk", "DYcNJaKSRmi", "DXwYLHRSV0a"].map((id) => (
               <div key={id} className="rounded-3xl overflow-hidden border border-border bg-background shadow-sm">
                 <iframe
                   src={`https://www.instagram.com/reel/${id}/embed`}
