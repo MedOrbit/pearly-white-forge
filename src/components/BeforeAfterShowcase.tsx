@@ -71,43 +71,48 @@ export default function BeforeAfterShowcase() {
   const containerRef = useRef<HTMLDivElement>(null);
   const [isDragging, setIsDragging] = useState(false);
   const [translateX, setTranslateX] = useState(0);
+  const translateRef = useRef(0);
   const dragStartX = useRef(0);
   const dragStartTranslate = useRef(0);
   const velocityRef = useRef(0);
   const lastXRef = useRef(0);
   const lastTimeRef = useRef(0);
   const rafRef = useRef<number | null>(null);
-  const autoScrollRef = useRef<number | null>(null);
+  const autoScrollRafRef = useRef<number | null>(null);
   const isInteractingRef = useRef(false);
 
   const allCases = [...cases, ...cases, ...cases];
+  const totalCards = allCases.length;
 
-  const getCardWidth = () => {
-    // 280px mobile, 300px sm+; gap is 24px (gap-6 = 1.5rem = 24px)
-    const isDesktop = window.innerWidth >= 640;
+  const getCardWidth = useCallback(() => {
+    const isDesktop = typeof window !== "undefined" && window.innerWidth >= 640;
     return isDesktop ? 300 + 24 : 280 + 24;
-  };
+  }, []);
 
-  const clampTranslate = useCallback((value: number) => {
+  const getBounds = useCallback(() => {
     const cardW = getCardWidth();
-    const totalWidth = allCases.length * cardW;
-    const containerWidth = containerRef.current?.offsetWidth || window.innerWidth;
+    const totalWidth = totalCards * cardW;
+    const containerWidth = containerRef.current?.offsetWidth || (typeof window !== "undefined" ? window.innerWidth : 375);
     const min = -(totalWidth - containerWidth);
-    const max = 0;
+    return { min: Math.min(min, 0), max: 0, cardW };
+  }, [getCardWidth, totalCards]);
+
+  const clamp = useCallback((value: number) => {
+    const { min, max } = getBounds();
     return Math.max(min, Math.min(max, value));
-  }, [allCases.length]);
+  }, [getBounds]);
 
   const animateTo = useCallback((target: number, duration = 400) => {
-    const start = translateX;
+    const start = translateRef.current;
     const diff = target - start;
     const startTime = performance.now();
 
     const step = (now: number) => {
       const elapsed = now - startTime;
       const progress = Math.min(elapsed / duration, 1);
-      // ease-out-cubic
       const eased = 1 - Math.pow(1 - progress, 3);
       const val = start + diff * eased;
+      translateRef.current = val;
       setTranslateX(val);
       if (progress < 1) {
         rafRef.current = requestAnimationFrame(step);
@@ -115,44 +120,44 @@ export default function BeforeAfterShowcase() {
     };
     if (rafRef.current) cancelAnimationFrame(rafRef.current);
     rafRef.current = requestAnimationFrame(step);
-  }, [translateX]);
+  }, []);
 
   const snapToNearest = useCallback(() => {
-    const cardW = getCardWidth();
-    const snapped = Math.round(translateX / cardW) * cardW;
-    animateTo(clampTranslate(snapped), 350);
-  }, [translateX, clampTranslate, animateTo]);
+    const { cardW } = getBounds();
+    const snapped = Math.round(translateRef.current / cardW) * cardW;
+    animateTo(clamp(snapped), 350);
+  }, [getBounds, clamp, animateTo]);
 
   const startAutoScroll = useCallback(() => {
-    if (autoScrollRef.current) cancelAnimationFrame(autoScrollRef.current);
+    if (autoScrollRafRef.current) cancelAnimationFrame(autoScrollRafRef.current);
     let last = performance.now();
-    const speed = 0.4; // px per ms
+    const speed = 0.4;
 
     const step = (now: number) => {
       if (isInteractingRef.current) {
-        autoScrollRef.current = requestAnimationFrame(step);
+        last = now;
+        autoScrollRafRef.current = requestAnimationFrame(step);
         return;
       }
       const dt = now - last;
       last = now;
-      setTranslateX((prev) => {
-        const cardW = getCardWidth();
-        const totalWidth = allCases.length * cardW;
-        const containerWidth = containerRef.current?.offsetWidth || window.innerWidth;
-        const min = -(totalWidth - containerWidth);
-        let next = prev - speed * dt;
-        if (next < min) next = 0;
-        return next;
-      });
-      autoScrollRef.current = requestAnimationFrame(step);
+      const cardW = getCardWidth();
+      const totalWidth = totalCards * cardW;
+      const containerWidth = containerRef.current?.offsetWidth || window.innerWidth;
+      const min = -(totalWidth - containerWidth);
+      let next = translateRef.current - speed * dt;
+      if (next < min) next = 0;
+      translateRef.current = next;
+      setTranslateX(next);
+      autoScrollRafRef.current = requestAnimationFrame(step);
     };
-    autoScrollRef.current = requestAnimationFrame(step);
-  }, [allCases.length]);
+    autoScrollRafRef.current = requestAnimationFrame(step);
+  }, [getCardWidth, totalCards]);
 
   useEffect(() => {
     startAutoScroll();
     return () => {
-      if (autoScrollRef.current) cancelAnimationFrame(autoScrollRef.current);
+      if (autoScrollRafRef.current) cancelAnimationFrame(autoScrollRafRef.current);
       if (rafRef.current) cancelAnimationFrame(rafRef.current);
     };
   }, [startAutoScroll]);
@@ -162,13 +167,14 @@ export default function BeforeAfterShowcase() {
     isInteractingRef.current = true;
     setIsDragging(true);
     dragStartX.current = e.clientX;
-    dragStartTranslate.current = translateX;
+    dragStartTranslate.current = translateRef.current;
     lastXRef.current = e.clientX;
     lastTimeRef.current = performance.now();
     velocityRef.current = 0;
     if (rafRef.current) cancelAnimationFrame(rafRef.current);
+    if (autoScrollRafRef.current) cancelAnimationFrame(autoScrollRafRef.current);
     (e.target as HTMLElement).setPointerCapture?.(e.pointerId);
-  }, [translateX]);
+  }, []);
 
   const handlePointerMove = useCallback((e: React.PointerEvent) => {
     if (!isDragging) return;
@@ -180,24 +186,26 @@ export default function BeforeAfterShowcase() {
     lastTimeRef.current = now;
 
     const raw = dragStartTranslate.current + (e.clientX - dragStartX.current);
-    setTranslateX(clampTranslate(raw));
-  }, [isDragging, clampTranslate]);
+    const clamped = clamp(raw);
+    translateRef.current = clamped;
+    setTranslateX(clamped);
+  }, [isDragging, clamp]);
 
   const handlePointerUp = useCallback(() => {
     isInteractingRef.current = false;
     setIsDragging(false);
     const velocity = velocityRef.current;
-    const momentum = velocity * 250; // throw distance
-    const target = clampTranslate(translateX + momentum);
+    const momentum = velocity * 250;
+    const target = clamp(translateRef.current + momentum);
 
-    // If very little movement, just snap; otherwise animate with momentum then snap
     if (Math.abs(velocity) > 0.3) {
       animateTo(target, 500);
       setTimeout(() => snapToNearest(), 520);
     } else {
       snapToNearest();
     }
-  }, [translateX, clampTranslate, animateTo, snapToNearest]);
+    startAutoScroll();
+  }, [clamp, animateTo, snapToNearest, startAutoScroll]);
 
   return (
     <section className="py-16 lg:py-24 bg-surface overflow-hidden">
