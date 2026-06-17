@@ -39,7 +39,7 @@ function Card({ c }: { c: (typeof cases)[number] }) {
           {c.orientation === "horizontal" ? (
             <div className="flex flex-col gap-2.5 h-full">
               <div className="relative flex-1 rounded-2xl overflow-hidden ring-1 ring-black/[0.06]">
-                <img src={c.before} alt={`${c.name} before`} className="w-full h-full object-cover pointer-events-none" loading="lazy" />
+                <img src={c.before} alt={`${c.name} before`} draggable={false} className="w-full h-full object-cover pointer-events-none select-none" loading="lazy" />
                 <Label>Before</Label>
               </div>
               <div className="relative flex-1 rounded-2xl overflow-hidden ring-1 ring-black/[0.06]">
