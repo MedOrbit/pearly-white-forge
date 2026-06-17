@@ -815,7 +815,7 @@ export default function DentalLanding() {
                   <p className="text-xs text-muted-foreground mb-5 ml-6">{b.note}</p>
                     <div className="flex flex-wrap gap-2 mt-auto">
                       <a href="#book" className="inline-flex items-center gap-1.5 bg-primary text-primary-foreground px-4 py-2.5 rounded-full text-xs font-semibold hover:opacity-90 transition">
-                        <CalendarCheck className="size-3.5" /> Book Consultation
+                        <CalendarCheck className="size-3.5" /> Book A Call
                       </a>
                       <a href={b.directionsUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 bg-background border border-border px-4 py-2.5 rounded-full text-xs font-semibold hover:bg-surface transition">
                         <Navigation className="size-3.5" /> Get directions
