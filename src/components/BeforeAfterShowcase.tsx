@@ -74,16 +74,14 @@ function Slider({ before, after, aspect }: { before: string; after: string; aspe
     >
       {/* After (full) */}
       <img src={after} alt="After treatment" className="absolute inset-0 w-full h-full object-cover" draggable={false} />
-      {/* Before (clipped) */}
-      <div className="absolute inset-0 overflow-hidden" style={{ width: `${pos}%` }}>
-        <img
-          src={before}
-          alt="Before treatment"
-          className="absolute inset-0 h-full object-cover"
-          style={{ width: `${(100 / Math.max(pos, 0.0001)) * 100}%`, maxWidth: "none" }}
-          draggable={false}
-        />
-      </div>
+      {/* Before (clipped via clip-path so the image stays anchored) */}
+      <img
+        src={before}
+        alt="Before treatment"
+        className="absolute inset-0 w-full h-full object-cover"
+        style={{ clipPath: `inset(0 ${100 - pos}% 0 0)` }}
+        draggable={false}
+      />
 
       {/* Labels */}
       <span className="absolute top-4 left-4 bg-foreground/80 text-background text-[10px] font-mono uppercase tracking-widest px-3 py-1.5 rounded-full">
