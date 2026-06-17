@@ -13,58 +13,75 @@ import implantsAfter from "@/assets/transformations/implants-after.jpg.asset.jso
 import compositeBefore from "@/assets/transformations/composite-before.jpg.asset.json";
 import compositeAfter from "@/assets/transformations/composite-after.jpg.asset.json";
 
-const cases = [
-  { name: "Braces", before: bracesBefore.url, after: bracesAfter.url, orientation: "vertical" as const },
-  { name: "Invisalign", before: invisalignBefore.url, after: invisalignAfter.url, orientation: "vertical" as const },
-  { name: "Porcelain Crowns", before: crownsBefore.url, after: crownsAfter.url, orientation: "horizontal" as const },
-  { name: "Porcelain Veneers", before: veneersBefore.url, after: veneersAfter.url, orientation: "vertical" as const },
-  { name: "Teeth Whitening", before: whiteningBefore.url, after: whiteningAfter.url, orientation: "horizontal" as const },
-  { name: "Dental Implants", before: implantsBefore.url, after: implantsAfter.url, orientation: "vertical" as const },
-  { name: "Composite Veneers", before: compositeBefore.url, after: compositeAfter.url, orientation: "vertical" as const },
+type Orientation = "vertical" | "horizontal";
+
+const cases: { name: string; before: string; after: string; orientation: Orientation }[] = [
+  { name: "Braces", before: bracesBefore.url, after: bracesAfter.url, orientation: "vertical" },
+  { name: "Invisalign", before: invisalignBefore.url, after: invisalignAfter.url, orientation: "vertical" },
+  { name: "Porcelain Crowns", before: crownsBefore.url, after: crownsAfter.url, orientation: "horizontal" },
+  { name: "Porcelain Veneers", before: veneersBefore.url, after: veneersAfter.url, orientation: "vertical" },
+  { name: "Teeth Whitening", before: whiteningBefore.url, after: whiteningAfter.url, orientation: "horizontal" },
+  { name: "Dental Implants", before: implantsBefore.url, after: implantsAfter.url, orientation: "vertical" },
+  { name: "Composite Veneers", before: compositeBefore.url, after: compositeAfter.url, orientation: "vertical" },
 ];
+
+function Card({ c }: { c: (typeof cases)[number] }) {
+  const Label = ({ children }: { children: React.ReactNode }) => (
+    <span className="absolute bottom-3 left-1/2 -translate-x-1/2 bg-white/95 backdrop-blur text-foreground text-[10px] font-sans font-semibold uppercase tracking-[0.12em] px-4 py-1.5 rounded-full shadow-md ring-1 ring-black/5 whitespace-nowrap">
+      {children}
+    </span>
+  );
+
+  return (
+    <div className="shrink-0 flex flex-col gap-4">
+      <div className="rounded-[28px] bg-card p-3 shadow-[0_8px_30px_-12px_rgba(0,0,0,0.15)] ring-1 ring-black/[0.06] w-[300px] sm:w-[340px]">
+        {c.orientation === "horizontal" ? (
+          <div className="flex flex-col gap-3">
+            <div className="relative rounded-2xl overflow-hidden ring-1 ring-black/[0.06]">
+              <img src={c.before} alt={`${c.name} before`} className="w-full h-auto object-cover block" loading="lazy" />
+              <Label>Before</Label>
+            </div>
+            <div className="relative rounded-2xl overflow-hidden ring-1 ring-black/[0.06]">
+              <img src={c.after} alt={`${c.name} after`} className="w-full h-auto object-cover block" loading="lazy" />
+              <Label>After</Label>
+            </div>
+          </div>
+        ) : (
+          <div className="grid grid-cols-2 gap-3">
+            <div className="relative rounded-2xl overflow-hidden ring-1 ring-black/[0.06] aspect-[3/4]">
+              <img src={c.before} alt={`${c.name} before`} className="w-full h-full object-cover" loading="lazy" />
+              <Label>Before</Label>
+            </div>
+            <div className="relative rounded-2xl overflow-hidden ring-1 ring-black/[0.06] aspect-[3/4]">
+              <img src={c.after} alt={`${c.name} after`} className="w-full h-full object-cover" loading="lazy" />
+              <Label>After</Label>
+            </div>
+          </div>
+        )}
+      </div>
+      <p className="text-center text-base font-semibold text-foreground">{c.name}</p>
+    </div>
+  );
+}
 
 export default function BeforeAfterShowcase() {
   return (
-    <section className="py-16 lg:py-24 bg-surface">
-      <div className="flex gap-4 overflow-x-auto px-5 sm:px-6 pb-4 scrollbar-hide snap-x snap-mandatory">
-        {cases.map((c) => (
-          <div key={c.name} className="snap-start shrink-0 flex flex-col gap-3">
-            {c.orientation === "horizontal" ? (
-              /* Vertical stack layout for horizontal images */
-              <div className="relative rounded-2xl overflow-hidden border border-border w-[280px] sm:w-[320px]">
-                <div className="relative">
-                  <img src={c.before} alt={`${c.name} before`} className="w-full h-auto object-cover" loading="lazy" />
-                  <span className="absolute bottom-3 left-3 bg-white text-foreground text-[11px] font-sans font-semibold uppercase tracking-wider px-4 py-1.5 rounded-full shadow-sm">
-                    Before
-                  </span>
-                </div>
-                <div className="relative border-t border-border">
-                  <img src={c.after} alt={`${c.name} after`} className="w-full h-auto object-cover" loading="lazy" />
-                  <span className="absolute bottom-3 left-3 bg-white text-foreground text-[11px] font-sans font-semibold uppercase tracking-wider px-4 py-1.5 rounded-full shadow-sm">
-                    After
-                  </span>
-                </div>
-              </div>
-            ) : (
-              /* Side-by-side layout for vertical images */
-              <div className="relative rounded-2xl overflow-hidden border border-border flex w-[280px] sm:w-[320px]">
-                <div className="relative flex-1 border-r border-border">
-                  <img src={c.before} alt={`${c.name} before`} className="w-full h-full object-cover" loading="lazy" />
-                  <span className="absolute bottom-3 left-1/2 -translate-x-1/2 bg-white text-foreground text-[11px] font-sans font-semibold uppercase tracking-wider px-4 py-1.5 rounded-full shadow-sm whitespace-nowrap">
-                    Before
-                  </span>
-                </div>
-                <div className="relative flex-1">
-                  <img src={c.after} alt={`${c.name} after`} className="w-full h-full object-cover" loading="lazy" />
-                  <span className="absolute bottom-3 left-1/2 -translate-x-1/2 bg-white text-foreground text-[11px] font-sans font-semibold uppercase tracking-wider px-4 py-1.5 rounded-full shadow-sm whitespace-nowrap">
-                    After
-                  </span>
-                </div>
-              </div>
-            )}
-            <p className="text-center text-sm font-semibold text-foreground">{c.name}</p>
-          </div>
-        ))}
+    <section className="py-16 lg:py-24 bg-surface overflow-hidden">
+      <div className="max-w-6xl mx-auto px-5 sm:px-6 mb-10 text-center">
+        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold tracking-tight text-foreground">
+          Real Smiles, Real Transformations
+        </h2>
+        <p className="mt-3 text-muted-foreground max-w-xl mx-auto">
+          A glimpse of the results we deliver every day.
+        </p>
+      </div>
+
+      <div className="group relative [mask-image:linear-gradient(to_right,transparent,black_6%,black_94%,transparent)]">
+        <div className="flex gap-6 w-max animate-marquee group-hover:[animation-play-state:paused] px-3">
+          {[...cases, ...cases].map((c, i) => (
+            <Card key={`${c.name}-${i}`} c={c} />
+          ))}
+        </div>
       </div>
     </section>
   );
