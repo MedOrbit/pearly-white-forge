@@ -931,15 +931,9 @@ export default function DentalLanding() {
       </footer>
 
       {/* Mobile sticky CTA */}
-      <div className="md:hidden fixed bottom-3 left-3 right-3 z-50 flex gap-2">
-        <a href={`tel:${PHONE_PRIMARY_TEL}`} className="flex-1 bg-background border border-border py-3 rounded-2xl flex items-center justify-center gap-1.5 font-semibold text-xs shadow-xl">
-          <Phone className="size-3.5" /> Call
-        </a>
-        <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="flex-1 bg-[#25D366] text-white py-3 rounded-2xl flex items-center justify-center gap-1.5 font-semibold text-xs shadow-xl">
-          <MessageCircle className="size-3.5" /> WhatsApp
-        </a>
-        <a href="#book" className="flex-[1.4] bg-primary text-primary-foreground py-3 rounded-2xl flex items-center justify-center gap-1.5 font-semibold text-xs shadow-xl">
-          <CalendarCheck className="size-3.5" /> Book ₹100
+      <div className="md:hidden fixed bottom-3 left-3 right-3 z-50">
+        <a href="#book" className="w-full bg-primary text-primary-foreground py-3.5 rounded-2xl flex items-center justify-center gap-1.5 font-semibold text-sm shadow-xl">
+          <CalendarCheck className="size-4" /> Book Consultation
         </a>
       </div>
     </div>
