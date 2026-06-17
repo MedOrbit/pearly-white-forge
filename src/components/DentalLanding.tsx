@@ -269,7 +269,7 @@ export default function DentalLanding() {
 
             <div className="flex flex-wrap gap-3 mb-8">
               <a href="#book" className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-4 rounded-full text-sm font-semibold hover:opacity-90 transition shadow-lg shadow-primary/20">
-                <CalendarCheck className="size-4" /> Book Consultation
+                <CalendarCheck className="size-4" /> Book A Call
               </a>
             </div>
             <div className="flex items-center gap-4">
