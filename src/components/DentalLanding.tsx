@@ -76,6 +76,8 @@ import txNightguard from "@/assets/tx-nightguard.jpg";
 import txFullmouth from "@/assets/tx-fullmouth.jpg";
 import txSedation from "@/assets/tx-sedation.jpg";
 import txVeneers from "@/assets/tx-veneers.jpg";
+import BeforeAfterShowcase from "@/components/BeforeAfterShowcase";
+
 
 // ─── Clinic constants ──────────────────────────────────────────────────────
 const PHONE_PRIMARY = "+91 95103 97046";
@@ -753,6 +755,9 @@ export default function DentalLanding() {
           </div>
         </div>
       </section>
+
+      <BeforeAfterShowcase />
+
 
 
 
