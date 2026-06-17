@@ -310,6 +310,8 @@ export default function DentalLanding() {
         </div>
       </section>
 
+      <BeforeAfterShowcase />
+
       {/* Marquee trust strip */}
       <div className="border-y border-border bg-surface overflow-hidden py-5">
         <div className="flex gap-12 animate-[marquee_35s_linear_infinite] whitespace-nowrap font-mono text-xs uppercase tracking-widest text-muted-foreground">
@@ -756,7 +758,7 @@ export default function DentalLanding() {
         </div>
       </section>
 
-      <BeforeAfterShowcase />
+      
 
 
 
