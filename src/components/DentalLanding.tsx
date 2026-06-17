@@ -215,9 +215,8 @@ export default function DentalLanding() {
       {/* Nav */}
       <nav className="sticky top-0 z-50 bg-transparent">
         <div className="max-w-7xl mx-auto px-5 sm:px-6 h-16 flex items-center justify-between">
-          <a href="#" className="font-display text-xl sm:text-2xl font-bold tracking-tight text-primary leading-none">
-            Patel Dental<span className="text-accent">.</span>
-            <span className="block text-[9px] font-mono uppercase tracking-[0.2em] text-muted-foreground font-normal mt-0.5">Hospital · Rajkot</span>
+          <a href="#" className="flex items-center">
+            <img src={logoUrl} alt="Gorgeous Smiles" className="h-10 sm:h-12 w-auto object-contain" />
           </a>
           <div className="hidden md:flex gap-7 text-sm font-medium text-muted-foreground">
             <a href="#treatments" className="hover:text-primary transition">Treatments</a>
@@ -933,7 +932,7 @@ export default function DentalLanding() {
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-4 gap-10 mb-16">
             <div className="lg:col-span-2">
-              <div className="font-display text-3xl font-bold mb-2">Patel Dental Hospital</div>
+              <img src={logoUrl} alt="Gorgeous Smiles" className="h-10 sm:h-12 w-auto object-contain mb-3" />
               <p className="text-xs font-mono uppercase tracking-widest text-accent mb-4">We take care of your teeth · Rajkot, Gujarat</p>
               <p className="text-primary-foreground/60 max-w-sm leading-relaxed mb-6">
                 Rajkot's trusted dental home since 2012 — implants, root canals, smile designing and complete family
