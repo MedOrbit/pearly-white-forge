@@ -29,16 +29,16 @@ export default function BeforeAfterShowcase() {
       <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
         {cases.map((c) => (
           <div key={c.name} className="flex flex-col gap-3">
-            <div className="grid grid-cols-2 gap-2">
+            <div className="flex flex-col gap-2">
               <div className="relative rounded-2xl overflow-hidden">
-                <img src={c.before} alt={`${c.name} before`} className="w-full h-full object-cover" loading="lazy" />
-                <span className="absolute top-3 left-3 bg-foreground/80 text-background text-[10px] font-mono uppercase tracking-widest px-2.5 py-1 rounded-full">
+                <img src={c.before} alt={`${c.name} before`} className="w-full h-auto object-cover" loading="lazy" />
+                <span className="absolute top-3 left-3 bg-black/70 text-white text-[10px] font-sans uppercase tracking-widest px-3 py-1.5 rounded-full">
                   Before
                 </span>
               </div>
               <div className="relative rounded-2xl overflow-hidden">
-                <img src={c.after} alt={`${c.name} after`} className="w-full h-full object-cover" loading="lazy" />
-                <span className="absolute top-3 right-3 bg-accent text-accent-foreground text-[10px] font-mono uppercase tracking-widest px-2.5 py-1 rounded-full">
+                <img src={c.after} alt={`${c.name} after`} className="w-full h-auto object-cover" loading="lazy" />
+                <span className="absolute top-3 right-3 bg-[#E07A5F] text-white text-[10px] font-sans uppercase tracking-widest px-3 py-1.5 rounded-full">
                   After
                 </span>
               </div>
