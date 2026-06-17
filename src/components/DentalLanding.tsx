@@ -756,6 +756,9 @@ export default function DentalLanding() {
         </div>
       </section>
 
+      <BeforeAfterShowcase />
+
+
 
 
 
