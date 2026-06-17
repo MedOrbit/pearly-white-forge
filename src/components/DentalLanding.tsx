@@ -215,29 +215,28 @@ function FaqItem({ q, a }: { q: string; a: string }) {
 export default function DentalLanding() {
   return (
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden pb-24 md:pb-0">
-      {/* Nav */}
-      <nav className="sticky top-0 z-50 bg-transparent">
-        <div className="max-w-7xl mx-auto px-5 sm:px-6 h-16 flex items-center justify-between">
+      {/* Sticky Header */}
+      <header className="fixed top-0 left-0 right-0 z-50 bg-[#1a1a1a]/95 backdrop-blur-md border-b border-white/10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 h-14 sm:h-16 flex items-center justify-between">
           <a href="#" className="flex items-center">
-            <img src={logoUrl} alt="Gorgeous Smiles" className="h-10 sm:h-12 w-auto object-contain" />
+            <img src={logoUrl} alt="Patel Dental Hospital" className="h-9 sm:h-11 w-auto object-contain" />
           </a>
-          <div className="hidden md:flex gap-7 text-sm font-medium text-muted-foreground">
-            <a href="#treatments" className="hover:text-primary transition">Treatments</a>
-            <a href="#team" className="hover:text-primary transition">Doctors</a>
-            <a href="#reviews" className="hover:text-primary transition">Reviews</a>
-            <a href="#branches" className="hover:text-primary transition">Branches</a>
-            <a href="#faq" className="hover:text-primary transition">FAQ</a>
-          </div>
-          <div className="flex items-center gap-3">
-            <a href={`tel:${PHONE_PRIMARY_TEL}`} className="hidden sm:flex items-center gap-2 font-mono text-sm font-medium text-foreground">
+          <div className="flex items-center gap-3 sm:gap-4">
+            <a href={`tel:${PHONE_PRIMARY_TEL}`} className="hidden sm:flex items-center gap-2 text-sm font-medium text-white/90 hover:text-white transition">
               <Phone className="size-4" /> {PHONE_PRIMARY}
             </a>
-            <a href="#book" className="bg-primary text-primary-foreground px-4 py-2.5 rounded-full text-sm font-semibold hover:opacity-90 transition">
-              Book Visit
+            <a href={`tel:${PHONE_PRIMARY_TEL}`} className="sm:hidden flex items-center justify-center size-9 rounded-full bg-white/10 text-white hover:bg-white/20 transition">
+              <Phone className="size-4" />
+            </a>
+            <a href="#book" className="bg-white text-[#1a1a1a] px-4 sm:px-5 py-2 rounded-full text-xs sm:text-sm font-semibold hover:bg-white/90 transition">
+              Book A Call
             </a>
           </div>
         </div>
-      </nav>
+      </header>
+
+      {/* Spacer for fixed header */}
+      <div className="h-14 sm:h-16" />
 
       {/* HERO */}
       <section className="relative px-5 sm:px-6 pt-10 lg:pt-16 pb-16 lg:pb-24">
@@ -270,7 +269,7 @@ export default function DentalLanding() {
 
             <div className="flex flex-wrap gap-3 mb-8">
               <a href="#book" className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-4 rounded-full text-sm font-semibold hover:opacity-90 transition shadow-lg shadow-primary/20">
-                <CalendarCheck className="size-4" /> Book Consultation
+                <CalendarCheck className="size-4" /> Book A Call
               </a>
             </div>
             <div className="flex items-center gap-4">
@@ -816,7 +815,7 @@ export default function DentalLanding() {
                   <p className="text-xs text-muted-foreground mb-5 ml-6">{b.note}</p>
                     <div className="flex flex-wrap gap-2 mt-auto">
                       <a href="#book" className="inline-flex items-center gap-1.5 bg-primary text-primary-foreground px-4 py-2.5 rounded-full text-xs font-semibold hover:opacity-90 transition">
-                        <CalendarCheck className="size-3.5" /> Book Consultation
+                        <CalendarCheck className="size-3.5" /> Book A Call
                       </a>
                       <a href={b.directionsUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 bg-background border border-border px-4 py-2.5 rounded-full text-xs font-semibold hover:bg-surface transition">
                         <Navigation className="size-3.5" /> Get directions
@@ -890,7 +889,7 @@ export default function DentalLanding() {
               </p>
               <div className="flex flex-wrap gap-3">
                 <a href="#book" className="inline-flex items-center gap-2 bg-accent text-accent-foreground px-5 py-3 rounded-full text-sm font-semibold hover:opacity-95 transition">
-                  <CalendarCheck className="size-4" /> Book Consultation
+                  <CalendarCheck className="size-4" /> Book A Call
                 </a>
               </div>
             </div>
@@ -927,7 +926,7 @@ export default function DentalLanding() {
       {/* Mobile sticky CTA */}
       <div className="md:hidden fixed bottom-3 left-3 right-3 z-50">
         <a href="#book" className="w-full bg-primary text-primary-foreground py-3.5 rounded-2xl flex items-center justify-center gap-1.5 font-semibold text-sm shadow-xl">
-          <CalendarCheck className="size-4" /> Book Consultation
+          <CalendarCheck className="size-4" /> Book A Call
         </a>
       </div>
     </div>
