@@ -25,20 +25,20 @@ const cases = [
 
 export default function BeforeAfterShowcase() {
   return (
-    <section className="py-16 lg:py-24 px-5 sm:px-6 bg-surface">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+    <section className="py-16 lg:py-24 bg-surface">
+      <div className="flex gap-4 overflow-x-auto px-5 sm:px-6 pb-4 scrollbar-hide snap-x snap-mandatory">
         {cases.map((c) => (
-          <div key={c.name} className="flex flex-col gap-3">
-            <div className="flex flex-col gap-2">
-              <div className="relative rounded-2xl overflow-hidden">
-                <img src={c.before} alt={`${c.name} before`} className="w-full h-auto object-cover" loading="lazy" />
-                <span className="absolute top-3 left-3 bg-black/70 text-white text-[10px] font-sans uppercase tracking-widest px-3 py-1.5 rounded-full">
+          <div key={c.name} className="snap-start shrink-0 flex flex-col gap-3">
+            <div className="flex gap-2">
+              <div className="relative rounded-2xl overflow-hidden w-[200px] h-[200px] sm:w-[240px] sm:h-[240px]">
+                <img src={c.before} alt={`${c.name} before`} className="w-full h-full object-cover" loading="lazy" />
+                <span className="absolute bottom-3 left-1/2 -translate-x-1/2 bg-white/90 text-black text-[10px] font-sans uppercase tracking-widest px-4 py-1.5 rounded-full shadow-sm">
                   Before
                 </span>
               </div>
-              <div className="relative rounded-2xl overflow-hidden">
-                <img src={c.after} alt={`${c.name} after`} className="w-full h-auto object-cover" loading="lazy" />
-                <span className="absolute top-3 right-3 bg-[#E07A5F] text-white text-[10px] font-sans uppercase tracking-widest px-3 py-1.5 rounded-full">
+              <div className="relative rounded-2xl overflow-hidden w-[200px] h-[200px] sm:w-[240px] sm:h-[240px]">
+                <img src={c.after} alt={`${c.name} after`} className="w-full h-full object-cover" loading="lazy" />
+                <span className="absolute bottom-3 left-1/2 -translate-x-1/2 bg-[#E07A5F] text-white text-[10px] font-sans uppercase tracking-widest px-4 py-1.5 rounded-full shadow-sm">
                   After
                 </span>
               </div>
