@@ -296,18 +296,6 @@ export default function DentalLanding() {
 
       <BeforeAfterShowcase />
 
-      {/* Marquee trust strip */}
-      <div className="border-y border-border bg-surface overflow-hidden py-5">
-        <div className="flex gap-12 animate-[marquee_35s_linear_infinite] whitespace-nowrap font-mono text-xs uppercase tracking-widest text-muted-foreground">
-          {[...trustLogos, ...trustLogos].map((logo, i) => (
-            <div key={i} className="flex items-center gap-3 shrink-0">
-              <span className="size-1.5 rounded-full bg-accent" />
-              {logo}
-            </div>
-          ))}
-        </div>
-      </div>
-      <style>{`@keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }`}</style>
 
       {/* INSTAGRAM REELS */}
       <section className="py-20 lg:py-28 px-5 sm:px-6">
