@@ -134,14 +134,6 @@ const testimonials = [
   { name: "Barkatbhai Dharani", treatment: "Batrisi Denture", img: reviewAnjali, quote: "Dr. Vipul Patel made a complete denture for me. It's comfortable and I can chew everything — finally smiling again." },
 ];
 
-const trustLogos = [
-  "Dental Council of India",
-  "Gujarat State Dental Council (A7495)",
-  "FICOI Certified Implantologist",
-  "4.9★ on Google · 492+ Reviews",
-  "Established 2012",
-  "Centrally Air-Conditioned Clinic",
-];
 
 function ToothIcon({ className, fill = "currentColor", strokeWidth = 1.5 }: { className?: string; fill?: string; strokeWidth?: number }) {
   return (
