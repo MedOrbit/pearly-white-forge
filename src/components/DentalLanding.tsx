@@ -37,6 +37,9 @@ const heroPatientMobile = heroPatientAsset.url;
 import drHenryAsset from "@/assets/clinic/dr-henry.png.asset.json";
 const drHenry = drHenryAsset.url;
 
+import logoAsset from "@/assets/clinic/logo-gorgeous-smiles.png.asset.json";
+const logoUrl = logoAsset.url;
+
 import doctorMale from "@/assets/doctor-male.jpg";
 import clinicInteriorAsset from "@/assets/clinic/reception.png.asset.json";
 const clinicInterior = clinicInteriorAsset.url;
