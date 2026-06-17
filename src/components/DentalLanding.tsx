@@ -270,14 +270,7 @@ export default function DentalLanding() {
 
             <div className="flex flex-wrap gap-3 mb-8">
               <a href="#book" className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-4 rounded-full text-sm font-semibold hover:opacity-90 transition shadow-lg shadow-primary/20">
-                <CalendarCheck className="size-4" /> Book ₹100 consultation
-              </a>
-              <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-[#25D366] text-white px-6 py-4 rounded-full text-sm font-semibold hover:opacity-95 transition shadow-lg">
-                <MessageCircle className="size-4" /> WhatsApp us
-              </a>
-              <a href={`tel:${PHONE_PRIMARY_TEL}`} className="inline-flex items-center gap-2 bg-background border border-border px-6 py-4 rounded-full text-sm font-semibold hover:bg-surface transition">
-                <Phone className="size-4" /> Call now
+                <CalendarCheck className="size-4" /> Book Consultation
               </a>
             </div>
             <div className="flex items-center gap-4">
@@ -821,17 +814,14 @@ export default function DentalLanding() {
                     <span>{b.hours}{b.sundayClosed ? " · Sunday closed" : ""}</span>
                   </p>
                   <p className="text-xs text-muted-foreground mb-5 ml-6">{b.note}</p>
-                  <div className="flex flex-wrap gap-2 mt-auto">
-                    <a href={`tel:${PHONE_PRIMARY_TEL}`} className="inline-flex items-center gap-1.5 bg-primary text-primary-foreground px-4 py-2.5 rounded-full text-xs font-semibold hover:opacity-90 transition">
-                      <Phone className="size-3.5" /> Call clinic
-                    </a>
-                    <a href={b.directionsUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 bg-background border border-border px-4 py-2.5 rounded-full text-xs font-semibold hover:bg-surface transition">
-                      <Navigation className="size-3.5" /> Get directions
-                    </a>
-                    <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 bg-[#25D366] text-white px-4 py-2.5 rounded-full text-xs font-semibold hover:opacity-95 transition">
-                      <MessageCircle className="size-3.5" /> WhatsApp
-                    </a>
-                  </div>
+                    <div className="flex flex-wrap gap-2 mt-auto">
+                      <a href="#book" className="inline-flex items-center gap-1.5 bg-primary text-primary-foreground px-4 py-2.5 rounded-full text-xs font-semibold hover:opacity-90 transition">
+                        <CalendarCheck className="size-3.5" /> Book Consultation
+                      </a>
+                      <a href={b.directionsUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 bg-background border border-border px-4 py-2.5 rounded-full text-xs font-semibold hover:bg-surface transition">
+                        <Navigation className="size-3.5" /> Get directions
+                      </a>
+                    </div>
                 </div>
               </div>
             ))}
@@ -900,10 +890,7 @@ export default function DentalLanding() {
               </p>
               <div className="flex flex-wrap gap-3">
                 <a href="#book" className="inline-flex items-center gap-2 bg-accent text-accent-foreground px-5 py-3 rounded-full text-sm font-semibold hover:opacity-95 transition">
-                  <CalendarCheck className="size-4" /> Book appointment
-                </a>
-                <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-[#25D366] text-white px-5 py-3 rounded-full text-sm font-semibold hover:opacity-95 transition">
-                  <MessageCircle className="size-4" /> WhatsApp
+                  <CalendarCheck className="size-4" /> Book Consultation
                 </a>
               </div>
             </div>
@@ -938,15 +925,9 @@ export default function DentalLanding() {
       </footer>
 
       {/* Mobile sticky CTA */}
-      <div className="md:hidden fixed bottom-3 left-3 right-3 z-50 flex gap-2">
-        <a href={`tel:${PHONE_PRIMARY_TEL}`} className="flex-1 bg-background border border-border py-3 rounded-2xl flex items-center justify-center gap-1.5 font-semibold text-xs shadow-xl">
-          <Phone className="size-3.5" /> Call
-        </a>
-        <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="flex-1 bg-[#25D366] text-white py-3 rounded-2xl flex items-center justify-center gap-1.5 font-semibold text-xs shadow-xl">
-          <MessageCircle className="size-3.5" /> WhatsApp
-        </a>
-        <a href="#book" className="flex-[1.4] bg-primary text-primary-foreground py-3 rounded-2xl flex items-center justify-center gap-1.5 font-semibold text-xs shadow-xl">
-          <CalendarCheck className="size-3.5" /> Book ₹100
+      <div className="md:hidden fixed bottom-3 left-3 right-3 z-50">
+        <a href="#book" className="w-full bg-primary text-primary-foreground py-3.5 rounded-2xl flex items-center justify-center gap-1.5 font-semibold text-sm shadow-xl">
+          <CalendarCheck className="size-4" /> Book Consultation
         </a>
       </div>
     </div>
