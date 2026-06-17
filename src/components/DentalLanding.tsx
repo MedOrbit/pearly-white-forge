@@ -270,14 +270,7 @@ export default function DentalLanding() {
 
             <div className="flex flex-wrap gap-3 mb-8">
               <a href="#book" className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-4 rounded-full text-sm font-semibold hover:opacity-90 transition shadow-lg shadow-primary/20">
-                <CalendarCheck className="size-4" /> Book ₹100 consultation
-              </a>
-              <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-[#25D366] text-white px-6 py-4 rounded-full text-sm font-semibold hover:opacity-95 transition shadow-lg">
-                <MessageCircle className="size-4" /> WhatsApp us
-              </a>
-              <a href={`tel:${PHONE_PRIMARY_TEL}`} className="inline-flex items-center gap-2 bg-background border border-border px-6 py-4 rounded-full text-sm font-semibold hover:bg-surface transition">
-                <Phone className="size-4" /> Call now
+                <CalendarCheck className="size-4" /> Book Consultation
               </a>
             </div>
             <div className="flex items-center gap-4">
