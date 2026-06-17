@@ -34,8 +34,10 @@ import heroPatientAsset from "@/assets/clinic/doctor-vipul.png.asset.json";
 const heroPatient = heroPatientAsset.url;
 const heroPatientMobile = heroPatientAsset.url;
 
+import drHenryAsset from "@/assets/clinic/dr-henry.png.asset.json";
+const drHenry = drHenryAsset.url;
+
 import doctorMale from "@/assets/doctor-male.jpg";
-import doctorFemale from "@/assets/doctor-female.jpg";
 import clinicInteriorAsset from "@/assets/clinic/reception.png.asset.json";
 const clinicInterior = clinicInteriorAsset.url;
 import clinicTreatmentRoomAsset from "@/assets/clinic/treatment-room.png.asset.json";
@@ -561,7 +563,7 @@ export default function DentalLanding() {
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               { img: doctorMale, name: "Dr. Vipul Patel", role: "Owner · Implantologist & Cosmetic Dentist · BDS, F.I.C.O.I, FMC", exp: "15+ yrs", featured: true, badge: "Lead Dentist" },
-              { img: doctorFemale, name: "Dr. Kinjal Patel", role: "Cosmetic Dentist · Implant Dentistry · BDS", exp: "14+ yrs" },
+              { img: drHenry, name: "Dr. Henry", role: "Cosmetic Dentist · Implant Dentistry · BDS", exp: "14+ yrs" },
               { img: familySmile, name: "Family-first dentistry", role: "Kids, adults & seniors — all under one roof", exp: "All ages" },
             ].map((m) => (
               <div key={m.name} className="group relative rounded-3xl overflow-hidden bg-background border border-border">
