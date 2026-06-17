@@ -14,13 +14,13 @@ import compositeBefore from "@/assets/transformations/composite-before.jpg.asset
 import compositeAfter from "@/assets/transformations/composite-after.jpg.asset.json";
 
 const cases = [
-  { name: "Braces", before: bracesBefore.url, after: bracesAfter.url },
-  { name: "Invisalign", before: invisalignBefore.url, after: invisalignAfter.url },
-  { name: "Porcelain Crowns", before: crownsBefore.url, after: crownsAfter.url },
-  { name: "Porcelain Veneers", before: veneersBefore.url, after: veneersAfter.url },
-  { name: "Teeth Whitening", before: whiteningBefore.url, after: whiteningAfter.url },
-  { name: "Dental Implants", before: implantsBefore.url, after: implantsAfter.url },
-  { name: "Composite Veneers", before: compositeBefore.url, after: compositeAfter.url },
+  { name: "Braces", before: bracesBefore.url, after: bracesAfter.url, orientation: "vertical" as const },
+  { name: "Invisalign", before: invisalignBefore.url, after: invisalignAfter.url, orientation: "vertical" as const },
+  { name: "Porcelain Crowns", before: crownsBefore.url, after: crownsAfter.url, orientation: "horizontal" as const },
+  { name: "Porcelain Veneers", before: veneersBefore.url, after: veneersAfter.url, orientation: "vertical" as const },
+  { name: "Teeth Whitening", before: whiteningBefore.url, after: whiteningAfter.url, orientation: "horizontal" as const },
+  { name: "Dental Implants", before: implantsBefore.url, after: implantsAfter.url, orientation: "vertical" as const },
+  { name: "Composite Veneers", before: compositeBefore.url, after: compositeAfter.url, orientation: "vertical" as const },
 ];
 
 export default function BeforeAfterShowcase() {
@@ -29,20 +29,39 @@ export default function BeforeAfterShowcase() {
       <div className="flex gap-4 overflow-x-auto px-5 sm:px-6 pb-4 scrollbar-hide snap-x snap-mandatory">
         {cases.map((c) => (
           <div key={c.name} className="snap-start shrink-0 flex flex-col gap-3">
-            <div className="flex gap-2">
-              <div className="relative rounded-2xl overflow-hidden w-[200px] h-[200px] sm:w-[240px] sm:h-[240px]">
-                <img src={c.before} alt={`${c.name} before`} className="w-full h-full object-cover" loading="lazy" />
-                <span className="absolute bottom-3 left-1/2 -translate-x-1/2 bg-white/90 text-black text-[10px] font-sans uppercase tracking-widest px-4 py-1.5 rounded-full shadow-sm">
-                  Before
-                </span>
+            {c.orientation === "horizontal" ? (
+              /* Vertical stack layout for horizontal images */
+              <div className="relative rounded-2xl overflow-hidden border border-border w-[280px] sm:w-[320px]">
+                <div className="relative">
+                  <img src={c.before} alt={`${c.name} before`} className="w-full h-auto object-cover" loading="lazy" />
+                  <span className="absolute bottom-3 left-3 bg-white text-foreground text-[11px] font-sans font-semibold uppercase tracking-wider px-4 py-1.5 rounded-full shadow-sm">
+                    Before
+                  </span>
+                </div>
+                <div className="relative border-t border-border">
+                  <img src={c.after} alt={`${c.name} after`} className="w-full h-auto object-cover" loading="lazy" />
+                  <span className="absolute bottom-3 left-3 bg-white text-foreground text-[11px] font-sans font-semibold uppercase tracking-wider px-4 py-1.5 rounded-full shadow-sm">
+                    After
+                  </span>
+                </div>
               </div>
-              <div className="relative rounded-2xl overflow-hidden w-[200px] h-[200px] sm:w-[240px] sm:h-[240px]">
-                <img src={c.after} alt={`${c.name} after`} className="w-full h-full object-cover" loading="lazy" />
-                <span className="absolute bottom-3 left-1/2 -translate-x-1/2 bg-[#E07A5F] text-white text-[10px] font-sans uppercase tracking-widest px-4 py-1.5 rounded-full shadow-sm">
-                  After
-                </span>
+            ) : (
+              /* Side-by-side layout for vertical images */
+              <div className="relative rounded-2xl overflow-hidden border border-border flex w-[280px] sm:w-[320px]">
+                <div className="relative flex-1 border-r border-border">
+                  <img src={c.before} alt={`${c.name} before`} className="w-full h-full object-cover" loading="lazy" />
+                  <span className="absolute bottom-3 left-1/2 -translate-x-1/2 bg-white text-foreground text-[11px] font-sans font-semibold uppercase tracking-wider px-4 py-1.5 rounded-full shadow-sm whitespace-nowrap">
+                    Before
+                  </span>
+                </div>
+                <div className="relative flex-1">
+                  <img src={c.after} alt={`${c.name} after`} className="w-full h-full object-cover" loading="lazy" />
+                  <span className="absolute bottom-3 left-1/2 -translate-x-1/2 bg-white text-foreground text-[11px] font-sans font-semibold uppercase tracking-wider px-4 py-1.5 rounded-full shadow-sm whitespace-nowrap">
+                    After
+                  </span>
+                </div>
               </div>
-            </div>
+            )}
             <p className="text-center text-sm font-semibold text-foreground">{c.name}</p>
           </div>
         ))}
