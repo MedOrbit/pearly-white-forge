@@ -19,7 +19,6 @@ const cases: { name: string; before: string; after: string; orientation: Orienta
   { name: "Braces", before: bracesBefore.url, after: bracesAfter.url, orientation: "vertical" },
   { name: "Invisalign", before: invisalignBefore.url, after: invisalignAfter.url, orientation: "vertical" },
   { name: "Porcelain Crowns", before: crownsBefore.url, after: crownsAfter.url, orientation: "horizontal" },
-  { name: "Porcelain Veneers", before: veneersBefore.url, after: veneersAfter.url, orientation: "vertical" },
   { name: "Teeth Whitening", before: whiteningBefore.url, after: whiteningAfter.url, orientation: "horizontal" },
   { name: "Dental Implants", before: implantsBefore.url, after: implantsAfter.url, orientation: "vertical" },
   { name: "Composite Veneers", before: compositeBefore.url, after: compositeAfter.url, orientation: "vertical" },
@@ -27,39 +26,41 @@ const cases: { name: string; before: string; after: string; orientation: Orienta
 
 function Card({ c }: { c: (typeof cases)[number] }) {
   const Label = ({ children }: { children: React.ReactNode }) => (
-    <span className="absolute bottom-3 left-1/2 -translate-x-1/2 bg-white/95 backdrop-blur text-foreground text-[10px] font-sans font-semibold uppercase tracking-[0.12em] px-4 py-1.5 rounded-full shadow-md ring-1 ring-black/5 whitespace-nowrap">
+    <span className="absolute bottom-3 left-1/2 -translate-x-1/2 bg-white text-[#1a1a1a] text-[9px] font-sans font-bold uppercase tracking-[0.15em] px-3.5 py-1.5 rounded-full shadow-sm">
       {children}
     </span>
   );
 
   return (
-    <div className="shrink-0 flex flex-col gap-4">
-      <div className="rounded-[28px] bg-card p-3 shadow-[0_8px_30px_-12px_rgba(0,0,0,0.15)] ring-1 ring-black/[0.06] w-[300px] sm:w-[340px]">
-        {c.orientation === "horizontal" ? (
-          <div className="flex flex-col gap-3">
-            <div className="relative rounded-2xl overflow-hidden ring-1 ring-black/[0.06]">
-              <img src={c.before} alt={`${c.name} before`} className="w-full h-auto object-cover block" loading="lazy" />
-              <Label>Before</Label>
+    <div className="shrink-0 flex flex-col items-center">
+      <div className="rounded-[24px] bg-card p-2.5 shadow-[0_8px_30px_-12px_rgba(0,0,0,0.12)] ring-1 ring-black/[0.05] w-[280px] sm:w-[300px]">
+        <div className="h-[320px] sm:h-[340px]">
+          {c.orientation === "horizontal" ? (
+            <div className="flex flex-col gap-2.5 h-full">
+              <div className="relative flex-1 rounded-2xl overflow-hidden ring-1 ring-black/[0.06]">
+                <img src={c.before} alt={`${c.name} before`} className="w-full h-full object-cover" loading="lazy" />
+                <Label>Before</Label>
+              </div>
+              <div className="relative flex-1 rounded-2xl overflow-hidden ring-1 ring-black/[0.06]">
+                <img src={c.after} alt={`${c.name} after`} className="w-full h-full object-cover" loading="lazy" />
+                <Label>After</Label>
+              </div>
             </div>
-            <div className="relative rounded-2xl overflow-hidden ring-1 ring-black/[0.06]">
-              <img src={c.after} alt={`${c.name} after`} className="w-full h-auto object-cover block" loading="lazy" />
-              <Label>After</Label>
+          ) : (
+            <div className="grid grid-cols-2 gap-2.5 h-full">
+              <div className="relative rounded-2xl overflow-hidden ring-1 ring-black/[0.06]">
+                <img src={c.before} alt={`${c.name} before`} className="w-full h-full object-cover" loading="lazy" />
+                <Label>Before</Label>
+              </div>
+              <div className="relative rounded-2xl overflow-hidden ring-1 ring-black/[0.06]">
+                <img src={c.after} alt={`${c.name} after`} className="w-full h-full object-cover" loading="lazy" />
+                <Label>After</Label>
+              </div>
             </div>
-          </div>
-        ) : (
-          <div className="grid grid-cols-2 gap-3">
-            <div className="relative rounded-2xl overflow-hidden ring-1 ring-black/[0.06] aspect-[3/4]">
-              <img src={c.before} alt={`${c.name} before`} className="w-full h-full object-cover" loading="lazy" />
-              <Label>Before</Label>
-            </div>
-            <div className="relative rounded-2xl overflow-hidden ring-1 ring-black/[0.06] aspect-[3/4]">
-              <img src={c.after} alt={`${c.name} after`} className="w-full h-full object-cover" loading="lazy" />
-              <Label>After</Label>
-            </div>
-          </div>
-        )}
+          )}
+        </div>
       </div>
-      <p className="text-center text-base font-semibold text-foreground">{c.name}</p>
+      <p className="mt-4 text-center text-[15px] font-semibold text-foreground">{c.name}</p>
     </div>
   );
 }
