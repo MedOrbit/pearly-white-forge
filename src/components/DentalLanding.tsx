@@ -889,7 +889,7 @@ export default function DentalLanding() {
               </p>
               <div className="flex flex-wrap gap-3">
                 <a href="#book" className="inline-flex items-center gap-2 bg-accent text-accent-foreground px-5 py-3 rounded-full text-sm font-semibold hover:opacity-95 transition">
-                  <CalendarCheck className="size-4" /> Book Consultation
+                  <CalendarCheck className="size-4" /> Book A Call
                 </a>
               </div>
             </div>
@@ -926,7 +926,7 @@ export default function DentalLanding() {
       {/* Mobile sticky CTA */}
       <div className="md:hidden fixed bottom-3 left-3 right-3 z-50">
         <a href="#book" className="w-full bg-primary text-primary-foreground py-3.5 rounded-2xl flex items-center justify-center gap-1.5 font-semibold text-sm shadow-xl">
-          <CalendarCheck className="size-4" /> Book Consultation
+          <CalendarCheck className="size-4" /> Book A Call
         </a>
       </div>
     </div>
