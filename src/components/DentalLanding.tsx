@@ -295,60 +295,15 @@ export default function DentalLanding() {
             </div>
           </div>
 
-          {/* Hero image stack */}
-          <div className="relative animate-fade-up mt-4 lg:mt-0">
-            <div className="relative">
-              <picture>
-                <source media="(max-width: 639px)" srcSet={heroPatientMobile} />
-                <img
-                  src={heroPatient}
-                  alt="Dr. Vipul Patel — Patel Dental Hospital, Rajkot"
-                  width={1080}
-                  height={1600}
-                  className="w-full aspect-[3/4] object-contain object-center -mt-10 sm:-mt-16 drop-shadow-[0_25px_35px_rgba(13,76,68,0.25)]"
-                />
-              </picture>
-              <div className="hidden sm:block absolute -top-5 -right-6 bg-background border border-border rounded-2xl shadow-xl p-4 w-52 rotate-3">
-                <div className="flex items-center gap-1 text-accent mb-1.5">
-                  {[...Array(5)].map((_, i) => <Star key={i} className="size-3.5 fill-current" />)}
-                </div>
-                <p className="text-xs leading-relaxed text-foreground">"Painless, single-visit RCT. Best in Rajkot!"</p>
-                <p className="text-[10px] text-muted-foreground mt-1.5 font-mono uppercase tracking-wider">— Verified Google review</p>
-              </div>
-              <div className="hidden sm:block absolute bottom-8 -left-4 bg-primary text-primary-foreground rounded-2xl shadow-xl p-5 w-56 -rotate-2">
-                <div className="flex items-center gap-2 text-accent text-[10px] font-bold tracking-widest uppercase mb-2">
-                  <CheckCircle2 className="size-4" /> Same-day care
-                </div>
-                <p className="font-display text-2xl leading-tight">
-                  ₹100 first<br /><span className="italic">consultation</span>
-                </p>
-              </div>
-              <div className="hidden sm:flex absolute top-1/2 -right-8 -translate-y-1/2 bg-background border border-border rounded-full shadow-xl px-4 py-3 items-center gap-2">
-                <Clock3 className="size-4 text-accent" />
-                <div className="text-xs">
-                  <div className="font-semibold leading-tight">Open today</div>
-                  <div className="text-muted-foreground leading-tight">9 AM – 9 PM</div>
-                </div>
-              </div>
-            </div>
-
-            <div className="sm:hidden mt-4 grid grid-cols-2 gap-3">
-              <div className="bg-background border border-border rounded-2xl shadow-md p-3">
-                <div className="flex items-center gap-0.5 text-accent mb-1">
-                  {[...Array(5)].map((_, i) => <Star key={i} className="size-3 fill-current" />)}
-                </div>
-                <p className="text-[11px] leading-snug text-foreground">"Painless single-visit RCT. Best in Rajkot!"</p>
-                <p className="text-[9px] text-muted-foreground mt-1 font-mono uppercase tracking-wider">— Google review</p>
-              </div>
-              <div className="bg-primary text-primary-foreground rounded-2xl shadow-md p-3">
-                <div className="flex items-center gap-1.5 text-accent text-[9px] font-bold tracking-widest uppercase mb-1">
-                  <CheckCircle2 className="size-3.5" /> Same-day
-                </div>
-                <p className="font-display text-lg leading-tight">
-                  ₹100 first <span className="italic">consultation</span>
-                </p>
-              </div>
-            </div>
+          {/* Hero image */}
+          <div className="animate-fade-up mt-4 lg:mt-0">
+            <img
+              src={heroPatient}
+              alt="Dr. Vipul Patel — Patel Dental Hospital, Rajkot"
+              width={1080}
+              height={1600}
+              className="w-full aspect-[3/4] object-contain object-center"
+            />
           </div>
         </div>
       </section>
