@@ -43,18 +43,18 @@ function Card({ c }: { c: (typeof cases)[number] }) {
                 <Label>Before</Label>
               </div>
               <div className="relative flex-1 rounded-2xl overflow-hidden ring-1 ring-black/[0.06]">
-                <img src={c.after} alt={`${c.name} after`} className="w-full h-full object-cover pointer-events-none" loading="lazy" />
+                <img src={c.after} alt={`${c.name} after`} draggable={false} className="w-full h-full object-cover pointer-events-none select-none" loading="lazy" />
                 <Label>After</Label>
               </div>
             </div>
           ) : (
             <div className="grid grid-cols-2 gap-2.5 h-full">
               <div className="relative rounded-2xl overflow-hidden ring-1 ring-black/[0.06]">
-                <img src={c.before} alt={`${c.name} before`} className="w-full h-full object-cover pointer-events-none" loading="lazy" />
+                <img src={c.before} alt={`${c.name} before`} draggable={false} className="w-full h-full object-cover pointer-events-none select-none" loading="lazy" />
                 <Label>Before</Label>
               </div>
               <div className="relative rounded-2xl overflow-hidden ring-1 ring-black/[0.06]">
-                <img src={c.after} alt={`${c.name} after`} className="w-full h-full object-cover pointer-events-none" loading="lazy" />
+                <img src={c.after} alt={`${c.name} after`} draggable={false} className="w-full h-full object-cover pointer-events-none select-none" loading="lazy" />
                 <Label>After</Label>
               </div>
             </div>
@@ -131,7 +131,7 @@ export default function BeforeAfterShowcase() {
   const startAutoScroll = useCallback(() => {
     if (autoScrollRafRef.current) cancelAnimationFrame(autoScrollRafRef.current);
     let last = performance.now();
-    const speed = 0.4;
+    const speed = 0.15;
 
     const step = (now: number) => {
       if (isInteractingRef.current) {
