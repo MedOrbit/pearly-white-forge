@@ -814,17 +814,14 @@ export default function DentalLanding() {
                     <span>{b.hours}{b.sundayClosed ? " · Sunday closed" : ""}</span>
                   </p>
                   <p className="text-xs text-muted-foreground mb-5 ml-6">{b.note}</p>
-                  <div className="flex flex-wrap gap-2 mt-auto">
-                    <a href={`tel:${PHONE_PRIMARY_TEL}`} className="inline-flex items-center gap-1.5 bg-primary text-primary-foreground px-4 py-2.5 rounded-full text-xs font-semibold hover:opacity-90 transition">
-                      <Phone className="size-3.5" /> Call clinic
-                    </a>
-                    <a href={b.directionsUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 bg-background border border-border px-4 py-2.5 rounded-full text-xs font-semibold hover:bg-surface transition">
-                      <Navigation className="size-3.5" /> Get directions
-                    </a>
-                    <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 bg-[#25D366] text-white px-4 py-2.5 rounded-full text-xs font-semibold hover:opacity-95 transition">
-                      <MessageCircle className="size-3.5" /> WhatsApp
-                    </a>
-                  </div>
+                    <div className="flex flex-wrap gap-2 mt-auto">
+                      <a href="#book" className="inline-flex items-center gap-1.5 bg-primary text-primary-foreground px-4 py-2.5 rounded-full text-xs font-semibold hover:opacity-90 transition">
+                        <CalendarCheck className="size-3.5" /> Book Consultation
+                      </a>
+                      <a href={b.directionsUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 bg-background border border-border px-4 py-2.5 rounded-full text-xs font-semibold hover:bg-surface transition">
+                        <Navigation className="size-3.5" /> Get directions
+                      </a>
+                    </div>
                 </div>
               </div>
             ))}
