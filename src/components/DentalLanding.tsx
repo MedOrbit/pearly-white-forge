@@ -890,10 +890,7 @@ export default function DentalLanding() {
               </p>
               <div className="flex flex-wrap gap-3">
                 <a href="#book" className="inline-flex items-center gap-2 bg-accent text-accent-foreground px-5 py-3 rounded-full text-sm font-semibold hover:opacity-95 transition">
-                  <CalendarCheck className="size-4" /> Book appointment
-                </a>
-                <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-[#25D366] text-white px-5 py-3 rounded-full text-sm font-semibold hover:opacity-95 transition">
-                  <MessageCircle className="size-4" /> WhatsApp
+                  <CalendarCheck className="size-4" /> Book Consultation
                 </a>
               </div>
             </div>
