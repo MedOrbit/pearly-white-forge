@@ -31,9 +31,6 @@ import {
   MessagesSquare,
 } from "lucide-react";
 
-import heroPatientAsset from "@/assets/clinic/dr-henny-hero-transparent.png.asset.json";
-const heroPatient = heroPatientAsset.url;
-const heroPatientMobile = heroPatientAsset.url;
 
 import drHenryAsset from "@/assets/clinic/dr-henry.png.asset.json";
 const drHenry = drHenryAsset.url;
@@ -76,7 +73,7 @@ import txNightguard from "@/assets/tx-nightguard.jpg";
 import txFullmouth from "@/assets/tx-fullmouth.jpg";
 import txSedation from "@/assets/tx-sedation.jpg";
 import txVeneers from "@/assets/tx-veneers.jpg";
-import BeforeAfterShowcase from "@/components/BeforeAfterShowcase";
+import BeforeAfterShowcase, { cases as beforeAfterCases } from "@/components/BeforeAfterShowcase";
 
 
 // ─── Clinic constants ──────────────────────────────────────────────────────
@@ -204,6 +201,54 @@ function FaqItem({ q, a }: { q: string; a: string }) {
   );
 }
 
+function CompactBeforeAfter() {
+  const showCases = beforeAfterCases.slice(0, 4);
+  return (
+    <div className="relative select-none">
+      {/* Desktop: vertical stack */}
+      <div className="hidden lg:flex flex-col gap-3">
+        {showCases.map((c, i) => (
+          <div key={i} className="rounded-2xl bg-card p-2 shadow-sm ring-1 ring-black/[0.05]">
+            <div className="grid grid-cols-2 gap-1.5 h-[100px]">
+              <div className="relative rounded-xl overflow-hidden">
+                <img src={c.before} alt={`${c.name} before`} className="w-full h-full object-cover" draggable={false} loading="lazy" />
+                <span className="absolute bottom-1 left-1/2 -translate-x-1/2 bg-white text-[#1a1a1a] text-[8px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full shadow-sm">Before</span>
+              </div>
+              <div className="relative rounded-xl overflow-hidden">
+                <img src={c.after} alt={`${c.name} after`} className="w-full h-full object-cover" draggable={false} loading="lazy" />
+                <span className="absolute bottom-1 left-1/2 -translate-x-1/2 bg-white text-[#1a1a1a] text-[8px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full shadow-sm">After</span>
+              </div>
+            </div>
+            <p className="mt-1.5 text-center text-xs font-semibold text-foreground">{c.name}</p>
+          </div>
+        ))}
+      </div>
+
+      {/* Mobile: horizontal scroll */}
+      <div className="lg:hidden overflow-x-auto pb-2 -mx-5 px-5" style={{ scrollbarWidth: "none" }}>
+        <div className="flex gap-3 w-max">
+          {showCases.map((c, i) => (
+            <div key={i} className="w-[180px] shrink-0 rounded-2xl bg-card p-2 shadow-sm ring-1 ring-black/[0.05]">
+              <div className="grid grid-cols-2 gap-1.5 h-[110px]">
+                <div className="relative rounded-xl overflow-hidden">
+                  <img src={c.before} alt={`${c.name} before`} className="w-full h-full object-cover" draggable={false} loading="lazy" />
+                  <span className="absolute bottom-1 left-1/2 -translate-x-1/2 bg-white text-[#1a1a1a] text-[8px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full shadow-sm">Before</span>
+                </div>
+                <div className="relative rounded-xl overflow-hidden">
+                  <img src={c.after} alt={`${c.name} after`} className="w-full h-full object-cover" draggable={false} loading="lazy" />
+                  <span className="absolute bottom-1 left-1/2 -translate-x-1/2 bg-white text-[#1a1a1a] text-[8px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full shadow-sm">After</span>
+                </div>
+              </div>
+              <p className="mt-1.5 text-center text-xs font-semibold text-foreground">{c.name}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+
 export default function DentalLanding() {
   return (
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden pb-24 md:pb-0">
@@ -237,13 +282,23 @@ export default function DentalLanding() {
 
         <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-10 lg:gap-16 items-center relative">
           <div className="animate-fade-up">
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-accent/10 text-accent text-[11px] font-bold tracking-widest uppercase mb-6">
-              <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75" />
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-accent" />
-              </span>
-              Open today · Consultation just ₹100
+            {/* Reviews — moved to top */}
+            <div className="flex items-center gap-4 mb-6">
+              <div className="flex -space-x-3">
+                <img src={reviewPriya} alt="" className="size-9 rounded-full border-2 border-background object-cover" />
+                <img src={reviewRahul} alt="" className="size-9 rounded-full border-2 border-background object-cover" />
+                <img src={reviewAnjali} alt="" className="size-9 rounded-full border-2 border-background object-cover" />
+                <div className="size-9 rounded-full border-2 border-background bg-primary text-primary-foreground text-[10px] font-bold flex items-center justify-center">500+</div>
+              </div>
+              <div className="text-sm">
+                <div className="flex items-center gap-1 text-accent">
+                  {[...Array(5)].map((_, i) => <Star key={i} className="size-3.5 fill-current" />)}
+                  <span className="text-foreground font-semibold ml-1">4.9</span>
+                </div>
+                <div className="text-xs text-muted-foreground">492+ verified Google reviews</div>
+              </div>
             </div>
+
             <h1 className="font-display text-[2.75rem] sm:text-6xl lg:text-7xl font-medium leading-[1.02] tracking-tight text-balance mb-6">
               Rajkot's most trusted{" "}
               <span className="italic text-primary relative">
@@ -276,32 +331,11 @@ export default function DentalLanding() {
                 </div>
               ))}
             </div>
-            <div className="flex items-center gap-4">
-              <div className="flex -space-x-3">
-                <img src={reviewPriya} alt="" className="size-9 rounded-full border-2 border-background object-cover" />
-                <img src={reviewRahul} alt="" className="size-9 rounded-full border-2 border-background object-cover" />
-                <img src={reviewAnjali} alt="" className="size-9 rounded-full border-2 border-background object-cover" />
-                <div className="size-9 rounded-full border-2 border-background bg-primary text-primary-foreground text-[10px] font-bold flex items-center justify-center">500+</div>
-              </div>
-              <div className="text-sm">
-                <div className="flex items-center gap-1 text-accent">
-                  {[...Array(5)].map((_, i) => <Star key={i} className="size-3.5 fill-current" />)}
-                  <span className="text-foreground font-semibold ml-1">4.9</span>
-                </div>
-                <div className="text-xs text-muted-foreground">492+ verified Google reviews</div>
-              </div>
-            </div>
           </div>
 
-          {/* Hero image */}
+          {/* Before & After — Above the fold */}
           <div className="animate-fade-up mt-4 lg:mt-0">
-            <img
-              src={heroPatient}
-              alt="Dr. Vipul Patel — Patel Dental Hospital, Rajkot"
-              width={1080}
-              height={1600}
-              className="w-full aspect-[3/4] object-contain object-center"
-            />
+            <CompactBeforeAfter />
           </div>
         </div>
       </section>

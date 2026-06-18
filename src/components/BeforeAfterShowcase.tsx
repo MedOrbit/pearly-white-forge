@@ -16,7 +16,7 @@ import compositeAfter from "@/assets/transformations/composite-after.jpg.asset.j
 
 type Orientation = "vertical" | "horizontal";
 
-const cases: { name: string; before: string; after: string; orientation: Orientation }[] = [
+export const cases: { name: string; before: string; after: string; orientation: Orientation }[] = [
   { name: "Braces", before: bracesBefore.url, after: bracesAfter.url, orientation: "vertical" },
   { name: "Invisalign", before: invisalignBefore.url, after: invisalignAfter.url, orientation: "vertical" },
   { name: "Porcelain Crowns", before: crownsBefore.url, after: crownsAfter.url, orientation: "horizontal" },
