@@ -249,6 +249,7 @@ function CompactBeforeAfter() {
       {/* Mobile: auto-sliding carousel */}
       <div className="lg:hidden">
         <div
+          ref={scrollRef}
           className="overflow-x-auto pb-2 -mx-5 px-5 snap-x snap-mandatory"
           style={{ scrollbarWidth: "none" }}
         >
