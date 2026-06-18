@@ -332,7 +332,7 @@ export default function DentalLanding() {
                 <CalendarCheck className="size-4" /> Book A Call
               </a>
             </div>
-            <div className="flex flex-wrap gap-x-5 gap-y-2 mb-8">
+            <div className="flex flex-wrap gap-x-5 gap-y-2 mb-0">
               {[
                 { label: "Painless treatments guaranteed" },
                 { label: "Same-day procedures available" },
@@ -359,7 +359,7 @@ export default function DentalLanding() {
         </div>
 
         {/* Before & After — Above the fold (mobile only) */}
-        <div className="max-w-7xl mx-auto mt-8 lg:hidden">
+        <div className="max-w-7xl mx-auto mt-4 lg:hidden">
           <CompactBeforeAfter />
         </div>
       </section>
