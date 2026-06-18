@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {
   Phone,
   CalendarCheck,
@@ -252,6 +252,17 @@ function CompactBeforeAfter() {
 
 
 export default function DentalLanding() {
+  const [showSticky, setShowSticky] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowSticky(window.scrollY > 120);
+    };
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll();
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden pb-24 md:pb-0">
       {/* Sticky Header */}
@@ -963,11 +974,13 @@ export default function DentalLanding() {
       </footer>
 
       {/* Mobile sticky CTA */}
-      <div className="md:hidden fixed bottom-3 left-3 right-3 z-50">
-        <a href="#book" className="w-full bg-primary text-primary-foreground py-3.5 rounded-2xl flex items-center justify-center gap-1.5 font-semibold text-sm shadow-xl">
-          <CalendarCheck className="size-4" /> Book A Call
-        </a>
-      </div>
+      {showSticky && (
+        <div className="md:hidden fixed bottom-3 left-3 right-3 z-50">
+          <a href="#book" className="w-full bg-primary text-primary-foreground py-3.5 rounded-2xl flex items-center justify-center gap-1.5 font-semibold text-sm shadow-xl">
+            <CalendarCheck className="size-4" /> Book A Call
+          </a>
+        </div>
+      )}
     </div>
   );
 }
