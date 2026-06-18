@@ -205,6 +205,7 @@ function FaqItem({ q, a }: { q: string; a: string }) {
 
 function CompactBeforeAfter() {
   const showCases = beforeAfterCases.slice(0, 4);
+  const scrollRef = useRef<HTMLDivElement>(null);
   const itemRefs = useRef<(HTMLDivElement | null)[]>([]);
   const [activeIdx, setActiveIdx] = useState(0);
 
@@ -216,11 +217,12 @@ function CompactBeforeAfter() {
   }, [showCases.length]);
 
   useEffect(() => {
-    itemRefs.current[activeIdx]?.scrollIntoView({
-      behavior: "smooth",
-      inline: "center",
-      block: "nearest",
-    });
+    const container = scrollRef.current;
+    const item = itemRefs.current[activeIdx];
+    if (container && item) {
+      const scrollLeft = item.offsetLeft - (container.offsetWidth - item.offsetWidth) / 2;
+      container.scrollTo({ left: scrollLeft, behavior: "smooth" });
+    }
   }, [activeIdx]);
 
   return (
@@ -247,6 +249,7 @@ function CompactBeforeAfter() {
       {/* Mobile: auto-sliding carousel */}
       <div className="lg:hidden">
         <div
+          ref={scrollRef}
           className="overflow-x-auto pb-2 -mx-5 px-5 snap-x snap-mandatory"
           style={{ scrollbarWidth: "none" }}
         >
