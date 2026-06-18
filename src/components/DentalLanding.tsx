@@ -400,7 +400,9 @@ export default function DentalLanding() {
         </div>
       </section>
 
-      <BeforeAfterShowcase />
+      <div className="hidden lg:block">
+        <BeforeAfterShowcase />
+      </div>
 
 
       {/* INSTAGRAM REELS */}
