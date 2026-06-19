@@ -429,7 +429,7 @@ export default function DentalLanding() {
         <div className="w-full max-w-7xl mx-auto grid lg:grid-cols-2 gap-10 lg:gap-10 lg:items-start relative">
           <div className="animate-fade-up lg:flex lg:flex-col">
             {/* Reviews */}
-            <div className="flex items-center gap-3 mb-6 lg:mb-6">
+            <div className="flex items-center gap-3 mb-6 lg:mb-8">
               <div className="flex -space-x-2.5">
                 <img src={reviewPriya} alt="" className="size-9 rounded-full border-2 border-background object-cover" />
                 <img src={reviewRahul} alt="" className="size-9 rounded-full border-2 border-background object-cover" />
@@ -445,7 +445,7 @@ export default function DentalLanding() {
               </div>
             </div>
 
-            <h1 className="font-display text-[2.75rem] sm:text-6xl lg:text-[3.25rem] font-medium leading-[1.02] lg:leading-[1.05] tracking-tight text-balance mb-6 lg:mb-6">
+            <h1 className="font-display text-[2.75rem] sm:text-6xl lg:text-[3.25rem] font-medium leading-[1.02] lg:leading-[1.05] tracking-tight text-balance mb-6 lg:mb-8">
               Rajkot's most trusted{" "}
               <span className="italic text-primary relative">
                 dental home
@@ -455,17 +455,17 @@ export default function DentalLanding() {
               </span>
               {" "}since 2012.
             </h1>
-            <p className="text-base text-muted-foreground max-w-[52ch] mb-4 lg:mb-6 leading-relaxed">
+            <p className="text-base text-muted-foreground max-w-[52ch] mb-4 lg:mb-8 leading-relaxed">
               Painless implants, single-visit root canals, smile designing and full-mouth rehabilitation by
               <span className="text-foreground font-medium"> Dr. Vipul Patel (FICOI)</span> — trusted by 500+ Rajkot families and rated 4.9★ on Google.
             </p>
 
-            <div className="flex flex-wrap gap-3 mb-6 lg:mb-6">
+            <div className="flex flex-wrap gap-3 mb-6 lg:mb-8">
               <a href="#book" className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-4 lg:px-5 lg:py-3 rounded-full text-sm font-semibold hover:opacity-90 transition shadow-lg shadow-primary/20">
                 <CalendarCheck className="size-4" /> Book A Call
               </a>
             </div>
-            <div className="flex flex-wrap gap-x-5 gap-y-2 lg:gap-x-4 lg:gap-y-4">
+            <div className="flex flex-wrap gap-x-5 gap-y-2 lg:gap-x-4 lg:gap-y-5">
               {[
                 { label: "Painless treatments guaranteed" },
                 { label: "Same-day procedures available" },
