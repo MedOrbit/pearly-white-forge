@@ -496,33 +496,6 @@ export default function DentalLanding() {
         </div>
       </section>
 
-      {/* INSTAGRAM REELS */}
-      <section className="py-20 lg:py-28 px-5 sm:px-6">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12 max-w-2xl mx-auto">
-            <p className="text-xs font-mono uppercase tracking-widest text-accent mb-3">From our reels</p>
-            <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl font-medium tracking-tight">
-              Watch us on <span className="italic text-primary">Instagram.</span>
-            </h2>
-          </div>
-          <div className="grid md:grid-cols-3 gap-6">
-            {["DYjtwGVSVjk", "DYcNJaKSRmi", "DXwYLHRSV0a"].map((id) => (
-              <div key={id} className="rounded-3xl overflow-hidden border border-border bg-background shadow-sm">
-                <iframe
-                  src={`https://www.instagram.com/reel/${id}/embed`}
-                  title={`Instagram reel ${id}`}
-                  loading="lazy"
-                  allow="encrypted-media"
-                  allowFullScreen
-                  scrolling="no"
-                  className="w-full"
-                  style={{ height: 720, border: 0 }}
-                />
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Stats — "We love to see people smile" */}
       <section className="py-20 lg:py-28 px-5 sm:px-6 bg-surface">
