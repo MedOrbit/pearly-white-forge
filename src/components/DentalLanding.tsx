@@ -414,6 +414,36 @@ export default function DentalLanding() {
       </div>
 
 
+      {/* INSTAGRAM REELS */}
+      <section className="py-20 lg:py-28 px-5 sm:px-6 bg-[#FDFCFB]">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12 max-w-2xl mx-auto">
+            <p className="text-xs font-mono uppercase tracking-widest text-accent mb-3">From our reels</p>
+            <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl font-medium tracking-tight">
+              Watch us on <span className="italic text-primary">Instagram.</span>
+            </h2>
+          </div>
+          <div className="grid md:grid-cols-3 gap-5 sm:gap-6">
+            {["DYjtwGVSVjk", "DYcNJaKSRmi", "DXwYLHRSV0a"].map((id) => (
+              <div key={id} className="group rounded-2xl overflow-hidden border border-[#0D4C44]/10 bg-white shadow-[0_1px_2px_rgba(13,76,68,0.04)] hover:shadow-[0_8px_24px_rgba(13,76,68,0.08)] transition-shadow">
+                <div className="relative w-full aspect-[9/16] max-h-[520px]">
+                  <iframe
+                    src={`https://www.instagram.com/reel/${id}/embed`}
+                    title={`Instagram reel ${id}`}
+                    loading="lazy"
+                    allow="encrypted-media"
+                    allowFullScreen
+                    scrolling="no"
+                    className="absolute inset-0 w-full h-full"
+                    style={{ border: 0 }}
+                  />
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* PATIENT TESTIMONIALS */}
       <section className="py-20 lg:py-28 px-5 sm:px-6 bg-[#FDFCFB]">
         <div className="max-w-7xl mx-auto">
