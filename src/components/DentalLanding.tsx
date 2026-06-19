@@ -425,18 +425,18 @@ export default function DentalLanding() {
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden pb-24 md:pb-0">
       {/* Sticky Header */}
       <header className="fixed top-0 left-0 right-0 z-50 bg-[#FDFCFB]/95 backdrop-blur-md border-b border-[#0D4C44]/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 h-14 sm:h-16 flex items-center justify-between">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 h-16 sm:h-20 flex items-center justify-between">
           <a href="#" className="flex items-center">
-            <img src={logoUrl} alt="Patel Dental Hospital" className="h-9 sm:h-11 w-auto object-contain" />
+            <img src={logoUrl} alt="Patel Dental Hospital" className="h-10 sm:h-14 w-auto object-contain" />
           </a>
           <div className="flex items-center gap-3 sm:gap-4">
-            <a href={`tel:${PHONE_PRIMARY_TEL}`} className="hidden sm:flex items-center gap-2 text-sm font-medium text-[#0D4C44]/90 hover:text-[#0D4C44] transition">
+            <a href={`tel:${PHONE_PRIMARY_TEL}`} className="hidden sm:flex items-center gap-2 text-base font-medium text-[#0D4C44]/90 hover:text-[#0D4C44] transition">
               <Phone className="size-4" /> {PHONE_PRIMARY}
             </a>
-            <a href={`tel:${PHONE_PRIMARY_TEL}`} className="sm:hidden flex items-center justify-center size-9 rounded-full bg-[#0D4C44]/5 text-[#0D4C44] active:scale-95 transition">
+            <a href={`tel:${PHONE_PRIMARY_TEL}`} className="sm:hidden flex items-center justify-center size-10 rounded-full bg-[#0D4C44]/5 text-[#0D4C44] active:scale-95 transition">
               <Phone className="size-4" />
             </a>
-            <a href="#book" className="bg-[#0D4C44] text-white px-4 sm:px-5 py-2 rounded-full text-xs sm:text-sm font-semibold hover:bg-[#0a3a34] transition">
+            <a href="#book" className="bg-[#0D4C44] text-white px-5 sm:px-6 py-2.5 rounded-full text-sm sm:text-base font-semibold hover:bg-[#0a3a34] transition">
               Book A Call
             </a>
           </div>
@@ -444,7 +444,7 @@ export default function DentalLanding() {
       </header>
 
       {/* Spacer for fixed header */}
-      <div className="h-14 sm:h-16" />
+      <div className="h-16 sm:h-20" />
 
       {/* HERO */}
       <section className="relative px-5 sm:px-6 pt-8 lg:pt-1 pb-6 lg:pb-0 lg:min-h-[calc(100vh-4rem)] lg:flex lg:flex-col lg:justify-between">
