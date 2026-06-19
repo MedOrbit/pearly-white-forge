@@ -66,7 +66,7 @@ function Card({ c }: { c: (typeof cases)[number] }) {
   );
 }
 
-export default function BeforeAfterShowcase() {
+export default function BeforeAfterShowcase({ showHeader = true }: { showHeader?: boolean }) {
   const trackRef = useRef<HTMLDivElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const [isDragging, setIsDragging] = useState(false);
@@ -209,14 +209,16 @@ export default function BeforeAfterShowcase() {
 
   return (
     <section className="py-16 lg:py-24 bg-surface overflow-hidden">
-      <div className="max-w-6xl mx-auto px-5 sm:px-6 mb-10 text-center">
-        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold tracking-tight text-foreground">
-          Real Smiles, Real Transformations
-        </h2>
-        <p className="mt-3 text-muted-foreground max-w-xl mx-auto">
-          A glimpse of the results we deliver every day.
-        </p>
-      </div>
+      {showHeader && (
+        <div className="max-w-6xl mx-auto px-5 sm:px-6 mb-10 text-center">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold tracking-tight text-foreground">
+            Real Smiles, Real Transformations
+          </h2>
+          <p className="mt-3 text-muted-foreground max-w-xl mx-auto">
+            A glimpse of the results we deliver every day.
+          </p>
+        </div>
+      )}
 
       <div
         ref={containerRef}
