@@ -470,11 +470,11 @@ export default function DentalLanding() {
               </div>
             </div>
 
-            <h1 className="font-display text-[2rem] sm:text-5xl lg:text-[3.5rem] xl:text-[3.8rem] font-medium leading-[1.05] tracking-tight text-balance mb-3 lg:mb-3">
+            <h1 className="font-display text-[2.5rem] sm:text-5xl lg:text-[3.5rem] xl:text-[3.8rem] font-medium leading-[1.05] tracking-tight text-balance mb-3 lg:mb-3">
               Rajkot's most trusted{" "}
               <span className="italic text-primary relative">
                 dental home
-                <svg className="absolute -bottom-1.5 left-0 w-full hidden sm:block" viewBox="0 0 200 12" fill="none">
+                <svg className="absolute -bottom-1.5 left-0 w-full" viewBox="0 0 200 12" fill="none">
                   <path d="M2 9 Q 100 -2 198 7" stroke="currentColor" strokeWidth="3" strokeLinecap="round" className="text-accent" />
                 </svg>
               </span>
