@@ -485,7 +485,7 @@ export default function DentalLanding() {
               <span className="text-foreground font-medium"> Dr. Vipul Patel (FICOI)</span> — trusted by 500+ Rajkot families and rated 4.9★ on Google.
             </p>
 
-            <div className="flex flex-wrap gap-3 mb-7 lg:mb-7">
+            <div className="flex flex-wrap gap-3 mb-5 lg:mb-5">
               <a href="#book" className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-4 rounded-full text-sm font-semibold hover:opacity-90 transition shadow-lg shadow-primary/20">
                 <CalendarCheck className="size-4" /> Book A Call
               </a>
