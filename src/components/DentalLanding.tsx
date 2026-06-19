@@ -331,14 +331,14 @@ function CompactBeforeAfter() {
           className="overflow-x-auto pb-1 snap-x snap-mandatory"
           style={{ scrollbarWidth: "none" }}
         >
-          <div className="flex gap-4 w-max px-[calc((100vw-1280px)/2+1.25rem)] min-[1280px]:px-5">
+          <div className="flex gap-4 w-max px-5 sm:px-6">
             {showCases.map((c, i) => (
               <div
                 key={i}
                 ref={(el) => { desktopItemRefs.current[i] = el; }}
-                className="w-[350px] xl:w-[390px] shrink-0 rounded-2xl bg-card p-2 shadow-sm ring-1 ring-black/[0.05] snap-center"
+                className="w-[340px] xl:w-[380px] shrink-0 rounded-2xl bg-card p-2 shadow-sm ring-1 ring-black/[0.05] snap-center"
               >
-                <div className="grid grid-cols-2 gap-1.5 h-[132px] xl:h-[148px]">
+                <div className="grid grid-cols-2 gap-1.5 aspect-[2/1]">
                   <div className="relative rounded-xl overflow-hidden">
                     <img src={c.before} alt={`${c.name} before`} className="w-full h-full object-cover" draggable={false} loading="lazy" />
                     <span className="absolute bottom-1 left-1/2 -translate-x-1/2 bg-card text-foreground text-[9px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full shadow-sm">Before</span>
@@ -516,8 +516,8 @@ export default function DentalLanding() {
           </div>
         </div>
 
-        {/* Before & After — Above the fold */}
-        <div className="max-w-7xl mx-auto mt-4 lg:mt-2">
+        {/* Before & After — Above the fold (full-bleed) */}
+        <div className="mt-4 lg:mt-2 -mx-5 sm:-mx-6">
           <CompactBeforeAfter />
         </div>
       </section>
