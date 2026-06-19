@@ -325,36 +325,36 @@ function CompactBeforeAfter() {
   return (
     <div className="relative select-none">
       {/* Desktop: auto-sliding horizontal carousel */}
-      <div className="hidden lg:block">
+          <div className="hidden lg:block">
         <div
           ref={desktopScrollRef}
-          className="overflow-x-auto pb-2 snap-x snap-mandatory"
+          className="overflow-x-auto pb-1 snap-x snap-mandatory"
           style={{ scrollbarWidth: "none" }}
         >
-          <div className="flex gap-4 w-max px-[20%]">
+          <div className="flex gap-3 w-max px-[calc((100vw-1280px)/2+1.25rem)] min-[1280px]:px-5">
             {showCases.map((c, i) => (
               <div
                 key={i}
                 ref={(el) => { desktopItemRefs.current[i] = el; }}
-                className="w-[420px] shrink-0 rounded-2xl bg-card p-3 shadow-sm ring-1 ring-black/[0.05] snap-center"
+                className="w-[300px] xl:w-[330px] shrink-0 rounded-2xl bg-card p-2 shadow-sm ring-1 ring-black/[0.05] snap-center"
               >
-                <div className="grid grid-cols-2 gap-2 h-[180px]">
+                <div className="grid grid-cols-2 gap-1.5 h-[96px] xl:h-[104px]">
                   <div className="relative rounded-xl overflow-hidden">
                     <img src={c.before} alt={`${c.name} before`} className="w-full h-full object-cover" draggable={false} loading="lazy" />
-                    <span className="absolute bottom-1.5 left-1/2 -translate-x-1/2 bg-white text-[#1a1a1a] text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full shadow-sm">Before</span>
+                    <span className="absolute bottom-1 left-1/2 -translate-x-1/2 bg-card text-foreground text-[9px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full shadow-sm">Before</span>
                   </div>
                   <div className="relative rounded-xl overflow-hidden">
                     <img src={c.after} alt={`${c.name} after`} className="w-full h-full object-cover" draggable={false} loading="lazy" />
-                    <span className="absolute bottom-1.5 left-1/2 -translate-x-1/2 bg-white text-[#1a1a1a] text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full shadow-sm">After</span>
+                    <span className="absolute bottom-1 left-1/2 -translate-x-1/2 bg-card text-foreground text-[9px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full shadow-sm">After</span>
                   </div>
                 </div>
-                <p className="mt-2.5 text-center text-sm font-semibold text-foreground">{c.name}</p>
+                <p className="mt-1.5 text-center text-xs font-semibold text-foreground">{c.name}</p>
               </div>
             ))}
           </div>
         </div>
         {/* Dot indicators */}
-        <div className="flex justify-center gap-1.5 mt-3">
+        <div className="flex justify-center gap-1.5 mt-2">
           {showCases.map((_, i) => (
             <div
               key={i}
@@ -447,14 +447,14 @@ export default function DentalLanding() {
       <div className="h-14 sm:h-16" />
 
       {/* HERO */}
-      <section className="relative px-5 sm:px-6 pt-2 lg:pt-4 pb-6 lg:pb-6">
+      <section className="relative px-5 sm:px-6 pt-2 lg:pt-2 pb-5 lg:pb-3">
         <div className="absolute top-32 -left-20 size-80 bg-accent/10 rounded-full blur-3xl pointer-events-none" />
         <div className="absolute bottom-0 right-0 size-96 bg-primary/10 rounded-full blur-3xl pointer-events-none" />
 
-        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-10 lg:gap-16 items-center relative">
+        <div className="max-w-7xl mx-auto grid lg:grid-cols-[0.88fr_1.12fr] gap-10 lg:gap-12 items-center relative">
           <div className="animate-fade-up">
             {/* Reviews — moved to top */}
-            <div className="flex items-center gap-4 mb-6">
+            <div className="flex items-center gap-4 mb-6 lg:mb-4">
               <div className="flex -space-x-3">
                 <img src={reviewPriya} alt="" className="size-9 rounded-full border-2 border-background object-cover" />
                 <img src={reviewRahul} alt="" className="size-9 rounded-full border-2 border-background object-cover" />
@@ -470,7 +470,7 @@ export default function DentalLanding() {
               </div>
             </div>
 
-            <h1 className="font-display text-[2.75rem] sm:text-6xl lg:text-7xl font-medium leading-[1.02] tracking-tight text-balance mb-6">
+            <h1 className="font-display text-[2.75rem] sm:text-6xl lg:text-[4rem] xl:text-[4.35rem] font-medium leading-[1.02] tracking-tight text-balance mb-6 lg:mb-5">
               Rajkot's most trusted{" "}
               <span className="italic text-primary relative">
                 dental home
@@ -480,12 +480,12 @@ export default function DentalLanding() {
               </span>
               {" "}since 2012.
             </h1>
-            <p className="text-lg text-muted-foreground max-w-[52ch] mb-8 leading-relaxed">
+            <p className="text-lg lg:text-base xl:text-lg text-muted-foreground max-w-[52ch] mb-8 lg:mb-6 leading-relaxed">
               Painless implants, single-visit root canals, smile designing and full-mouth rehabilitation by
               <span className="text-foreground font-medium"> Dr. Vipul Patel (FICOI)</span> — trusted by 500+ Rajkot families and rated 4.9★ on Google.
             </p>
 
-            <div className="flex flex-wrap gap-3 mb-6">
+            <div className="flex flex-wrap gap-3 mb-6 lg:mb-5">
               <a href="#book" className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-4 rounded-full text-sm font-semibold hover:opacity-90 transition shadow-lg shadow-primary/20">
                 <CalendarCheck className="size-4" /> Book A Call
               </a>
@@ -511,13 +511,13 @@ export default function DentalLanding() {
               alt="Dr. Vipul Patel — Patel Dental Hospital, Rajkot"
               width={1080}
               height={1600}
-              className="w-full aspect-[3/4] object-contain object-center"
+              className="w-full h-[520px] xl:h-[560px] object-contain object-center"
             />
           </div>
         </div>
 
-        {/* Before & After — Above the fold (mobile only) */}
-        <div className="max-w-7xl mx-auto mt-6 lg:mt-8">
+        {/* Before & After — Above the fold */}
+        <div className="max-w-7xl mx-auto mt-6 lg:mt-0">
           <CompactBeforeAfter />
         </div>
       </section>
