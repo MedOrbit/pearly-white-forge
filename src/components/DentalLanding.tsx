@@ -451,8 +451,8 @@ export default function DentalLanding() {
         <div className="absolute top-32 -left-20 size-80 bg-accent/10 rounded-full blur-3xl pointer-events-none" />
         <div className="absolute bottom-0 right-0 size-96 bg-primary/10 rounded-full blur-3xl pointer-events-none" />
 
-        <div className="max-w-7xl mx-auto grid lg:grid-cols-[0.88fr_1.12fr] gap-10 lg:gap-12 items-start relative">
-          <div className="animate-fade-up">
+        <div className="max-w-7xl mx-auto grid lg:grid-cols-[0.88fr_1.12fr] gap-10 lg:gap-12 items-stretch flex-1">
+          <div className="animate-fade-up flex flex-col justify-center lg:py-6">
             {/* Reviews — moved to top */}
             <div className="flex items-center gap-4 mb-3 lg:mb-2">
               <div className="flex -space-x-3">
@@ -504,8 +504,8 @@ export default function DentalLanding() {
             </div>
           </div>
 
-          {/* Doctor image — desktop only */}
-          <div className="hidden lg:block animate-fade-up overflow-hidden rounded-2xl h-[380px] xl:h-[420px]">
+          {/* Doctor image — desktop only, fill available height */}
+          <div className="hidden lg:flex animate-fade-up overflow-hidden rounded-2xl items-end">
             <img
               src={heroPatient}
               alt="Dr. Vipul Patel — Patel Dental Hospital, Rajkot"
