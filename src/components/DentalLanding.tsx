@@ -470,7 +470,7 @@ export default function DentalLanding() {
               </div>
             </div>
 
-            <h1 className="font-display text-[2.5rem] sm:text-5xl lg:text-[3.5rem] xl:text-[3.8rem] font-medium leading-[1.05] tracking-tight text-balance mb-5 lg:mb-3">
+            <h1 className="font-display text-[2.75rem] sm:text-6xl lg:text-[4rem] xl:text-[4.5rem] font-medium leading-[1.05] tracking-tight text-balance mb-5 lg:mb-3">
               Rajkot's most trusted{" "}
               <span className="italic text-primary relative">
                 dental home
@@ -529,7 +529,7 @@ export default function DentalLanding() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12 max-w-2xl mx-auto">
             <p className="text-xs font-mono uppercase tracking-widest text-accent mb-3">From our reels</p>
-            <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl font-medium tracking-tight">
+            <h2 className="font-display text-5xl sm:text-6xl lg:text-7xl font-medium tracking-tight">
               Watch us on <span className="italic text-primary">Instagram.</span>
             </h2>
           </div>
@@ -559,7 +559,7 @@ export default function DentalLanding() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12 max-w-2xl mx-auto">
             <p className="text-xs font-mono uppercase tracking-widest text-accent mb-3">Patient stories</p>
-            <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl font-medium tracking-tight">
+            <h2 className="font-display text-5xl sm:text-6xl lg:text-7xl font-medium tracking-tight">
               Loved by our <span className="italic text-primary">patients.</span>
             </h2>
           </div>
@@ -620,7 +620,7 @@ export default function DentalLanding() {
       {/* PAINLESS PROMISE */}
       <section className="py-20 lg:py-28 px-5 sm:px-6 bg-[#F5F0EC]">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-medium tracking-tight text-[#1a1a1a] leading-tight">
+          <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl font-medium tracking-tight text-[#1a1a1a] leading-tight">
             You've been avoiding the dentist because the last one hurt. <span className="italic text-[#0D4C44]">This won't.</span>
           </h2>
           <p className="mt-6 text-base sm:text-lg text-[#1a1a1a]/70 leading-relaxed">
@@ -644,7 +644,7 @@ export default function DentalLanding() {
             <p className="text-xs font-mono uppercase tracking-widest text-accent mb-3">
               Patel Dental Hospital — Dental Clinic in Rajkot
             </p>
-            <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl font-medium tracking-tight text-primary">
+            <h2 className="font-display text-5xl sm:text-6xl lg:text-7xl font-medium tracking-tight text-primary">
               We love to see <span className="italic">people smile.</span>
             </h2>
             <p className="mt-5 text-base text-muted-foreground">
@@ -669,7 +669,7 @@ export default function DentalLanding() {
                   <Icon className="size-12 sm:size-14" fill="currentColor" strokeWidth={1.5} />
                 </div>
                 <div>
-                  <div className="font-display text-3xl sm:text-4xl font-semibold text-foreground leading-none">
+                  <div className="font-display text-4xl sm:text-5xl font-semibold text-foreground leading-none">
                     {val}
                   </div>
                   <div className="text-sm text-muted-foreground mt-2">{label}</div>
@@ -687,7 +687,7 @@ export default function DentalLanding() {
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 lg:mb-20 gap-6">
             <div>
               <p className="text-xs font-mono uppercase tracking-widest text-accent mb-3">Our services</p>
-              <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl font-medium tracking-tight max-w-xl">
+              <h2 className="font-display text-5xl sm:text-6xl lg:text-7xl font-medium tracking-tight max-w-xl">
                 Complete dental care, <span className="italic text-primary">under one roof.</span>
               </h2>
             </div>
@@ -722,7 +722,7 @@ export default function DentalLanding() {
                   <p className="text-[11px] sm:text-xs font-mono uppercase tracking-[0.2em] text-accent mb-5">
                     {dream}
                   </p>
-                  <h3 className="font-display text-3xl sm:text-4xl lg:text-5xl font-medium leading-[1.1] tracking-tight text-foreground mb-6">
+                  <h3 className="font-display text-4xl sm:text-5xl lg:text-6xl font-medium leading-[1.1] tracking-tight text-foreground mb-6">
                     {heading}
                   </h3>
                   <p className="text-base sm:text-lg text-muted-foreground leading-relaxed mb-8 max-w-xl">
@@ -754,7 +754,7 @@ export default function DentalLanding() {
             <div className="absolute inset-0 flex items-center px-8 sm:px-12 lg:px-16">
               <div className="max-w-xl text-primary-foreground">
                 <p className="text-xs font-mono uppercase tracking-widest text-accent mb-3">The clinic</p>
-                <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-medium leading-tight mb-5">
+                <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl font-medium leading-tight mb-5">
                   A clinic built for your <span className="italic">comfort.</span>
                 </h2>
                 <p className="text-primary-foreground/80 leading-relaxed mb-6 max-w-md">
@@ -776,7 +776,7 @@ export default function DentalLanding() {
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
             <div>
               <p className="text-xs font-mono uppercase tracking-widest text-accent mb-3">Inside Patel Dental</p>
-              <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl font-medium tracking-tight max-w-xl leading-tight">
+              <h2 className="font-display text-5xl sm:text-6xl lg:text-7xl font-medium tracking-tight max-w-xl leading-tight">
                 Step into our <span className="italic text-primary">clinic.</span>
               </h2>
             </div>
@@ -822,7 +822,7 @@ export default function DentalLanding() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-14 max-w-2xl mx-auto">
             <p className="text-xs font-mono uppercase tracking-widest text-accent mb-3">Meet your dentists</p>
-            <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl font-medium tracking-tight">
+            <h2 className="font-display text-5xl sm:text-6xl lg:text-7xl font-medium tracking-tight">
               Specialists who actually <span className="italic text-primary">listen.</span>
             </h2>
           </div>
@@ -858,7 +858,7 @@ export default function DentalLanding() {
         <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
           <div>
             <p className="text-xs font-mono uppercase tracking-widest text-accent mb-3">Why Patel Dental Hospital</p>
-            <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl font-medium mb-6 leading-tight">
+            <h2 className="font-display text-5xl sm:text-6xl lg:text-7xl font-medium mb-6 leading-tight">
               The Rajkot difference, <span className="italic">since 2012.</span>
             </h2>
             <p className="text-primary-foreground/70 mb-8 leading-relaxed max-w-md">
@@ -895,7 +895,7 @@ export default function DentalLanding() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-14 max-w-2xl mx-auto">
             <p className="text-xs font-mono uppercase tracking-widest text-accent mb-3">How it works</p>
-            <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl font-medium tracking-tight">
+            <h2 className="font-display text-5xl sm:text-6xl lg:text-7xl font-medium tracking-tight">
               From hello to a healthier smile.
             </h2>
           </div>
@@ -922,7 +922,7 @@ export default function DentalLanding() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-14 max-w-2xl mx-auto">
             <p className="text-xs font-mono uppercase tracking-widest text-accent mb-3">Technology</p>
-            <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl font-medium tracking-tight">
+            <h2 className="font-display text-5xl sm:text-6xl lg:text-7xl font-medium tracking-tight">
               Precision tools, <span className="italic text-primary">gentle hands.</span>
             </h2>
             <p className="text-muted-foreground mt-5 leading-relaxed">
@@ -953,7 +953,7 @@ export default function DentalLanding() {
         <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <div>
             <p className="text-xs font-mono uppercase tracking-widest text-accent mb-3">Transparent pricing</p>
-            <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl font-medium tracking-tight mb-6 leading-tight">
+            <h2 className="font-display text-5xl sm:text-6xl lg:text-7xl font-medium tracking-tight mb-6 leading-tight">
               Quality care, <span className="italic text-primary">honest pricing.</span>
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-8 max-w-md">
@@ -1000,7 +1000,7 @@ export default function DentalLanding() {
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
             <div>
               <p className="text-xs font-mono uppercase tracking-widest text-accent mb-3">Trusted credentials</p>
-              <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl font-medium tracking-tight max-w-xl leading-tight">
+              <h2 className="font-display text-5xl sm:text-6xl lg:text-7xl font-medium tracking-tight max-w-xl leading-tight">
                 Recognised <span className="italic">expertise.</span>
               </h2>
             </div>
@@ -1031,7 +1031,7 @@ export default function DentalLanding() {
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-14 gap-6">
             <div>
               <p className="text-xs font-mono uppercase tracking-widest text-accent mb-3">Patient stories</p>
-              <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl font-medium tracking-tight max-w-xl">
+              <h2 className="font-display text-5xl sm:text-6xl lg:text-7xl font-medium tracking-tight max-w-xl">
                 Real reviews, <span className="italic text-primary">real Rajkot smiles.</span>
               </h2>
             </div>
@@ -1076,7 +1076,7 @@ export default function DentalLanding() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-14 max-w-2xl mx-auto">
             <p className="text-xs font-mono uppercase tracking-widest text-accent mb-3">Visit us</p>
-            <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl font-medium tracking-tight">
+            <h2 className="font-display text-5xl sm:text-6xl lg:text-7xl font-medium tracking-tight">
               Two clinics across <span className="italic text-primary">Rajkot.</span>
             </h2>
             <p className="text-muted-foreground mt-5 leading-relaxed">
@@ -1116,7 +1116,7 @@ export default function DentalLanding() {
                 />
                 <div className="p-7 flex flex-col grow">
                   <div className="flex items-start justify-between gap-3 mb-3">
-                    <h3 className="font-display text-2xl font-semibold text-primary leading-tight">{b.name}</h3>
+                    <h3 className="font-display text-3xl font-semibold text-primary leading-tight">{b.name}</h3>
                     <span className="text-[10px] font-mono uppercase tracking-widest text-accent bg-accent/10 px-2.5 py-1 rounded-full whitespace-nowrap">{b.tag}</span>
                   </div>
                   <p className="text-sm text-foreground/80 leading-relaxed flex items-start gap-2 mb-3">
@@ -1152,7 +1152,7 @@ export default function DentalLanding() {
             </div>
             <div>
               <p className="text-xs font-mono uppercase tracking-widest text-accent mb-1">New patient offer</p>
-              <h3 className="font-display text-2xl sm:text-3xl">
+              <h3 className="font-display text-3xl sm:text-4xl">
                 ₹100 consultation + <span className="italic">complimentary</span> treatment plan
               </h3>
             </div>
