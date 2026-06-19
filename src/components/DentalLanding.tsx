@@ -492,7 +492,7 @@ export default function DentalLanding() {
         </div>
 
         {/* Before & After — below hero on all screens */}
-        <div className="w-full max-w-7xl mx-auto mt-4 lg:mt-8">
+        <div className="w-full max-w-7xl mx-auto mt-4 lg:mt-0 lg:mb-2">
           <CompactBeforeAfter />
         </div>
       </section>
