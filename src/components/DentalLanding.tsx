@@ -93,26 +93,114 @@ const WHATSAPP_LINK = "https://wa.me/919510397046?text=Hi%20Patel%20Dental%20Hos
 const EMAIL = "info@pateldentalhospital.com";
 
 const treatments = [
-  { img: txCheckup, name: "Dental Consultation", desc: "Detailed oral check-up with Dr. Vipul Patel. Just ₹100 — transparent, no hidden charges." },
-  { img: txImplants, name: "Dental Implants", desc: "Single tooth to full-mouth implants, performed by FICOI-certified implantologist since 2012." },
-  { img: txFullmouth, name: "Full Mouth Rehabilitation", desc: "Complete reconstruction for worn, broken or missing teeth — function plus aesthetics restored." },
-  { img: txRootcanal, name: "Single-Visit Root Canal", desc: "Painless RCT completed in one sitting using rotary endodontics. Save your natural tooth." },
-  { img: txLaser, name: "Laser Dentistry", desc: "Sutureless gum treatments, faster healing, less bleeding — laser-assisted modern care." },
-  { img: txSmile, name: "Smile Designing", desc: "Cosmetic makeovers customised to your face — designed to make you smile with confidence." },
-  { img: txWhitening, name: "Teeth Whitening & Bleaching", desc: "Visibly brighter teeth in one in-clinic session — safe, dentist-grade, long-lasting." },
-  { img: txCrowns, name: "Zirconia & BruxZir Crowns", desc: "Premium zirconia and ceramic crowns/bridges — natural-looking, metal-free, ultra-durable." },
-  { img: txVeneers, name: "Porcelain Veneers", desc: "Ultra-thin shells that instantly fix chips, gaps and stains — Hollywood smile, no compromise." },
-  { img: txAligners, name: "Clear Aligners", desc: "Invisible orthodontics for adults and teens — straighten teeth without metal braces." },
-  { img: txBraces, name: "Braces & Orthodontics", desc: "Metal, ceramic and lingual braces for misaligned teeth — for kids, teens and adults." },
-  { img: txPediatric, name: "Pediatric Dentistry", desc: "Gentle, child-friendly care — pulpectomy, sealants, fluoride and first-visit comfort." },
-  { img: txScaling, name: "Scaling & Polishing", desc: "Professional cleaning to remove plaque, stains and tartar — fresher breath in one visit." },
-  { img: txFillings, name: "Tooth-Coloured Fillings", desc: "Composite fillings that match your natural tooth — mercury-free and long-lasting." },
-  { img: txExtraction, name: "Tooth & Wisdom Extraction", desc: "Surgical removal of decayed, broken or impacted wisdom teeth — safe and quick recovery." },
-  { img: txDentures, name: "Dentures (incl. Batrisi)", desc: "Custom complete and partial dentures, including implant-supported Batrisi denture." },
-  { img: txGums, name: "Gum Treatments", desc: "Flap surgery, gingivectomy, depigmentation and bleeding-gum care by specialists." },
-  { img: txNightguard, name: "Apicoectomy & Surgery", desc: "Endodontic micro-surgery, removal of cysts, tumours and impacted teeth — done in-house." },
-  { img: txFacial, name: "Dental Jewellery", desc: "Add a tasteful sparkle to your smile — safe, painless, removable dental jewellery." },
-  { img: txSedation, name: "Oral Cancer Screening", desc: "Early-stage detection of OSMF and oral cancer through biopsy and clinical exam." },
+  {
+    img: txImplants,
+    name: "Dental Implants",
+    dream: "Your smile, whole again — for good",
+    heading: "Bite into anything and laugh without a second thought — with teeth that feel like your own.",
+    sub: "Permanent implants that look, feel and function like natural teeth — no gaps, no slipping dentures. Placed with 3D-guided precision by our in-house implant specialists, so it's done right the first time.",
+    cta: "Book your implant consultation",
+    href: "#book",
+  },
+  {
+    img: txAligners,
+    name: "Clear Aligners",
+    dream: "A straighter smile no one sees coming",
+    heading: "Straighten your teeth without a single person noticing.",
+    sub: "Clear, removable aligners — no metal brackets, no diet restrictions, no awkward photos. We map your whole transformation from a digital scan, so you see the result before you start.",
+    cta: "Book your aligner consultation",
+    href: "#book",
+  },
+  {
+    img: txSmile,
+    name: "Cosmetic Dentistry",
+    dream: "The smile you've always wanted",
+    heading: "Walk out with a smile you can't stop showing off.",
+    sub: "A makeover built around your face — whitening, veneers and alignment combined into one plan. You'll preview your new smile with a digital design before anything is done.",
+    cta: "Book your smile consultation",
+    href: "#book",
+  },
+  {
+    img: txVeneers,
+    name: "Veneers",
+    dream: "A flawless front row, fast",
+    heading: "Hide chips, gaps and stains behind a flawless, natural-looking smile.",
+    sub: "Custom porcelain veneers, hand-shaded to match you, transform your front teeth in as few as two visits — no one will guess they aren't real.",
+    cta: "Book your veneer consultation",
+    href: "#book",
+  },
+  {
+    img: txWhitening,
+    name: "Teeth Whitening",
+    dream: "Several shades brighter, today",
+    heading: "Walk in dull, walk out shades brighter — in a single visit.",
+    sub: "Safe, professional whitening that's far stronger than any kit, with little to no sensitivity. Get in-clinic results today, or a take-home kit at your pace.",
+    cta: "Book your whitening session",
+    href: "#book",
+  },
+  {
+    img: txCheckup,
+    name: "Emergency Dentist",
+    dream: "In pain? Seen today.",
+    heading: "Stop the pain today — same-day care when you simply can't wait.",
+    sub: "Toothache, a broken or knocked-out tooth, swelling — we keep slots open every day for emergencies. Message us on WhatsApp and we'll get you in fast.",
+    cta: "Call / WhatsApp now",
+    href: WHATSAPP_LINK,
+  },
+  {
+    img: txRootcanal,
+    name: "Root Canal",
+    dream: "Keep your tooth, lose the pain",
+    heading: "Save your tooth and end the pain — in a root canal you'll barely feel.",
+    sub: "Forget the horror stories. Modern rotary techniques make it gentle and often a single visit — so you keep your natural tooth instead of losing it.",
+    cta: "Book your root canal consultation",
+    href: "#book",
+  },
+  {
+    img: txCrowns,
+    name: "Dental Crowns",
+    dream: "Your tooth, rebuilt good as new",
+    heading: "Restore a cracked or worn-down tooth to full strength — and a natural look.",
+    sub: "Durable, colour-matched crowns that protect and rebuild a damaged tooth so you can chew normally again. Precision-fitted, with same-day options for many cases.",
+    cta: "Book your crown consultation",
+    href: "#book",
+  },
+  {
+    img: txScaling,
+    name: "Dental Cleaning",
+    dream: "A fresh, healthy start",
+    heading: "Walk out with a clean, fresh mouth — and stop small problems before they grow.",
+    sub: "A gentle, thorough cleaning that removes the plaque, tartar and stains brushing can't, plus a full check so nothing sneaks up on you. Fresher breath, healthier gums, fewer surprises.",
+    cta: "Book your cleaning",
+    href: "#book",
+  },
+  {
+    img: txFillings,
+    name: "Dental Fillings",
+    dream: "Cavity gone, no one can tell",
+    heading: "Fix that cavity with a filling no one will ever see.",
+    sub: "Tooth-coloured fillings that blend in perfectly while stopping the decay and ending the sensitivity — done gently, usually in a single visit.",
+    cta: "Book your filling appointment",
+    href: "#book",
+  },
+  {
+    img: txExtraction,
+    name: "Tooth Extraction",
+    dream: "Out with the problem, gently",
+    heading: "Remove a problem tooth gently — with less pain and faster healing.",
+    sub: "From simple removals to wisdom teeth, our painless, often laser-assisted approach means less discomfort, less swelling, and clear aftercare so you heal quickly.",
+    cta: "Book your extraction consultation",
+    href: "#book",
+  },
+  {
+    img: txDentures,
+    name: "Dentures",
+    dream: "Eat, speak and smile with confidence again",
+    heading: "Smile and eat confidently again — with dentures that fit and look natural.",
+    sub: "Custom full or partial dentures shaped for a comfortable, secure fit — no slipping, no bulk. Ask about implant-supported options that lock firmly in place.",
+    cta: "Book your denture consultation",
+    href: "#book",
+  },
 ];
 
 const faqs = [
@@ -574,7 +662,7 @@ export default function DentalLanding() {
       {/* TREATMENTS */}
       <section id="treatments" className="py-20 lg:py-28 px-5 sm:px-6 bg-surface">
         <div className="max-w-7xl mx-auto">
-          <div className="flex flex-col md:flex-row md:items-end justify-between mb-14 gap-6">
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 lg:mb-20 gap-6">
             <div>
               <p className="text-xs font-mono uppercase tracking-widest text-accent mb-3">Our services</p>
               <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl font-medium tracking-tight max-w-xl">
@@ -587,21 +675,44 @@ export default function DentalLanding() {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 sm:gap-6">
-            {treatments.map(({ img, name, desc }) => (
-              <div key={name}
-                className="group bg-background rounded-3xl border border-border overflow-hidden hover:-translate-y-1 hover:shadow-2xl hover:shadow-primary/10 hover:border-primary/30 transition-all duration-300 flex flex-col">
-                <div className="relative overflow-hidden aspect-[4/3] bg-surface">
-                  <img src={img} alt={name} loading="lazy" width={800} height={600}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-foreground/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition" />
+          <div className="space-y-16 sm:space-y-20 lg:space-y-28">
+            {treatments.map(({ img, name, dream, heading, sub, cta, href }, idx) => (
+              <div
+                key={name}
+                className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center"
+              >
+                {/* Image */}
+                <div className={`relative ${idx % 2 === 1 ? "lg:order-2" : ""}`}>
+                  <div className="relative overflow-hidden rounded-2xl bg-background aspect-square lg:aspect-[4/5] shadow-[0_20px_60px_-20px_rgba(13,76,68,0.25)]">
+                    <img
+                      src={img}
+                      alt={name}
+                      loading="lazy"
+                      width={1000}
+                      height={1200}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
                 </div>
-                <div className="p-5 sm:p-6 flex flex-col grow">
-                  <h3 className="font-display text-lg sm:text-xl font-semibold leading-tight mb-2">{name}</h3>
-                  <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed mb-5 grow">{desc}</p>
-                  <a href="#book"
-                    className="inline-flex items-center justify-center gap-1.5 self-start text-xs font-semibold text-primary border-b border-primary/30 hover:border-primary pb-0.5 transition">
-                    Book now <ArrowRight className="size-3.5 group-hover:translate-x-0.5 transition" />
+
+                {/* Content */}
+                <div className={`flex flex-col ${idx % 2 === 1 ? "lg:order-1" : ""}`}>
+                  <p className="text-[11px] sm:text-xs font-mono uppercase tracking-[0.2em] text-accent mb-5">
+                    {dream}
+                  </p>
+                  <h3 className="font-display text-3xl sm:text-4xl lg:text-5xl font-medium leading-[1.1] tracking-tight text-foreground mb-6">
+                    {heading}
+                  </h3>
+                  <p className="text-base sm:text-lg text-muted-foreground leading-relaxed mb-8 max-w-xl">
+                    {sub}
+                  </p>
+                  <a
+                    href={href}
+                    {...(href.startsWith("http") ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+                    className="group inline-flex items-center justify-center gap-2 self-start px-7 py-4 rounded-full bg-primary text-primary-foreground text-sm font-semibold tracking-wide hover:bg-primary/90 transition shadow-[0_10px_30px_-10px_rgba(13,76,68,0.45)]"
+                  >
+                    {cta}
+                    <ArrowRight className="size-4 group-hover:translate-x-0.5 transition" />
                   </a>
                 </div>
               </div>
