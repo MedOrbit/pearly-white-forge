@@ -325,7 +325,7 @@ function CompactBeforeAfter() {
       <div className="hidden lg:grid grid-cols-4 gap-3">
         {showCases.map((c, i) => (
           <div key={i} className="rounded-xl bg-card p-2 shadow-sm ring-1 ring-black/[0.05]">
-            <div className="grid grid-cols-2 gap-1.5 h-[80px]">
+            <div className="grid grid-cols-2 gap-1.5 h-[96px]">
               <div className="relative rounded-lg overflow-hidden">
                 <img src={c.before} alt={`${c.name} before`} className="w-full h-full object-cover" draggable={false} loading="lazy" />
                 <span className="absolute bottom-1 left-1/2 -translate-x-1/2 bg-white text-[#1a1a1a] text-[8px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full shadow-sm">Before</span>
