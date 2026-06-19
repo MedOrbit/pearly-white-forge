@@ -479,14 +479,20 @@ export default function DentalLanding() {
             </div>
           </div>
 
-          {/* Before & After cards — desktop only */}
+          {/* Doctor image — desktop only */}
           <div className="hidden lg:block animate-fade-up">
-            <CompactBeforeAfter />
+            <img
+              src={heroPatient}
+              alt="Dr. Vipul Patel — Patel Dental Hospital, Rajkot"
+              width={1080}
+              height={1600}
+              className="w-full aspect-[3/4] object-contain object-center"
+            />
           </div>
         </div>
 
-        {/* Before & After — Above the fold (mobile only) */}
-        <div className="max-w-7xl mx-auto mt-4 lg:hidden">
+        {/* Before & After — below hero on all screens */}
+        <div className="max-w-7xl mx-auto mt-8">
           <CompactBeforeAfter />
         </div>
       </section>
