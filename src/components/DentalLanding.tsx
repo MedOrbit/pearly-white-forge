@@ -95,6 +95,7 @@ const EMAIL = "info@pateldentalhospital.com";
 const treatments = [
   {
     img: txImplants,
+    name: "Dental Implants",
     dream: "Your smile, whole again — for good",
     heading: "Bite into anything and laugh without a second thought — with teeth that feel like your own.",
     sub: "Permanent implants that look, feel and function like natural teeth — no gaps, no slipping dentures. Placed with 3D-guided precision by our in-house implant specialists, so it's done right the first time.",
@@ -103,6 +104,7 @@ const treatments = [
   },
   {
     img: txAligners,
+    name: "Clear Aligners",
     dream: "A straighter smile no one sees coming",
     heading: "Straighten your teeth without a single person noticing.",
     sub: "Clear, removable aligners — no metal brackets, no diet restrictions, no awkward photos. We map your whole transformation from a digital scan, so you see the result before you start.",
@@ -111,6 +113,7 @@ const treatments = [
   },
   {
     img: txSmile,
+    name: "Cosmetic Dentistry",
     dream: "The smile you've always wanted",
     heading: "Walk out with a smile you can't stop showing off.",
     sub: "A makeover built around your face — whitening, veneers and alignment combined into one plan. You'll preview your new smile with a digital design before anything is done.",
@@ -119,6 +122,7 @@ const treatments = [
   },
   {
     img: txVeneers,
+    name: "Veneers",
     dream: "A flawless front row, fast",
     heading: "Hide chips, gaps and stains behind a flawless, natural-looking smile.",
     sub: "Custom porcelain veneers, hand-shaded to match you, transform your front teeth in as few as two visits — no one will guess they aren't real.",
@@ -127,6 +131,7 @@ const treatments = [
   },
   {
     img: txWhitening,
+    name: "Teeth Whitening",
     dream: "Several shades brighter, today",
     heading: "Walk in dull, walk out shades brighter — in a single visit.",
     sub: "Safe, professional whitening that's far stronger than any kit, with little to no sensitivity. Get in-clinic results today, or a take-home kit at your pace.",
@@ -135,6 +140,7 @@ const treatments = [
   },
   {
     img: txCheckup,
+    name: "Emergency Dentist",
     dream: "In pain? Seen today.",
     heading: "Stop the pain today — same-day care when you simply can't wait.",
     sub: "Toothache, a broken or knocked-out tooth, swelling — we keep slots open every day for emergencies. Message us on WhatsApp and we'll get you in fast.",
@@ -143,6 +149,7 @@ const treatments = [
   },
   {
     img: txRootcanal,
+    name: "Root Canal",
     dream: "Keep your tooth, lose the pain",
     heading: "Save your tooth and end the pain — in a root canal you'll barely feel.",
     sub: "Forget the horror stories. Modern rotary techniques make it gentle and often a single visit — so you keep your natural tooth instead of losing it.",
@@ -151,6 +158,7 @@ const treatments = [
   },
   {
     img: txCrowns,
+    name: "Dental Crowns",
     dream: "Your tooth, rebuilt good as new",
     heading: "Restore a cracked or worn-down tooth to full strength — and a natural look.",
     sub: "Durable, colour-matched crowns that protect and rebuild a damaged tooth so you can chew normally again. Precision-fitted, with same-day options for many cases.",
@@ -159,6 +167,7 @@ const treatments = [
   },
   {
     img: txScaling,
+    name: "Dental Cleaning",
     dream: "A fresh, healthy start",
     heading: "Walk out with a clean, fresh mouth — and stop small problems before they grow.",
     sub: "A gentle, thorough cleaning that removes the plaque, tartar and stains brushing can't, plus a full check so nothing sneaks up on you. Fresher breath, healthier gums, fewer surprises.",
@@ -167,6 +176,7 @@ const treatments = [
   },
   {
     img: txFillings,
+    name: "Dental Fillings",
     dream: "Cavity gone, no one can tell",
     heading: "Fix that cavity with a filling no one will ever see.",
     sub: "Tooth-coloured fillings that blend in perfectly while stopping the decay and ending the sensitivity — done gently, usually in a single visit.",
@@ -175,6 +185,7 @@ const treatments = [
   },
   {
     img: txExtraction,
+    name: "Tooth Extraction",
     dream: "Out with the problem, gently",
     heading: "Remove a problem tooth gently — with less pain and faster healing.",
     sub: "From simple removals to wisdom teeth, our painless, often laser-assisted approach means less discomfort, less swelling, and clear aftercare so you heal quickly.",
@@ -183,6 +194,7 @@ const treatments = [
   },
   {
     img: txDentures,
+    name: "Dentures",
     dream: "Eat, speak and smile with confidence again",
     heading: "Smile and eat confidently again — with dentures that fit and look natural.",
     sub: "Custom full or partial dentures shaped for a comfortable, secure fit — no slipping, no bulk. Ask about implant-supported options that lock firmly in place.",
