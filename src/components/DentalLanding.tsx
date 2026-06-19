@@ -321,23 +321,35 @@ function CompactBeforeAfter() {
 
   return (
     <div className="relative select-none">
-      {/* Desktop: horizontal strip */}
-      <div className="hidden lg:grid grid-cols-4 gap-4">
-        {showCases.map((c, i) => (
-          <div key={i} className="rounded-2xl bg-card p-2 shadow-sm ring-1 ring-black/[0.05]">
-            <div className="grid grid-cols-2 gap-1.5 h-[130px]">
-              <div className="relative rounded-xl overflow-hidden">
-                <img src={c.before} alt={`${c.name} before`} className="w-full h-full object-cover" draggable={false} loading="lazy" />
-                <span className="absolute bottom-1 left-1/2 -translate-x-1/2 bg-white text-[#1a1a1a] text-[9px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full shadow-sm">Before</span>
+      {/* Desktop: horizontal scrolling strip */}
+      <div className="hidden lg:block">
+        <div
+          ref={scrollRef}
+          className="overflow-x-auto pb-2 snap-x snap-mandatory"
+          style={{ scrollbarWidth: "none" }}
+        >
+          <div className="flex gap-4 w-max">
+            {showCases.map((c, i) => (
+              <div
+                key={i}
+                ref={(el) => { itemRefs.current[i] = el; }}
+                className="w-[280px] shrink-0 rounded-2xl bg-card p-2.5 shadow-sm ring-1 ring-black/[0.05] snap-center"
+              >
+                <div className="grid grid-cols-2 gap-2 h-[150px]">
+                  <div className="relative rounded-xl overflow-hidden">
+                    <img src={c.before} alt={`${c.name} before`} className="w-full h-full object-cover" draggable={false} loading="lazy" />
+                    <span className="absolute bottom-1.5 left-1/2 -translate-x-1/2 bg-white text-[#1a1a1a] text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full shadow-sm">Before</span>
+                  </div>
+                  <div className="relative rounded-xl overflow-hidden">
+                    <img src={c.after} alt={`${c.name} after`} className="w-full h-full object-cover" draggable={false} loading="lazy" />
+                    <span className="absolute bottom-1.5 left-1/2 -translate-x-1/2 bg-white text-[#1a1a1a] text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full shadow-sm">After</span>
+                  </div>
+                </div>
+                <p className="mt-2.5 text-center text-sm font-semibold text-foreground">{c.name}</p>
               </div>
-              <div className="relative rounded-xl overflow-hidden">
-                <img src={c.after} alt={`${c.name} after`} className="w-full h-full object-cover" draggable={false} loading="lazy" />
-                <span className="absolute bottom-1 left-1/2 -translate-x-1/2 bg-white text-[#1a1a1a] text-[9px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full shadow-sm">After</span>
-              </div>
-            </div>
-            <p className="mt-2 text-center text-xs font-semibold text-foreground">{c.name}</p>
+            ))}
           </div>
-        ))}
+        </div>
       </div>
 
       {/* Mobile: auto-sliding carousel */}
