@@ -480,12 +480,12 @@ export default function DentalLanding() {
               </span>
               {" "}since 2012.
             </h1>
-            <p className="text-lg lg:text-base xl:text-lg text-muted-foreground max-w-[52ch] mb-8 lg:mb-7 leading-relaxed">
+            <p className="text-lg lg:text-base xl:text-lg text-muted-foreground max-w-[52ch] mb-8 lg:mb-8 leading-relaxed">
               Painless implants, single-visit root canals, smile designing and full-mouth rehabilitation by
               <span className="text-foreground font-medium"> Dr. Vipul Patel (FICOI)</span> — trusted by 500+ Rajkot families and rated 4.9★ on Google.
             </p>
 
-            <div className="flex flex-wrap gap-3 mb-7 lg:mb-6">
+            <div className="flex flex-wrap gap-3 mb-7 lg:mb-7">
               <a href="#book" className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-4 rounded-full text-sm font-semibold hover:opacity-90 transition shadow-lg shadow-primary/20">
                 <CalendarCheck className="size-4" /> Book A Call
               </a>
@@ -511,13 +511,13 @@ export default function DentalLanding() {
               alt="Dr. Vipul Patel — Patel Dental Hospital, Rajkot"
               width={1080}
               height={1600}
-              className="w-full h-[560px] xl:h-[600px] object-contain object-center"
+              className="w-full h-[580px] xl:h-[630px] object-contain object-center"
             />
           </div>
         </div>
 
         {/* Before & After — Above the fold */}
-        <div className="max-w-7xl mx-auto mt-8 lg:mt-3">
+        <div className="max-w-7xl mx-auto mt-10 lg:mt-4">
           <CompactBeforeAfter />
         </div>
       </section>
