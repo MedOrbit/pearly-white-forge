@@ -328,7 +328,7 @@ function CompactBeforeAfter() {
           <div className="hidden lg:block">
         <div
           ref={desktopScrollRef}
-          className="overflow-x-auto pb-1 snap-x snap-mandatory"
+          className="overflow-x-auto pb-0 snap-x snap-mandatory"
           style={{ scrollbarWidth: "none" }}
         >
           <div className="flex gap-4 w-max px-5 sm:px-6">
@@ -354,7 +354,7 @@ function CompactBeforeAfter() {
           </div>
         </div>
         {/* Dot indicators */}
-        <div className="flex justify-center gap-1.5 mt-2">
+        <div className="flex justify-center gap-1.5 mt-1">
           {showCases.map((_, i) => (
             <div
               key={i}
@@ -447,7 +447,7 @@ export default function DentalLanding() {
       <div className="h-14 sm:h-16" />
 
       {/* HERO */}
-      <section className="relative px-5 sm:px-6 pt-1 lg:pt-1 pb-3 lg:pb-3">
+      <section className="relative px-5 sm:px-6 pt-1 lg:pt-1 pb-1 lg:pb-0">
         <div className="absolute top-32 -left-20 size-80 bg-accent/10 rounded-full blur-3xl pointer-events-none" />
         <div className="absolute bottom-0 right-0 size-96 bg-primary/10 rounded-full blur-3xl pointer-events-none" />
 
@@ -517,7 +517,7 @@ export default function DentalLanding() {
         </div>
 
         {/* Before & After — Above the fold (full-bleed) */}
-        <div className="mt-4 lg:mt-2 -mx-5 sm:-mx-6">
+        <div className="mt-3 lg:mt-1 -mx-5 sm:-mx-6">
           <CompactBeforeAfter />
         </div>
       </section>
@@ -525,7 +525,7 @@ export default function DentalLanding() {
 
 
       {/* INSTAGRAM REELS */}
-      <section className="py-20 lg:py-28 px-5 sm:px-6 bg-[#FDFCFB]">
+      <section className="pt-6 pb-20 lg:pt-8 lg:pb-28 px-5 sm:px-6 bg-[#FDFCFB]">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12 max-w-2xl mx-auto">
             <p className="text-xs font-mono uppercase tracking-widest text-accent mb-3">From our reels</p>
