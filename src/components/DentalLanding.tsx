@@ -486,7 +486,7 @@ export default function DentalLanding() {
               alt="Dr. Vipul Patel — Patel Dental Hospital, Rajkot"
               width={1080}
               height={1600}
-              className="w-auto max-h-[360px] lg:max-h-[520px] object-contain object-center"
+              className="w-auto max-h-[360px] lg:max-h-[580px] object-contain object-center"
             />
           </div>
         </div>
