@@ -447,14 +447,14 @@ export default function DentalLanding() {
       <div className="h-14 sm:h-16" />
 
       {/* HERO */}
-      <section className="relative px-5 sm:px-6 pt-1 lg:pt-1 pb-1 lg:pb-0 lg:min-h-[calc(100vh-4rem)] lg:flex lg:flex-col lg:justify-between">
+      <section className="relative px-5 sm:px-6 pt-8 lg:pt-1 pb-6 lg:pb-0 lg:min-h-[calc(100vh-4rem)] lg:flex lg:flex-col lg:justify-between">
         <div className="absolute top-32 -left-20 size-80 bg-accent/10 rounded-full blur-3xl pointer-events-none" />
         <div className="absolute bottom-0 right-0 size-96 bg-primary/10 rounded-full blur-3xl pointer-events-none" />
 
         <div className="max-w-7xl mx-auto grid lg:grid-cols-[0.88fr_1.12fr] gap-10 lg:gap-12 items-stretch flex-1">
           <div className="animate-fade-up flex flex-col justify-center lg:py-6">
             {/* Reviews — moved to top */}
-            <div className="flex items-center gap-4 mt-4 mb-3 lg:mt-0 lg:mb-2">
+            <div className="flex items-center gap-4 mt-4 mb-5 lg:mt-0 lg:mb-2">
               <div className="flex -space-x-3">
                 <img src={reviewPriya} alt="" className="size-8 rounded-full border-2 border-background object-cover" />
                 <img src={reviewRahul} alt="" className="size-8 rounded-full border-2 border-background object-cover" />
@@ -470,7 +470,7 @@ export default function DentalLanding() {
               </div>
             </div>
 
-            <h1 className="font-display text-[2.5rem] sm:text-5xl lg:text-[3.5rem] xl:text-[3.8rem] font-medium leading-[1.05] tracking-tight text-balance mb-3 lg:mb-3">
+            <h1 className="font-display text-[2.5rem] sm:text-5xl lg:text-[3.5rem] xl:text-[3.8rem] font-medium leading-[1.05] tracking-tight text-balance mb-5 lg:mb-3">
               Rajkot's most trusted{" "}
               <span className="italic text-primary relative">
                 dental home
@@ -480,17 +480,17 @@ export default function DentalLanding() {
               </span>
               {" "}since 2012.
             </h1>
-            <p className="text-base lg:text-sm xl:text-base text-muted-foreground max-w-[52ch] mb-4 lg:mb-4 leading-relaxed">
+            <p className="text-base lg:text-sm xl:text-base text-muted-foreground max-w-[52ch] mb-6 lg:mb-4 leading-relaxed">
               Painless implants, single-visit root canals, smile designing and full-mouth rehabilitation by
               <span className="text-foreground font-medium"> Dr. Vipul Patel (FICOI)</span> — trusted by 500+ Rajkot families and rated 4.9★ on Google.
             </p>
 
-            <div className="flex flex-wrap gap-3 mb-3 lg:mb-3">
+            <div className="flex flex-wrap gap-3 mb-5 lg:mb-3">
               <a href="#book" className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-5 py-3 rounded-full text-sm font-semibold hover:opacity-90 transition shadow-lg shadow-primary/20">
                 <CalendarCheck className="size-4" /> Book A Call
               </a>
             </div>
-            <div className="flex flex-col gap-2 mb-0">
+            <div className="flex flex-col gap-3 lg:gap-2 mb-0">
               {[
                 { label: "Painless treatments guaranteed" },
                 { label: "Same-day procedures available" },
