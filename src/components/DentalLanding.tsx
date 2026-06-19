@@ -470,7 +470,7 @@ export default function DentalLanding() {
               </div>
             </div>
 
-            <h1 className="font-display text-[1.75rem] sm:text-5xl lg:text-[3.5rem] xl:text-[3.8rem] font-medium leading-[1.1] sm:leading-[1.05] tracking-tight text-balance mb-3 lg:mb-3">
+            <h1 className="font-display text-[2rem] sm:text-5xl lg:text-[3.5rem] xl:text-[3.8rem] font-medium leading-[1.05] tracking-tight text-balance mb-3 lg:mb-3">
               Rajkot's most trusted{" "}
               <span className="italic text-primary relative">
                 dental home
