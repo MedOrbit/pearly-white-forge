@@ -447,14 +447,14 @@ export default function DentalLanding() {
       <div className="h-14 sm:h-16" />
 
       {/* HERO */}
-      <section className="relative px-5 sm:px-6 pt-2 lg:pt-4 pb-6 lg:pb-6">
+      <section className="relative px-5 sm:px-6 pt-2 lg:pt-2 pb-5 lg:pb-3">
         <div className="absolute top-32 -left-20 size-80 bg-accent/10 rounded-full blur-3xl pointer-events-none" />
         <div className="absolute bottom-0 right-0 size-96 bg-primary/10 rounded-full blur-3xl pointer-events-none" />
 
-        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-10 lg:gap-16 items-center relative">
+        <div className="max-w-7xl mx-auto grid lg:grid-cols-[0.88fr_1.12fr] gap-10 lg:gap-12 items-center relative">
           <div className="animate-fade-up">
             {/* Reviews — moved to top */}
-            <div className="flex items-center gap-4 mb-6">
+            <div className="flex items-center gap-4 mb-6 lg:mb-4">
               <div className="flex -space-x-3">
                 <img src={reviewPriya} alt="" className="size-9 rounded-full border-2 border-background object-cover" />
                 <img src={reviewRahul} alt="" className="size-9 rounded-full border-2 border-background object-cover" />
@@ -470,7 +470,7 @@ export default function DentalLanding() {
               </div>
             </div>
 
-            <h1 className="font-display text-[2.75rem] sm:text-6xl lg:text-7xl font-medium leading-[1.02] tracking-tight text-balance mb-6">
+            <h1 className="font-display text-[2.75rem] sm:text-6xl lg:text-[4rem] xl:text-[4.35rem] font-medium leading-[1.02] tracking-tight text-balance mb-6 lg:mb-5">
               Rajkot's most trusted{" "}
               <span className="italic text-primary relative">
                 dental home
@@ -480,12 +480,12 @@ export default function DentalLanding() {
               </span>
               {" "}since 2012.
             </h1>
-            <p className="text-lg text-muted-foreground max-w-[52ch] mb-8 leading-relaxed">
+            <p className="text-lg lg:text-base xl:text-lg text-muted-foreground max-w-[52ch] mb-8 lg:mb-6 leading-relaxed">
               Painless implants, single-visit root canals, smile designing and full-mouth rehabilitation by
               <span className="text-foreground font-medium"> Dr. Vipul Patel (FICOI)</span> — trusted by 500+ Rajkot families and rated 4.9★ on Google.
             </p>
 
-            <div className="flex flex-wrap gap-3 mb-6">
+            <div className="flex flex-wrap gap-3 mb-6 lg:mb-5">
               <a href="#book" className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-4 rounded-full text-sm font-semibold hover:opacity-90 transition shadow-lg shadow-primary/20">
                 <CalendarCheck className="size-4" /> Book A Call
               </a>
@@ -511,13 +511,13 @@ export default function DentalLanding() {
               alt="Dr. Vipul Patel — Patel Dental Hospital, Rajkot"
               width={1080}
               height={1600}
-              className="w-full aspect-[3/4] object-contain object-center"
+              className="w-full max-h-[590px] aspect-[3/4] object-contain object-center"
             />
           </div>
         </div>
 
-        {/* Before & After — Above the fold (mobile only) */}
-        <div className="max-w-7xl mx-auto mt-6 lg:mt-8">
+        {/* Before & After — Above the fold */}
+        <div className="max-w-7xl mx-auto mt-6 lg:mt-0">
           <CompactBeforeAfter />
         </div>
       </section>
