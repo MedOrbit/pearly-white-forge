@@ -447,11 +447,11 @@ export default function DentalLanding() {
       <div className="h-14 sm:h-16" />
 
       {/* HERO */}
-      <section className="relative px-5 sm:px-6 pt-1 lg:pt-1 pb-1 lg:pb-0 lg:min-h-[calc(100vh-4rem)] lg:flex lg:flex-col lg:justify-between">
+      <section className="relative px-5 sm:px-6 pt-1 lg:pt-6 pb-1 lg:pb-0">
         <div className="absolute top-32 -left-20 size-80 bg-accent/10 rounded-full blur-3xl pointer-events-none" />
         <div className="absolute bottom-0 right-0 size-96 bg-primary/10 rounded-full blur-3xl pointer-events-none" />
 
-        <div className="max-w-7xl mx-auto grid lg:grid-cols-[0.95fr_1.05fr] gap-8 lg:gap-10 items-center flex-1 lg:max-h-[470px]">
+        <div className="max-w-7xl mx-auto grid lg:grid-cols-[0.95fr_1.05fr] gap-8 lg:gap-10 items-center">
           <div className="animate-fade-up flex flex-col justify-center lg:py-0">
             {/* Reviews — moved to top */}
             <div className="flex items-center gap-4 mb-3 lg:mb-2">
@@ -505,20 +505,19 @@ export default function DentalLanding() {
           </div>
 
           {/* Doctor image — desktop only */}
-          <div className="hidden lg:flex animate-fade-up items-end justify-center h-[360px] xl:h-[390px] self-end overflow-visible">
+          <div className="hidden lg:flex animate-fade-up items-end justify-center h-[400px] xl:h-[430px] self-end overflow-hidden rounded-2xl">
             <img
               src={heroPatient}
               alt="Dr. Vipul Patel — Patel Dental Hospital, Rajkot"
               width={1080}
               height={1600}
-              className="block object-contain object-bottom"
-              style={{ height: "100%", width: "auto", maxWidth: "100%" }}
+              className="block w-full h-full object-cover object-top"
             />
           </div>
         </div>
 
         {/* Before & After — Above the fold (full-bleed) */}
-        <div className="mt-1 lg:-mt-8 -mx-5 sm:-mx-6">
+        <div className="mt-1 lg:mt-4 -mx-5 sm:-mx-6">
           <CompactBeforeAfter />
         </div>
       </section>
