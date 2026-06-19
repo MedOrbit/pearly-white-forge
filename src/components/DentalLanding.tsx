@@ -321,43 +321,23 @@ function CompactBeforeAfter() {
 
   return (
     <div className="relative select-none">
-      {/* Desktop: auto-sliding single card */}
-      <div className="hidden lg:block">
-        <div className="relative overflow-hidden mx-auto max-w-[460px]">
-          <div
-            className="flex transition-transform duration-700 ease-out"
-            style={{ transform: `translateX(-${activeIdx * 100}%)` }}
-          >
-            {showCases.map((c, i) => (
-              <div key={i} className="w-full shrink-0 px-1">
-                <div className="rounded-2xl bg-card p-2 shadow-sm ring-1 ring-black/[0.05]">
-                  <div className="grid grid-cols-2 gap-2 h-[120px]">
-                    <div className="relative rounded-xl overflow-hidden">
-                      <img src={c.before} alt={`${c.name} before`} className="w-full h-full object-cover" draggable={false} loading="lazy" />
-                      <span className="absolute bottom-1.5 left-1/2 -translate-x-1/2 bg-white text-[#1a1a1a] text-[9px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full shadow-sm">Before</span>
-                    </div>
-                    <div className="relative rounded-xl overflow-hidden">
-                      <img src={c.after} alt={`${c.name} after`} className="w-full h-full object-cover" draggable={false} loading="lazy" />
-                      <span className="absolute bottom-1.5 left-1/2 -translate-x-1/2 bg-white text-[#1a1a1a] text-[9px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full shadow-sm">After</span>
-                    </div>
-                  </div>
-                  <p className="mt-1.5 text-center text-sm font-semibold text-foreground">{c.name}</p>
-                </div>
+      {/* Desktop: horizontal grid */}
+      <div className="hidden lg:grid grid-cols-4 gap-2">
+        {showCases.map((c, i) => (
+          <div key={i} className="rounded-xl bg-card p-1.5 shadow-sm ring-1 ring-black/[0.05]">
+            <div className="grid grid-cols-2 gap-1 h-[56px]">
+              <div className="relative rounded-lg overflow-hidden">
+                <img src={c.before} alt={`${c.name} before`} className="w-full h-full object-cover" draggable={false} loading="lazy" />
+                <span className="absolute bottom-1 left-1/2 -translate-x-1/2 bg-white text-[#1a1a1a] text-[7px] font-bold uppercase tracking-wider px-1.5 py-0.5 rounded-full shadow-sm">Before</span>
               </div>
-            ))}
+              <div className="relative rounded-lg overflow-hidden">
+                <img src={c.after} alt={`${c.name} after`} className="w-full h-full object-cover" draggable={false} loading="lazy" />
+                <span className="absolute bottom-1 left-1/2 -translate-x-1/2 bg-white text-[#1a1a1a] text-[7px] font-bold uppercase tracking-wider px-1.5 py-0.5 rounded-full shadow-sm">After</span>
+              </div>
+            </div>
+            <p className="mt-1 text-center text-[11px] font-semibold text-foreground">{c.name}</p>
           </div>
-        </div>
-        {/* Dot indicators */}
-        <div className="flex justify-center gap-1.5 mt-2">
-          {showCases.map((_, i) => (
-            <button
-              key={i}
-              onClick={() => setActiveIdx(i)}
-              aria-label={`Show case ${i + 1}`}
-              className={`h-1.5 rounded-full transition-all duration-300 ${i === activeIdx ? "w-5 bg-primary" : "w-1.5 bg-muted"}`}
-            />
-          ))}
-        </div>
+        ))}
       </div>
 
       {/* Mobile: auto-sliding carousel */}
@@ -402,7 +382,6 @@ function CompactBeforeAfter() {
     </div>
   );
 }
-
 
 
 export default function DentalLanding() {
