@@ -605,50 +605,6 @@ export default function DentalLanding() {
       </section>
 
 
-      {/* Stats — "We love to see people smile" */}
-      <section className="py-20 lg:py-28 px-5 sm:px-6 bg-surface">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center max-w-2xl mx-auto mb-14">
-            <p className="text-xs font-mono uppercase tracking-widest text-accent mb-3">
-              Patel Dental Hospital — Dental Clinic in Rajkot
-            </p>
-            <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl font-medium tracking-tight text-primary">
-              We love to see <span className="italic">people smile.</span>
-            </h2>
-            <p className="mt-5 text-base text-muted-foreground">
-              Exceptional care from the moment you walk in, to the smile you walk out with.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-8 lg:gap-12">
-            {[
-              { Icon: Bone,          val: "1000+", label: "Dental Implants" },
-              { Icon: Users,         val: "500+",  label: "Happy Families" },
-              { Icon: Smile,          val: "800+",  label: "Smile Makeovers" },
-              { Icon: Syringe,        val: "2000+", label: "Root Canals" },
-              { Icon: CalendarDays,  val: "13+",   label: "Years in Rajkot" },
-              { Icon: Building2,     val: "2",     label: "Convenient Branches" },
-              { Icon: BadgeCheck,     val: "2",     label: "FICOI Certified Dentists" },
-              { Icon: Star,           val: "4.9★",  label: "Google Rating" },
-              { Icon: MessagesSquare, val: "492+",  label: "Google Reviews" },
-            ].map(({ Icon, val, label }) => (
-              <div key={label} className="flex items-center gap-4 sm:gap-5">
-                <div className="shrink-0 text-[#8BC53F] flex items-center justify-center">
-                  <Icon className="size-12 sm:size-14" fill="currentColor" strokeWidth={1.5} />
-                </div>
-                <div>
-                  <div className="font-display text-3xl sm:text-4xl font-semibold text-foreground leading-none">
-                    {val}
-                  </div>
-                  <div className="text-sm text-muted-foreground mt-2">{label}</div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-
       {/* TREATMENTS */}
       <section id="treatments" className="py-20 lg:py-28 px-5 sm:px-6 bg-surface">
         <div className="max-w-7xl mx-auto">
@@ -704,6 +660,50 @@ export default function DentalLanding() {
                     {cta}
                     <ArrowRight className="size-4 group-hover:translate-x-0.5 transition" />
                   </a>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+
+      {/* Stats — "We love to see people smile" */}
+      <section className="py-20 lg:py-28 px-5 sm:px-6 bg-surface">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center max-w-2xl mx-auto mb-14">
+            <p className="text-xs font-mono uppercase tracking-widest text-accent mb-3">
+              Patel Dental Hospital — Dental Clinic in Rajkot
+            </p>
+            <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl font-medium tracking-tight text-primary">
+              We love to see <span className="italic">people smile.</span>
+            </h2>
+            <p className="mt-5 text-base text-muted-foreground">
+              Exceptional care from the moment you walk in, to the smile you walk out with.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-8 lg:gap-12">
+            {[
+              { Icon: Bone,          val: "1000+", label: "Dental Implants" },
+              { Icon: Users,         val: "500+",  label: "Happy Families" },
+              { Icon: Smile,          val: "800+",  label: "Smile Makeovers" },
+              { Icon: Syringe,        val: "2000+", label: "Root Canals" },
+              { Icon: CalendarDays,  val: "13+",   label: "Years in Rajkot" },
+              { Icon: Building2,     val: "2",     label: "Convenient Branches" },
+              { Icon: BadgeCheck,     val: "2",     label: "FICOI Certified Dentists" },
+              { Icon: Star,           val: "4.9★",  label: "Google Rating" },
+              { Icon: MessagesSquare, val: "492+",  label: "Google Reviews" },
+            ].map(({ Icon, val, label }) => (
+              <div key={label} className="flex items-center gap-4 sm:gap-5">
+                <div className="shrink-0 text-[#8BC53F] flex items-center justify-center">
+                  <Icon className="size-12 sm:size-14" fill="currentColor" strokeWidth={1.5} />
+                </div>
+                <div>
+                  <div className="font-display text-3xl sm:text-4xl font-semibold text-foreground leading-none">
+                    {val}
+                  </div>
+                  <div className="text-sm text-muted-foreground mt-2">{label}</div>
                 </div>
               </div>
             ))}
