@@ -331,14 +331,14 @@ function CompactBeforeAfter() {
           className="overflow-x-auto pb-1 snap-x snap-mandatory"
           style={{ scrollbarWidth: "none" }}
         >
-          <div className="flex gap-3 w-max px-[calc((100vw-1280px)/2+1.25rem)] min-[1280px]:px-5">
+          <div className="flex gap-4 w-max px-[calc((100vw-1280px)/2+1.25rem)] min-[1280px]:px-5">
             {showCases.map((c, i) => (
               <div
                 key={i}
                 ref={(el) => { desktopItemRefs.current[i] = el; }}
-                className="w-[300px] xl:w-[340px] shrink-0 rounded-2xl bg-card p-2 shadow-sm ring-1 ring-black/[0.05] snap-center"
+                className="w-[350px] xl:w-[390px] shrink-0 rounded-2xl bg-card p-2 shadow-sm ring-1 ring-black/[0.05] snap-center"
               >
-                <div className="grid grid-cols-2 gap-1.5 h-[100px] xl:h-[110px]">
+                <div className="grid grid-cols-2 gap-1.5 h-[132px] xl:h-[148px]">
                   <div className="relative rounded-xl overflow-hidden">
                     <img src={c.before} alt={`${c.name} before`} className="w-full h-full object-cover" draggable={false} loading="lazy" />
                     <span className="absolute bottom-1 left-1/2 -translate-x-1/2 bg-card text-foreground text-[9px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full shadow-sm">Before</span>
@@ -447,14 +447,14 @@ export default function DentalLanding() {
       <div className="h-14 sm:h-16" />
 
       {/* HERO */}
-      <section className="relative px-5 sm:px-6 pt-2 lg:pt-2 pb-5 lg:pb-4">
+      <section className="relative px-5 sm:px-6 pt-2 lg:pt-2 pb-7 lg:pb-6">
         <div className="absolute top-32 -left-20 size-80 bg-accent/10 rounded-full blur-3xl pointer-events-none" />
         <div className="absolute bottom-0 right-0 size-96 bg-primary/10 rounded-full blur-3xl pointer-events-none" />
 
-        <div className="max-w-7xl mx-auto grid lg:grid-cols-[0.88fr_1.12fr] gap-10 lg:gap-12 items-center relative">
+        <div className="max-w-7xl mx-auto grid lg:grid-cols-[0.88fr_1.12fr] gap-10 lg:gap-12 items-start relative">
           <div className="animate-fade-up">
             {/* Reviews — moved to top */}
-            <div className="flex items-center gap-4 mb-4 lg:mb-3">
+            <div className="flex items-center gap-4 mb-4 lg:mb-2">
               <div className="flex -space-x-3">
                 <img src={reviewPriya} alt="" className="size-9 rounded-full border-2 border-background object-cover" />
                 <img src={reviewRahul} alt="" className="size-9 rounded-full border-2 border-background object-cover" />
@@ -470,7 +470,7 @@ export default function DentalLanding() {
               </div>
             </div>
 
-            <h1 className="font-display text-[2.75rem] sm:text-6xl lg:text-[3.8rem] xl:text-[4.2rem] font-medium leading-[1.02] tracking-tight text-balance mb-5 lg:mb-4">
+            <h1 className="font-display text-[2.75rem] sm:text-6xl lg:text-[4.3rem] xl:text-[4.7rem] font-medium leading-[1.02] tracking-tight text-balance mb-5 lg:mb-4">
               Rajkot's most trusted{" "}
               <span className="italic text-primary relative">
                 dental home
@@ -480,7 +480,7 @@ export default function DentalLanding() {
               </span>
               {" "}since 2012.
             </h1>
-            <p className="text-base lg:text-[15px] xl:text-base text-muted-foreground max-w-[52ch] mb-5 lg:mb-5 leading-relaxed">
+            <p className="text-lg lg:text-base xl:text-lg text-muted-foreground max-w-[52ch] mb-6 lg:mb-6 leading-relaxed">
               Painless implants, single-visit root canals, smile designing and full-mouth rehabilitation by
               <span className="text-foreground font-medium"> Dr. Vipul Patel (FICOI)</span> — trusted by 500+ Rajkot families and rated 4.9★ on Google.
             </p>
@@ -505,7 +505,7 @@ export default function DentalLanding() {
           </div>
 
           {/* Doctor image — desktop only */}
-          <div className="hidden lg:block animate-fade-up overflow-hidden rounded-2xl h-[340px] xl:h-[380px]">
+          <div className="hidden lg:block animate-fade-up overflow-hidden rounded-2xl h-[480px] xl:h-[520px]">
             <img
               src={heroPatient}
               alt="Dr. Vipul Patel — Patel Dental Hospital, Rajkot"
@@ -517,7 +517,7 @@ export default function DentalLanding() {
         </div>
 
         {/* Before & After — Above the fold */}
-        <div className="max-w-7xl mx-auto mt-4 lg:mt-2">
+        <div className="max-w-7xl mx-auto mt-6 lg:mt-3">
           <CompactBeforeAfter />
         </div>
       </section>
