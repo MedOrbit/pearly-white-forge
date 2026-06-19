@@ -331,7 +331,7 @@ function CompactBeforeAfter() {
           className="overflow-x-auto pb-0 snap-x snap-mandatory"
           style={{ scrollbarWidth: "none" }}
         >
-          <div className="flex gap-4 w-max px-5 sm:px-6">
+          <div className="flex gap-4 w-max px-5 sm:px-6 mx-auto">
             {showCases.map((c, i) => (
               <div
                 key={i}
