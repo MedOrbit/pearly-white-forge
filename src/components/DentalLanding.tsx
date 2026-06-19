@@ -376,9 +376,9 @@ function CompactBeforeAfter() {
               <div
                 key={i}
                 ref={(el) => { mobileItemRefs.current[i] = el; }}
-                className="w-[180px] shrink-0 rounded-2xl bg-card p-2 shadow-sm ring-1 ring-black/[0.05] snap-center"
+                className="w-[240px] shrink-0 rounded-2xl bg-card p-2 shadow-sm ring-1 ring-black/[0.05] snap-center"
               >
-                <div className="grid grid-cols-2 gap-1.5 aspect-square">
+                <div className="grid grid-cols-2 gap-1.5 aspect-[2/1]">
                   <div className="relative rounded-xl overflow-hidden">
                     <img src={c.before} alt={`${c.name} before`} className="w-full h-full object-cover" draggable={false} loading="lazy" />
                     <span className="absolute bottom-1 left-1/2 -translate-x-1/2 bg-white text-[#1a1a1a] text-[8px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full shadow-sm">Before</span>

@@ -35,7 +35,7 @@ function Card({ c }: { c: (typeof cases)[number] }) {
   return (
     <div className="shrink-0 flex flex-col items-center select-none" style={{ touchAction: "pan-y" }}>
       <div className="rounded-[24px] bg-card p-2.5 shadow-[0_8px_30px_-12px_rgba(0,0,0,0.12)] ring-1 ring-black/[0.05] w-[280px] sm:w-[300px]">
-        <div className="aspect-square sm:aspect-auto sm:h-[340px]">
+        <div className={`${c.orientation === "horizontal" ? "aspect-[2/1]" : "aspect-square"} sm:aspect-auto sm:h-[340px]`}>
           {c.orientation === "horizontal" ? (
             <div className="grid grid-cols-2 gap-2.5 h-full">
               <div className="relative rounded-2xl overflow-hidden ring-1 ring-black/[0.06]">
