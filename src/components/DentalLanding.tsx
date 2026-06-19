@@ -662,7 +662,7 @@ export default function DentalLanding() {
       {/* TREATMENTS */}
       <section id="treatments" className="py-20 lg:py-28 px-5 sm:px-6 bg-surface">
         <div className="max-w-7xl mx-auto">
-          <div className="flex flex-col md:flex-row md:items-end justify-between mb-14 gap-6">
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 lg:mb-20 gap-6">
             <div>
               <p className="text-xs font-mono uppercase tracking-widest text-accent mb-3">Our services</p>
               <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl font-medium tracking-tight max-w-xl">
@@ -675,21 +675,44 @@ export default function DentalLanding() {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 sm:gap-6">
-            {treatments.map(({ img, name, desc }) => (
-              <div key={name}
-                className="group bg-background rounded-3xl border border-border overflow-hidden hover:-translate-y-1 hover:shadow-2xl hover:shadow-primary/10 hover:border-primary/30 transition-all duration-300 flex flex-col">
-                <div className="relative overflow-hidden aspect-[4/3] bg-surface">
-                  <img src={img} alt={name} loading="lazy" width={800} height={600}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-foreground/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition" />
+          <div className="space-y-16 sm:space-y-20 lg:space-y-28">
+            {treatments.map(({ img, name, dream, heading, sub, cta, href }, idx) => (
+              <div
+                key={name}
+                className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center"
+              >
+                {/* Image */}
+                <div className={`relative ${idx % 2 === 1 ? "lg:order-2" : ""}`}>
+                  <div className="relative overflow-hidden rounded-2xl bg-background aspect-square lg:aspect-[4/5] shadow-[0_20px_60px_-20px_rgba(13,76,68,0.25)]">
+                    <img
+                      src={img}
+                      alt={name}
+                      loading="lazy"
+                      width={1000}
+                      height={1200}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
                 </div>
-                <div className="p-5 sm:p-6 flex flex-col grow">
-                  <h3 className="font-display text-lg sm:text-xl font-semibold leading-tight mb-2">{name}</h3>
-                  <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed mb-5 grow">{desc}</p>
-                  <a href="#book"
-                    className="inline-flex items-center justify-center gap-1.5 self-start text-xs font-semibold text-primary border-b border-primary/30 hover:border-primary pb-0.5 transition">
-                    Book now <ArrowRight className="size-3.5 group-hover:translate-x-0.5 transition" />
+
+                {/* Content */}
+                <div className={`flex flex-col ${idx % 2 === 1 ? "lg:order-1" : ""}`}>
+                  <p className="text-[11px] sm:text-xs font-mono uppercase tracking-[0.2em] text-accent mb-5">
+                    {dream}
+                  </p>
+                  <h3 className="font-display text-3xl sm:text-4xl lg:text-5xl font-medium leading-[1.1] tracking-tight text-foreground mb-6">
+                    {heading}
+                  </h3>
+                  <p className="text-base sm:text-lg text-muted-foreground leading-relaxed mb-8 max-w-xl">
+                    {sub}
+                  </p>
+                  <a
+                    href={href}
+                    {...(href.startsWith("http") ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+                    className="group inline-flex items-center justify-center gap-2 self-start px-7 py-4 rounded-full bg-primary text-primary-foreground text-sm font-semibold tracking-wide hover:bg-primary/90 transition shadow-[0_10px_30px_-10px_rgba(13,76,68,0.45)]"
+                  >
+                    {cta}
+                    <ArrowRight className="size-4 group-hover:translate-x-0.5 transition" />
                   </a>
                 </div>
               </div>
