@@ -525,7 +525,7 @@ export default function DentalLanding() {
 
 
       {/* INSTAGRAM REELS */}
-      <section className="pt-6 pb-20 lg:pt-8 lg:pb-28 px-5 sm:px-6 bg-[#FDFCFB]">
+      <section className="pt-2 pb-20 lg:pt-3 lg:pb-28 px-5 sm:px-6 bg-[#FDFCFB]">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12 max-w-2xl mx-auto">
             <p className="text-xs font-mono uppercase tracking-widest text-accent mb-3">From our reels</p>
