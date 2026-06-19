@@ -422,11 +422,11 @@ export default function DentalLanding() {
       <div className="h-14 sm:h-16" />
 
       {/* HERO */}
-      <section className="relative px-5 sm:px-6 pt-10 lg:pt-2 pb-8 lg:pb-3 lg:min-h-[calc(100vh-4rem)] lg:flex lg:flex-col lg:justify-center lg:overflow-hidden">
+      <section className="relative px-5 sm:px-6 pt-10 lg:pt-2 pb-8 lg:pb-6 lg:min-h-[calc(100vh-4rem)] lg:flex lg:flex-col lg:justify-start lg:overflow-hidden">
         <div className="absolute top-32 -left-20 size-80 bg-accent/10 rounded-full blur-3xl pointer-events-none" />
         <div className="absolute bottom-0 right-0 size-96 bg-primary/10 rounded-full blur-3xl pointer-events-none" />
 
-        <div className="w-full max-w-7xl mx-auto grid lg:grid-cols-2 gap-10 lg:gap-10 lg:items-center relative">
+        <div className="w-full max-w-7xl mx-auto grid lg:grid-cols-2 gap-10 lg:gap-10 lg:items-stretch lg:flex-1 relative">
           <div className="animate-fade-up">
             {/* Reviews */}
             <div className="flex items-center gap-3 mb-6 lg:mb-2">
