@@ -31,7 +31,7 @@ import {
   MessagesSquare,
 } from "lucide-react";
 
-import doctorHeroAsset from "@/assets/clinic/doctor-hero.png.asset.json";
+import doctorHeroAsset from "@/assets/dr-henny-new.png.asset.json";
 const heroPatient = doctorHeroAsset.url;
 
 import drHenryAsset from "@/assets/clinic/dr-henry.png.asset.json";
