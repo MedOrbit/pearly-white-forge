@@ -447,7 +447,7 @@ export default function DentalLanding() {
       <div className="h-14 sm:h-16" />
 
       {/* HERO */}
-      <section className="relative px-5 sm:px-6 pt-2 lg:pt-2 pb-7 lg:pb-6">
+      <section className="relative px-5 sm:px-6 pt-2 lg:pt-2 pb-5 lg:pb-4">
         <div className="absolute top-32 -left-20 size-80 bg-accent/10 rounded-full blur-3xl pointer-events-none" />
         <div className="absolute bottom-0 right-0 size-96 bg-primary/10 rounded-full blur-3xl pointer-events-none" />
 
@@ -517,7 +517,7 @@ export default function DentalLanding() {
         </div>
 
         {/* Before & After — Above the fold */}
-        <div className="max-w-7xl mx-auto mt-6 lg:mt-3">
+        <div className="max-w-7xl mx-auto mt-4 lg:mt-2">
           <CompactBeforeAfter />
         </div>
       </section>
