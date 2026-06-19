@@ -490,14 +490,14 @@ export default function DentalLanding() {
                 <CalendarCheck className="size-4" /> Book A Call
               </a>
             </div>
-            <div className="flex flex-wrap gap-x-5 gap-y-2 mb-0">
+            <div className="flex flex-col gap-2 mb-0">
               {[
-                { label: "Painless treatments" },
-                { label: "Same-day procedures" },
-                { label: "Transparent pricing" },
+                { label: "Painless treatments guaranteed" },
+                { label: "Same-day procedures available" },
+                { label: "Transparent pricing — no hidden costs" },
               ].map((badge) => (
-                <div key={badge.label} className="flex items-center gap-1.5 text-[13px] text-foreground font-semibold">
-                  <CheckCircle2 className="size-4 text-accent shrink-0" />
+                <div key={badge.label} className="flex items-center gap-2 text-[13px] sm:text-sm text-foreground font-medium">
+                  <CheckCircle2 className="size-4 text-accent shrink-0" strokeWidth={2} />
                   <span>{badge.label}</span>
                 </div>
               ))}
