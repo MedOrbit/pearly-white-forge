@@ -517,7 +517,7 @@ export default function DentalLanding() {
         </div>
 
         {/* Before & After — Above the fold */}
-        <div className="max-w-7xl mx-auto mt-10 lg:mt-4">
+        <div className="max-w-7xl mx-auto mt-6 lg:mt-3">
           <CompactBeforeAfter />
         </div>
       </section>
