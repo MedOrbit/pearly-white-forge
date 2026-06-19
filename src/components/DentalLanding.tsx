@@ -299,8 +299,10 @@ function FaqItem({ q, a }: { q: string; a: string }) {
 
 function CompactBeforeAfter() {
   const showCases = beforeAfterCases.slice(0, 4);
-  const scrollRef = useRef<HTMLDivElement>(null);
-  const itemRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const desktopScrollRef = useRef<HTMLDivElement>(null);
+  const mobileScrollRef = useRef<HTMLDivElement>(null);
+  const desktopItemRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const mobileItemRefs = useRef<(HTMLDivElement | null)[]>([]);
   const [activeIdx, setActiveIdx] = useState(0);
 
   useEffect(() => {
@@ -311,31 +313,32 @@ function CompactBeforeAfter() {
   }, [showCases.length]);
 
   useEffect(() => {
-    const container = scrollRef.current;
-    const item = itemRefs.current[activeIdx];
-    if (container && item) {
+    const scrollTo = (container: HTMLDivElement | null, item: HTMLDivElement | null) => {
+      if (!container || !item) return;
       const scrollLeft = item.offsetLeft - (container.offsetWidth - item.offsetWidth) / 2;
       container.scrollTo({ left: scrollLeft, behavior: "smooth" });
-    }
+    };
+    scrollTo(desktopScrollRef.current, desktopItemRefs.current[activeIdx]);
+    scrollTo(mobileScrollRef.current, mobileItemRefs.current[activeIdx]);
   }, [activeIdx]);
 
   return (
     <div className="relative select-none">
-      {/* Desktop: horizontal scrolling strip */}
+      {/* Desktop: auto-sliding horizontal carousel */}
       <div className="hidden lg:block">
         <div
-          ref={scrollRef}
+          ref={desktopScrollRef}
           className="overflow-x-auto pb-2 snap-x snap-mandatory"
           style={{ scrollbarWidth: "none" }}
         >
-          <div className="flex gap-4 w-max">
+          <div className="flex gap-4 w-max px-[20%]">
             {showCases.map((c, i) => (
               <div
                 key={i}
-                ref={(el) => { itemRefs.current[i] = el; }}
-                className="w-[280px] shrink-0 rounded-2xl bg-card p-2.5 shadow-sm ring-1 ring-black/[0.05] snap-center"
+                ref={(el) => { desktopItemRefs.current[i] = el; }}
+                className="w-[420px] shrink-0 rounded-2xl bg-card p-3 shadow-sm ring-1 ring-black/[0.05] snap-center"
               >
-                <div className="grid grid-cols-2 gap-2 h-[150px]">
+                <div className="grid grid-cols-2 gap-2 h-[180px]">
                   <div className="relative rounded-xl overflow-hidden">
                     <img src={c.before} alt={`${c.name} before`} className="w-full h-full object-cover" draggable={false} loading="lazy" />
                     <span className="absolute bottom-1.5 left-1/2 -translate-x-1/2 bg-white text-[#1a1a1a] text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full shadow-sm">Before</span>
@@ -350,12 +353,21 @@ function CompactBeforeAfter() {
             ))}
           </div>
         </div>
+        {/* Dot indicators */}
+        <div className="flex justify-center gap-1.5 mt-3">
+          {showCases.map((_, i) => (
+            <div
+              key={i}
+              className={`h-1.5 rounded-full transition-all duration-300 ${i === activeIdx ? "w-4 bg-primary" : "w-1.5 bg-muted"}`}
+            />
+          ))}
+        </div>
       </div>
 
       {/* Mobile: auto-sliding carousel */}
       <div className="lg:hidden">
         <div
-          ref={scrollRef}
+          ref={mobileScrollRef}
           className="overflow-x-auto pb-2 -mx-5 px-5 snap-x snap-mandatory"
           style={{ scrollbarWidth: "none" }}
         >
@@ -363,7 +375,7 @@ function CompactBeforeAfter() {
             {showCases.map((c, i) => (
               <div
                 key={i}
-                ref={(el) => { itemRefs.current[i] = el; }}
+                ref={(el) => { mobileItemRefs.current[i] = el; }}
                 className="w-[180px] shrink-0 rounded-2xl bg-card p-2 shadow-sm ring-1 ring-black/[0.05] snap-center"
               >
                 <div className="grid grid-cols-2 gap-1.5 h-[110px]">
@@ -394,6 +406,7 @@ function CompactBeforeAfter() {
     </div>
   );
 }
+
 
 
 export default function DentalLanding() {
