@@ -336,7 +336,7 @@ function CompactBeforeAfter() {
               <div
                 key={i}
                 ref={(el) => { desktopItemRefs.current[i] = el; }}
-                className="w-[340px] xl:w-[380px] shrink-0 rounded-2xl bg-card p-2 shadow-sm ring-1 ring-black/[0.05] snap-center"
+                className="w-[300px] xl:w-[320px] shrink-0 rounded-2xl bg-card p-2 shadow-sm ring-1 ring-black/[0.05] snap-center"
               >
                 <div className="grid grid-cols-2 gap-1.5 aspect-[2/1]">
                   <div className="relative rounded-xl overflow-hidden">
