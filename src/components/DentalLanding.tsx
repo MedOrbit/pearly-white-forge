@@ -492,11 +492,11 @@ export default function DentalLanding() {
             </div>
             <div className="flex flex-wrap gap-x-5 gap-y-2 mb-0">
               {[
-                { label: "Painless treatments guaranteed" },
-                { label: "Same-day procedures available" },
-                { label: "Transparent pricing — no hidden costs" },
+                { label: "Painless treatments" },
+                { label: "Same-day procedures" },
+                { label: "Transparent pricing" },
               ].map((badge) => (
-                <div key={badge.label} className="flex items-center gap-1.5 text-[13px] text-muted-foreground">
+                <div key={badge.label} className="flex items-center gap-1.5 text-[13px] text-foreground font-semibold">
                   <CheckCircle2 className="size-4 text-accent shrink-0" />
                   <span>{badge.label}</span>
                 </div>
