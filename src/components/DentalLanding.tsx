@@ -480,7 +480,7 @@ export default function DentalLanding() {
               </span>
               {" "}since 2012.
             </h1>
-            <p className="text-lg lg:text-base xl:text-lg text-muted-foreground max-w-[52ch] mb-8 lg:mb-8 leading-relaxed">
+            <p className="text-lg lg:text-base xl:text-lg text-muted-foreground max-w-[52ch] mb-6 lg:mb-6 leading-relaxed">
               Painless implants, single-visit root canals, smile designing and full-mouth rehabilitation by
               <span className="text-foreground font-medium"> Dr. Vipul Patel (FICOI)</span> — trusted by 500+ Rajkot families and rated 4.9★ on Google.
             </p>
