@@ -81,7 +81,7 @@ import txNightguard from "@/assets/tx-nightguard.jpg";
 import txFullmouth from "@/assets/tx-fullmouth.jpg";
 import txSedation from "@/assets/tx-sedation.jpg";
 import txVeneers from "@/assets/tx-veneers.jpg";
-import { cases as beforeAfterCases } from "@/components/BeforeAfterShowcase";
+import BeforeAfterShowcase, { cases as beforeAfterCases } from "@/components/BeforeAfterShowcase";
 
 
 // ─── Clinic constants ──────────────────────────────────────────────────────
@@ -321,21 +321,21 @@ function CompactBeforeAfter() {
 
   return (
     <div className="relative select-none">
-      {/* Desktop: horizontal grid */}
-      <div className="hidden lg:grid grid-cols-4 gap-3">
+      {/* Desktop: vertical stack */}
+      <div className="hidden lg:flex flex-col gap-3">
         {showCases.map((c, i) => (
-          <div key={i} className="rounded-xl bg-card p-2 shadow-sm ring-1 ring-black/[0.05]">
-            <div className="grid grid-cols-2 gap-1.5 h-[96px]">
-              <div className="relative rounded-lg overflow-hidden">
+          <div key={i} className="rounded-2xl bg-card p-2 shadow-sm ring-1 ring-black/[0.05]">
+            <div className="grid grid-cols-2 gap-1.5 h-[100px]">
+              <div className="relative rounded-xl overflow-hidden">
                 <img src={c.before} alt={`${c.name} before`} className="w-full h-full object-cover" draggable={false} loading="lazy" />
                 <span className="absolute bottom-1 left-1/2 -translate-x-1/2 bg-white text-[#1a1a1a] text-[8px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full shadow-sm">Before</span>
               </div>
-              <div className="relative rounded-lg overflow-hidden">
+              <div className="relative rounded-xl overflow-hidden">
                 <img src={c.after} alt={`${c.name} after`} className="w-full h-full object-cover" draggable={false} loading="lazy" />
                 <span className="absolute bottom-1 left-1/2 -translate-x-1/2 bg-white text-[#1a1a1a] text-[8px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full shadow-sm">After</span>
               </div>
             </div>
-            <p className="mt-1.5 text-center text-[12px] font-semibold text-foreground">{c.name}</p>
+            <p className="mt-1.5 text-center text-xs font-semibold text-foreground">{c.name}</p>
           </div>
         ))}
       </div>
@@ -422,57 +422,57 @@ export default function DentalLanding() {
       <div className="h-14 sm:h-16" />
 
       {/* HERO */}
-      <section className="relative px-5 sm:px-6 pt-10 lg:pt-2 pb-8 lg:pb-6 lg:min-h-[calc(100vh-4rem)] lg:flex lg:flex-col lg:justify-start lg:overflow-hidden">
+      <section className="relative px-5 sm:px-6 pt-10 lg:pt-16 pb-8 lg:pb-12">
         <div className="absolute top-32 -left-20 size-80 bg-accent/10 rounded-full blur-3xl pointer-events-none" />
         <div className="absolute bottom-0 right-0 size-96 bg-primary/10 rounded-full blur-3xl pointer-events-none" />
 
-        <div className="w-full max-w-7xl mx-auto grid lg:grid-cols-2 gap-10 lg:gap-10 lg:items-stretch relative">
-          <div className="animate-fade-up lg:flex lg:flex-col lg:justify-start">
-            {/* Reviews */}
-            <div className="flex items-center gap-3 mb-6 lg:mb-4">
-              <div className="flex -space-x-2.5">
+        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-10 lg:gap-16 items-center relative">
+          <div className="animate-fade-up">
+            {/* Reviews — moved to top */}
+            <div className="flex items-center gap-4 mb-6">
+              <div className="flex -space-x-3">
                 <img src={reviewPriya} alt="" className="size-9 rounded-full border-2 border-background object-cover" />
                 <img src={reviewRahul} alt="" className="size-9 rounded-full border-2 border-background object-cover" />
                 <img src={reviewAnjali} alt="" className="size-9 rounded-full border-2 border-background object-cover" />
                 <div className="size-9 rounded-full border-2 border-background bg-primary text-primary-foreground text-[10px] font-bold flex items-center justify-center">500+</div>
               </div>
               <div className="text-sm">
-                <div className="flex items-center gap-0.5 text-accent">
-                  {[...Array(5)].map((_, i) => <Star key={i} className="size-3 fill-current" />)}
+                <div className="flex items-center gap-1 text-accent">
+                  {[...Array(5)].map((_, i) => <Star key={i} className="size-3.5 fill-current" />)}
                   <span className="text-foreground font-semibold ml-1">4.9</span>
                 </div>
-                <div className="text-[11px] text-muted-foreground">492+ verified Google reviews</div>
+                <div className="text-xs text-muted-foreground">492+ verified Google reviews</div>
               </div>
             </div>
 
-            <h1 className="font-display text-[2.75rem] sm:text-6xl lg:text-[3.25rem] font-medium leading-[1.02] lg:leading-[1.05] tracking-tight text-balance mb-6 lg:mb-4">
+            <h1 className="font-display text-[2.75rem] sm:text-6xl lg:text-7xl font-medium leading-[1.02] tracking-tight text-balance mb-6">
               Rajkot's most trusted{" "}
               <span className="italic text-primary relative">
                 dental home
-                <svg className="absolute -bottom-2 lg:-bottom-1 left-0 w-full" viewBox="0 0 200 12" fill="none">
+                <svg className="absolute -bottom-2 left-0 w-full" viewBox="0 0 200 12" fill="none">
                   <path d="M2 9 Q 100 -2 198 7" stroke="currentColor" strokeWidth="3" strokeLinecap="round" className="text-accent" />
                 </svg>
               </span>
               {" "}since 2012.
             </h1>
-            <p className="text-base text-muted-foreground max-w-[52ch] mb-4 lg:mb-4 leading-relaxed">
+            <p className="text-lg text-muted-foreground max-w-[52ch] mb-8 leading-relaxed">
               Painless implants, single-visit root canals, smile designing and full-mouth rehabilitation by
               <span className="text-foreground font-medium"> Dr. Vipul Patel (FICOI)</span> — trusted by 500+ Rajkot families and rated 4.9★ on Google.
             </p>
 
-            <div className="flex flex-wrap gap-3 mb-6 lg:mb-4">
-              <a href="#book" className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-4 lg:px-5 lg:py-3 rounded-full text-sm font-semibold hover:opacity-90 transition shadow-lg shadow-primary/20">
+            <div className="flex flex-wrap gap-3 mb-6">
+              <a href="#book" className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-4 rounded-full text-sm font-semibold hover:opacity-90 transition shadow-lg shadow-primary/20">
                 <CalendarCheck className="size-4" /> Book A Call
               </a>
             </div>
-            <div className="flex flex-wrap gap-x-5 gap-y-2 lg:gap-x-4 lg:gap-y-2">
+            <div className="flex flex-wrap gap-x-5 gap-y-2 mb-0">
               {[
                 { label: "Painless treatments guaranteed" },
                 { label: "Same-day procedures available" },
                 { label: "Transparent pricing — no hidden costs" },
               ].map((badge) => (
-                <div key={badge.label} className="flex items-center gap-1 text-[12px] text-muted-foreground">
-                  <CheckCircle2 className="size-3.5 text-accent shrink-0" />
+                <div key={badge.label} className="flex items-center gap-1.5 text-[13px] text-muted-foreground">
+                  <CheckCircle2 className="size-4 text-accent shrink-0" />
                   <span>{badge.label}</span>
                 </div>
               ))}
@@ -480,22 +480,26 @@ export default function DentalLanding() {
           </div>
 
           {/* Doctor image — desktop only */}
-          <div className="hidden lg:flex animate-fade-up items-end justify-center lg:self-end">
+          <div className="hidden lg:block animate-fade-up">
             <img
               src={heroPatient}
               alt="Dr. Vipul Patel — Patel Dental Hospital, Rajkot"
               width={1080}
               height={1600}
-              className="w-auto max-h-[360px] lg:max-h-[580px] object-contain object-center"
+              className="w-full aspect-[3/4] object-contain object-center"
             />
           </div>
         </div>
 
-        {/* Before & After — below hero on all screens */}
-        <div className="w-full max-w-7xl mx-auto mt-4 lg:hidden">
+        {/* Before & After — Above the fold (mobile only) */}
+        <div className="max-w-7xl mx-auto mt-4 lg:hidden">
           <CompactBeforeAfter />
         </div>
       </section>
+
+      <div className="hidden lg:block">
+        <BeforeAfterShowcase />
+      </div>
 
 
       {/* INSTAGRAM REELS */}
@@ -611,6 +615,50 @@ export default function DentalLanding() {
       </section>
 
 
+      {/* Stats — "We love to see people smile" */}
+      <section className="py-20 lg:py-28 px-5 sm:px-6 bg-surface">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center max-w-2xl mx-auto mb-14">
+            <p className="text-xs font-mono uppercase tracking-widest text-accent mb-3">
+              Patel Dental Hospital — Dental Clinic in Rajkot
+            </p>
+            <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl font-medium tracking-tight text-primary">
+              We love to see <span className="italic">people smile.</span>
+            </h2>
+            <p className="mt-5 text-base text-muted-foreground">
+              Exceptional care from the moment you walk in, to the smile you walk out with.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-8 lg:gap-12">
+            {[
+              { Icon: Bone,          val: "1000+", label: "Dental Implants" },
+              { Icon: Users,         val: "500+",  label: "Happy Families" },
+              { Icon: Smile,          val: "800+",  label: "Smile Makeovers" },
+              { Icon: Syringe,        val: "2000+", label: "Root Canals" },
+              { Icon: CalendarDays,  val: "13+",   label: "Years in Rajkot" },
+              { Icon: Building2,     val: "2",     label: "Convenient Branches" },
+              { Icon: BadgeCheck,     val: "2",     label: "FICOI Certified Dentists" },
+              { Icon: Star,           val: "4.9★",  label: "Google Rating" },
+              { Icon: MessagesSquare, val: "492+",  label: "Google Reviews" },
+            ].map(({ Icon, val, label }) => (
+              <div key={label} className="flex items-center gap-4 sm:gap-5">
+                <div className="shrink-0 text-[#8BC53F] flex items-center justify-center">
+                  <Icon className="size-12 sm:size-14" fill="currentColor" strokeWidth={1.5} />
+                </div>
+                <div>
+                  <div className="font-display text-3xl sm:text-4xl font-semibold text-foreground leading-none">
+                    {val}
+                  </div>
+                  <div className="text-sm text-muted-foreground mt-2">{label}</div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+
       {/* TREATMENTS */}
       <section id="treatments" className="py-20 lg:py-28 px-5 sm:px-6 bg-surface">
         <div className="max-w-7xl mx-auto">
@@ -666,50 +714,6 @@ export default function DentalLanding() {
                     {cta}
                     <ArrowRight className="size-4 group-hover:translate-x-0.5 transition" />
                   </a>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-
-      {/* Stats — "We love to see people smile" */}
-      <section className="py-20 lg:py-28 px-5 sm:px-6 bg-surface">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center max-w-2xl mx-auto mb-14">
-            <p className="text-xs font-mono uppercase tracking-widest text-accent mb-3">
-              Patel Dental Hospital — Dental Clinic in Rajkot
-            </p>
-            <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl font-medium tracking-tight text-primary">
-              We love to see <span className="italic">people smile.</span>
-            </h2>
-            <p className="mt-5 text-base text-muted-foreground">
-              Exceptional care from the moment you walk in, to the smile you walk out with.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-8 lg:gap-12">
-            {[
-              { Icon: Bone,          val: "1000+", label: "Dental Implants" },
-              { Icon: Users,         val: "500+",  label: "Happy Families" },
-              { Icon: Smile,          val: "800+",  label: "Smile Makeovers" },
-              { Icon: Syringe,        val: "2000+", label: "Root Canals" },
-              { Icon: CalendarDays,  val: "13+",   label: "Years in Rajkot" },
-              { Icon: Building2,     val: "2",     label: "Convenient Branches" },
-              { Icon: BadgeCheck,     val: "2",     label: "FICOI Certified Dentists" },
-              { Icon: Star,           val: "4.9★",  label: "Google Rating" },
-              { Icon: MessagesSquare, val: "492+",  label: "Google Reviews" },
-            ].map(({ Icon, val, label }) => (
-              <div key={label} className="flex items-center gap-4 sm:gap-5">
-                <div className="shrink-0 text-[#8BC53F] flex items-center justify-center">
-                  <Icon className="size-12 sm:size-14" fill="currentColor" strokeWidth={1.5} />
-                </div>
-                <div>
-                  <div className="font-display text-3xl sm:text-4xl font-semibold text-foreground leading-none">
-                    {val}
-                  </div>
-                  <div className="text-sm text-muted-foreground mt-2">{label}</div>
                 </div>
               </div>
             ))}
