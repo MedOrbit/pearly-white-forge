@@ -322,20 +322,20 @@ function CompactBeforeAfter() {
   return (
     <div className="relative select-none">
       {/* Desktop: horizontal grid */}
-      <div className="hidden lg:grid grid-cols-4 gap-2">
+      <div className="hidden lg:grid grid-cols-4 gap-3">
         {showCases.map((c, i) => (
-          <div key={i} className="rounded-xl bg-card p-1.5 shadow-sm ring-1 ring-black/[0.05]">
-            <div className="grid grid-cols-2 gap-1 h-[56px]">
+          <div key={i} className="rounded-xl bg-card p-2 shadow-sm ring-1 ring-black/[0.05]">
+            <div className="grid grid-cols-2 gap-1.5 h-[96px]">
               <div className="relative rounded-lg overflow-hidden">
                 <img src={c.before} alt={`${c.name} before`} className="w-full h-full object-cover" draggable={false} loading="lazy" />
-                <span className="absolute bottom-1 left-1/2 -translate-x-1/2 bg-white text-[#1a1a1a] text-[7px] font-bold uppercase tracking-wider px-1.5 py-0.5 rounded-full shadow-sm">Before</span>
+                <span className="absolute bottom-1 left-1/2 -translate-x-1/2 bg-white text-[#1a1a1a] text-[8px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full shadow-sm">Before</span>
               </div>
               <div className="relative rounded-lg overflow-hidden">
                 <img src={c.after} alt={`${c.name} after`} className="w-full h-full object-cover" draggable={false} loading="lazy" />
-                <span className="absolute bottom-1 left-1/2 -translate-x-1/2 bg-white text-[#1a1a1a] text-[7px] font-bold uppercase tracking-wider px-1.5 py-0.5 rounded-full shadow-sm">After</span>
+                <span className="absolute bottom-1 left-1/2 -translate-x-1/2 bg-white text-[#1a1a1a] text-[8px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full shadow-sm">After</span>
               </div>
             </div>
-            <p className="mt-1 text-center text-[11px] font-semibold text-foreground">{c.name}</p>
+            <p className="mt-1.5 text-center text-[12px] font-semibold text-foreground">{c.name}</p>
           </div>
         ))}
       </div>
@@ -422,14 +422,14 @@ export default function DentalLanding() {
       <div className="h-14 sm:h-16" />
 
       {/* HERO */}
-      <section className="relative px-5 sm:px-6 pt-10 lg:pt-2 pb-8 lg:pb-3 lg:min-h-[calc(100vh-4rem)] lg:flex lg:flex-col lg:justify-center lg:overflow-hidden">
+      <section className="relative px-5 sm:px-6 pt-10 lg:pt-2 pb-8 lg:pb-6 lg:min-h-[calc(100vh-4rem)] lg:flex lg:flex-col lg:justify-start lg:overflow-hidden">
         <div className="absolute top-32 -left-20 size-80 bg-accent/10 rounded-full blur-3xl pointer-events-none" />
         <div className="absolute bottom-0 right-0 size-96 bg-primary/10 rounded-full blur-3xl pointer-events-none" />
 
-        <div className="w-full max-w-7xl mx-auto grid lg:grid-cols-2 gap-10 lg:gap-10 lg:items-center relative">
-          <div className="animate-fade-up">
+        <div className="w-full max-w-7xl mx-auto grid lg:grid-cols-2 gap-10 lg:gap-10 lg:items-start relative">
+          <div className="animate-fade-up lg:flex lg:flex-col">
             {/* Reviews */}
-            <div className="flex items-center gap-3 mb-6 lg:mb-2">
+            <div className="flex items-center gap-3 mb-6 lg:mb-3">
               <div className="flex -space-x-2.5">
                 <img src={reviewPriya} alt="" className="size-9 rounded-full border-2 border-background object-cover" />
                 <img src={reviewRahul} alt="" className="size-9 rounded-full border-2 border-background object-cover" />
@@ -445,7 +445,7 @@ export default function DentalLanding() {
               </div>
             </div>
 
-            <h1 className="font-display text-[2.75rem] sm:text-6xl lg:text-[3.25rem] font-medium leading-[1.02] lg:leading-[1.05] tracking-tight text-balance mb-6 lg:mb-2">
+            <h1 className="font-display text-[2.75rem] sm:text-6xl lg:text-[3.25rem] font-medium leading-[1.02] lg:leading-[1.05] tracking-tight text-balance mb-6 lg:mb-3">
               Rajkot's most trusted{" "}
               <span className="italic text-primary relative">
                 dental home
@@ -455,12 +455,12 @@ export default function DentalLanding() {
               </span>
               {" "}since 2012.
             </h1>
-            <p className="text-base text-muted-foreground max-w-[52ch] mb-4 lg:mb-2 leading-relaxed">
+            <p className="text-base text-muted-foreground max-w-[52ch] mb-4 lg:mb-3 leading-relaxed">
               Painless implants, single-visit root canals, smile designing and full-mouth rehabilitation by
               <span className="text-foreground font-medium"> Dr. Vipul Patel (FICOI)</span> — trusted by 500+ Rajkot families and rated 4.9★ on Google.
             </p>
 
-            <div className="flex flex-wrap gap-3 mb-6 lg:mb-2">
+            <div className="flex flex-wrap gap-3 mb-6 lg:mb-3">
               <a href="#book" className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-4 lg:px-5 lg:py-3 rounded-full text-sm font-semibold hover:opacity-90 transition shadow-lg shadow-primary/20">
                 <CalendarCheck className="size-4" /> Book A Call
               </a>
@@ -480,19 +480,19 @@ export default function DentalLanding() {
           </div>
 
           {/* Doctor image — desktop only */}
-          <div className="hidden lg:flex animate-fade-up justify-center">
+          <div className="hidden lg:flex animate-fade-up items-end justify-center lg:self-end">
             <img
               src={heroPatient}
               alt="Dr. Vipul Patel — Patel Dental Hospital, Rajkot"
               width={1080}
               height={1600}
-              className="w-auto max-h-[360px] lg:max-h-[260px] object-contain object-center"
+              className="w-auto max-h-[360px] lg:max-h-[580px] object-contain object-center"
             />
           </div>
         </div>
 
         {/* Before & After — below hero on all screens */}
-        <div className="w-full max-w-7xl mx-auto mt-4 lg:mt-8">
+        <div className="w-full max-w-7xl mx-auto mt-4 lg:mt-0 lg:mb-2">
           <CompactBeforeAfter />
         </div>
       </section>
