@@ -452,7 +452,7 @@ export default function DentalLanding() {
         <div className="absolute bottom-0 right-0 size-96 bg-primary/10 rounded-full blur-3xl pointer-events-none" />
 
         <div className="max-w-7xl mx-auto grid lg:grid-cols-[0.88fr_1.12fr] gap-10 lg:gap-12 items-center flex-1">
-          <div className="animate-fade-up flex flex-col justify-center lg:py-6">
+          <div className="animate-fade-up flex flex-col justify-center lg:py-2">
             {/* Reviews — moved to top */}
             <div className="flex items-center gap-4 mb-3 lg:mb-2">
               <div className="flex -space-x-3">
