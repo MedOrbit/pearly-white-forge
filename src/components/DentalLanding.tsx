@@ -477,6 +477,25 @@ export default function DentalLanding() {
         </div>
       </section>
 
+      {/* PAINLESS PROMISE */}
+      <section className="py-20 lg:py-28 px-5 sm:px-6 bg-[#F5F0EC]">
+        <div className="max-w-3xl mx-auto text-center">
+          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-medium tracking-tight text-[#1a1a1a] leading-tight">
+            You've been avoiding the dentist because the last one hurt. <span className="italic text-[#0D4C44]">This won't.</span>
+          </h2>
+          <p className="mt-6 text-base sm:text-lg text-[#1a1a1a]/70 leading-relaxed">
+            If a painful past visit has you dreading the chair, you're not alone — and the longer you wait, the bigger the problem gets. At Patel Dental Hospital, genuinely painless techniques and a team that explains every step mean you finally get it sorted — calmly, and for good.
+          </p>
+          <a
+            href="#book"
+            className="inline-flex items-center gap-2 mt-8 bg-[#0D4C44] text-white px-7 py-3 rounded-full text-sm font-semibold hover:bg-[#0a3a34] transition"
+          >
+            Book your free consultation
+            <ArrowRight className="size-4" />
+          </a>
+        </div>
+      </section>
+
       {/* INSTAGRAM REELS */}
       <section className="py-20 lg:py-28 px-5 sm:px-6">
         <div className="max-w-7xl mx-auto">
