@@ -505,13 +505,13 @@ export default function DentalLanding() {
           </div>
 
           {/* Doctor image — desktop only */}
-          <div className="hidden lg:block animate-fade-up overflow-hidden rounded-2xl h-[340px] xl:h-[380px]">
+          <div className="hidden lg:flex animate-fade-up overflow-hidden rounded-2xl items-center justify-center">
             <img
               src={heroPatient}
               alt="Dr. Vipul Patel — Patel Dental Hospital, Rajkot"
               width={1080}
               height={1600}
-              className="w-full h-full object-cover object-top"
+              className="w-full h-full object-cover object-[center_15%]"
             />
           </div>
         </div>
