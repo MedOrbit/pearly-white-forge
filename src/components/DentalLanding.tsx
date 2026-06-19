@@ -325,36 +325,36 @@ function CompactBeforeAfter() {
   return (
     <div className="relative select-none">
       {/* Desktop: auto-sliding horizontal carousel */}
-      <div className="hidden lg:block">
+          <div className="hidden lg:block">
         <div
           ref={desktopScrollRef}
-          className="overflow-x-auto pb-2 snap-x snap-mandatory"
+          className="overflow-x-auto pb-1 snap-x snap-mandatory"
           style={{ scrollbarWidth: "none" }}
         >
-          <div className="flex gap-4 w-max px-[20%]">
+          <div className="flex gap-3 w-max px-[calc((100vw-1280px)/2+1.25rem)] min-[1280px]:px-5">
             {showCases.map((c, i) => (
               <div
                 key={i}
                 ref={(el) => { desktopItemRefs.current[i] = el; }}
-                className="w-[420px] shrink-0 rounded-2xl bg-card p-3 shadow-sm ring-1 ring-black/[0.05] snap-center"
+                className="w-[300px] xl:w-[330px] shrink-0 rounded-2xl bg-card p-2 shadow-sm ring-1 ring-black/[0.05] snap-center"
               >
-                <div className="grid grid-cols-2 gap-2 h-[180px]">
+                <div className="grid grid-cols-2 gap-1.5 h-[112px] xl:h-[124px]">
                   <div className="relative rounded-xl overflow-hidden">
                     <img src={c.before} alt={`${c.name} before`} className="w-full h-full object-cover" draggable={false} loading="lazy" />
-                    <span className="absolute bottom-1.5 left-1/2 -translate-x-1/2 bg-white text-[#1a1a1a] text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full shadow-sm">Before</span>
+                    <span className="absolute bottom-1 left-1/2 -translate-x-1/2 bg-card text-foreground text-[9px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full shadow-sm">Before</span>
                   </div>
                   <div className="relative rounded-xl overflow-hidden">
                     <img src={c.after} alt={`${c.name} after`} className="w-full h-full object-cover" draggable={false} loading="lazy" />
-                    <span className="absolute bottom-1.5 left-1/2 -translate-x-1/2 bg-white text-[#1a1a1a] text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full shadow-sm">After</span>
+                    <span className="absolute bottom-1 left-1/2 -translate-x-1/2 bg-card text-foreground text-[9px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full shadow-sm">After</span>
                   </div>
                 </div>
-                <p className="mt-2.5 text-center text-sm font-semibold text-foreground">{c.name}</p>
+                <p className="mt-1.5 text-center text-xs font-semibold text-foreground">{c.name}</p>
               </div>
             ))}
           </div>
         </div>
         {/* Dot indicators */}
-        <div className="flex justify-center gap-1.5 mt-3">
+        <div className="flex justify-center gap-1.5 mt-2">
           {showCases.map((_, i) => (
             <div
               key={i}
