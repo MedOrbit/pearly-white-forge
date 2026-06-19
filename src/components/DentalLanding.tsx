@@ -190,7 +190,6 @@ const treatments = [
     href: "#book",
   },
 ];
-];
 
 const faqs = [
   { q: "How much does a consultation cost at Patel Dental Hospital?", a: "A complete consultation with Dr. Vipul Patel is just ₹100 — including a detailed oral examination and a transparent treatment plan with no hidden charges." },
