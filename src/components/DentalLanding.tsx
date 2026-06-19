@@ -422,19 +422,19 @@ export default function DentalLanding() {
       <div className="h-14 sm:h-16" />
 
       {/* HERO */}
-      <section className="relative px-5 sm:px-6 pt-2 lg:pt-3 pb-3 lg:pb-4">
+      <section className="relative px-5 sm:px-6 pt-10 lg:pt-3 pb-8 lg:pb-4">
         <div className="absolute top-32 -left-20 size-80 bg-accent/10 rounded-full blur-3xl pointer-events-none" />
         <div className="absolute bottom-0 right-0 size-96 bg-primary/10 rounded-full blur-3xl pointer-events-none" />
 
-        <div className="w-full max-w-7xl mx-auto grid lg:grid-cols-2 gap-6 lg:gap-10 items-start relative">
+        <div className="w-full max-w-7xl mx-auto grid lg:grid-cols-2 gap-10 lg:gap-10 items-start relative">
           <div className="animate-fade-up">
             {/* Reviews */}
-            <div className="flex items-center gap-3 mb-3">
+            <div className="flex items-center gap-3 mb-6 lg:mb-3">
               <div className="flex -space-x-2.5">
-                <img src={reviewPriya} alt="" className="size-8 rounded-full border-2 border-background object-cover" />
-                <img src={reviewRahul} alt="" className="size-8 rounded-full border-2 border-background object-cover" />
-                <img src={reviewAnjali} alt="" className="size-8 rounded-full border-2 border-background object-cover" />
-                <div className="size-8 rounded-full border-2 border-background bg-primary text-primary-foreground text-[9px] font-bold flex items-center justify-center">500+</div>
+                <img src={reviewPriya} alt="" className="size-9 rounded-full border-2 border-background object-cover" />
+                <img src={reviewRahul} alt="" className="size-9 rounded-full border-2 border-background object-cover" />
+                <img src={reviewAnjali} alt="" className="size-9 rounded-full border-2 border-background object-cover" />
+                <div className="size-9 rounded-full border-2 border-background bg-primary text-primary-foreground text-[10px] font-bold flex items-center justify-center">500+</div>
               </div>
               <div className="text-sm">
                 <div className="flex items-center gap-0.5 text-accent">
@@ -445,11 +445,11 @@ export default function DentalLanding() {
               </div>
             </div>
 
-            <h1 className="font-display text-[2.75rem] sm:text-5xl lg:text-[3.25rem] font-medium leading-[1.05] tracking-tight text-balance mb-3">
+            <h1 className="font-display text-[2.75rem] sm:text-6xl lg:text-[3.25rem] font-medium leading-[1.02] lg:leading-[1.05] tracking-tight text-balance mb-6 lg:mb-3">
               Rajkot's most trusted{" "}
               <span className="italic text-primary relative">
                 dental home
-                <svg className="absolute -bottom-1 left-0 w-full" viewBox="0 0 200 12" fill="none">
+                <svg className="absolute -bottom-2 lg:-bottom-1 left-0 w-full" viewBox="0 0 200 12" fill="none">
                   <path d="M2 9 Q 100 -2 198 7" stroke="currentColor" strokeWidth="3" strokeLinecap="round" className="text-accent" />
                 </svg>
               </span>
@@ -460,12 +460,12 @@ export default function DentalLanding() {
               <span className="text-foreground font-medium"> Dr. Vipul Patel (FICOI)</span> — trusted by 500+ Rajkot families and rated 4.9★ on Google.
             </p>
 
-            <div className="flex flex-wrap gap-3 mb-3">
-              <a href="#book" className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-5 py-3 rounded-full text-sm font-semibold hover:opacity-90 transition shadow-lg shadow-primary/20">
+            <div className="flex flex-wrap gap-3 mb-6 lg:mb-3">
+              <a href="#book" className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-4 lg:px-5 lg:py-3 rounded-full text-sm font-semibold hover:opacity-90 transition shadow-lg shadow-primary/20">
                 <CalendarCheck className="size-4" /> Book A Call
               </a>
             </div>
-            <div className="flex flex-wrap gap-x-4 gap-y-1.5">
+            <div className="flex flex-wrap gap-x-5 gap-y-2 lg:gap-x-4 lg:gap-y-1.5">
               {[
                 { label: "Painless treatments guaranteed" },
                 { label: "Same-day procedures available" },
@@ -492,7 +492,7 @@ export default function DentalLanding() {
         </div>
 
         {/* Before & After — below hero on all screens */}
-        <div className="w-full max-w-7xl mx-auto mt-3">
+        <div className="w-full max-w-7xl mx-auto mt-4 lg:mt-3">
           <CompactBeforeAfter />
         </div>
       </section>
