@@ -498,7 +498,7 @@ export default function DentalLanding() {
       </section>
 
       <div className="hidden lg:block">
-        <BeforeAfterShowcase />
+        <BeforeAfterShowcase showHeader={false} />
       </div>
 
 
