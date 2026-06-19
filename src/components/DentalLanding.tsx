@@ -81,7 +81,7 @@ import txNightguard from "@/assets/tx-nightguard.jpg";
 import txFullmouth from "@/assets/tx-fullmouth.jpg";
 import txSedation from "@/assets/tx-sedation.jpg";
 import txVeneers from "@/assets/tx-veneers.jpg";
-import BeforeAfterShowcase, { cases as beforeAfterCases } from "@/components/BeforeAfterShowcase";
+import { cases as beforeAfterCases } from "@/components/BeforeAfterShowcase";
 
 
 // ─── Clinic constants ──────────────────────────────────────────────────────
