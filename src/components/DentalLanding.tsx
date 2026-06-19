@@ -305,19 +305,19 @@ export default function DentalLanding() {
   return (
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden pb-24 md:pb-0">
       {/* Sticky Header */}
-      <header className="fixed top-0 left-0 right-0 z-50 bg-[#FDFCFB]/95 backdrop-blur-md border-b border-[#0D4C44]/10 md:bg-[#1a1a1a]/95 md:backdrop-blur-md md:border-b md:border-white/10">
+      <header className="fixed top-0 left-0 right-0 z-50 bg-[#FDFCFB]/95 backdrop-blur-md border-b border-[#0D4C44]/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 h-14 sm:h-16 flex items-center justify-between">
           <a href="#" className="flex items-center">
             <img src={logoUrl} alt="Patel Dental Hospital" className="h-9 sm:h-11 w-auto object-contain" />
           </a>
           <div className="flex items-center gap-3 sm:gap-4">
-            <a href={`tel:${PHONE_PRIMARY_TEL}`} className="hidden sm:flex items-center gap-2 text-sm font-medium text-white/90 hover:text-white transition">
+            <a href={`tel:${PHONE_PRIMARY_TEL}`} className="hidden sm:flex items-center gap-2 text-sm font-medium text-[#0D4C44]/90 hover:text-[#0D4C44] transition">
               <Phone className="size-4" /> {PHONE_PRIMARY}
             </a>
             <a href={`tel:${PHONE_PRIMARY_TEL}`} className="sm:hidden flex items-center justify-center size-9 rounded-full bg-[#0D4C44]/5 text-[#0D4C44] active:scale-95 transition">
               <Phone className="size-4" />
             </a>
-            <a href="#book" className="bg-[#0D4C44] text-white px-4 sm:px-5 py-2 rounded-full text-xs sm:text-sm font-semibold hover:bg-[#0a3a34] transition md:bg-white md:text-[#1a1a1a] md:hover:bg-white/90">
+            <a href="#book" className="bg-[#0D4C44] text-white px-4 sm:px-5 py-2 rounded-full text-xs sm:text-sm font-semibold hover:bg-[#0a3a34] transition">
               Book A Call
             </a>
           </div>
