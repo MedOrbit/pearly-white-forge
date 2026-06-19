@@ -37,23 +37,23 @@ function Card({ c }: { c: (typeof cases)[number] }) {
       <div className="rounded-[24px] bg-card p-2.5 shadow-[0_8px_30px_-12px_rgba(0,0,0,0.12)] ring-1 ring-black/[0.05] w-[280px] sm:w-[300px]">
         <div className="aspect-square sm:aspect-auto sm:h-[340px]">
           {c.orientation === "horizontal" ? (
-            <div className="flex flex-col gap-2.5 h-full">
-              <div className="relative flex-1 rounded-2xl overflow-hidden ring-1 ring-black/[0.06]">
-                <img src={c.before} alt={`${c.name} before`} draggable={false} className="w-full h-full object-cover pointer-events-none select-none" loading="lazy" />
-                <Label>Before</Label>
-              </div>
-              <div className="relative flex-1 rounded-2xl overflow-hidden ring-1 ring-black/[0.06]">
-                <img src={c.after} alt={`${c.name} after`} draggable={false} className="w-full h-full object-cover pointer-events-none select-none" loading="lazy" />
-                <Label>After</Label>
-              </div>
-            </div>
-          ) : (
             <div className="grid grid-cols-2 gap-2.5 h-full">
               <div className="relative rounded-2xl overflow-hidden ring-1 ring-black/[0.06]">
                 <img src={c.before} alt={`${c.name} before`} draggable={false} className="w-full h-full object-cover pointer-events-none select-none" loading="lazy" />
                 <Label>Before</Label>
               </div>
               <div className="relative rounded-2xl overflow-hidden ring-1 ring-black/[0.06]">
+                <img src={c.after} alt={`${c.name} after`} draggable={false} className="w-full h-full object-cover pointer-events-none select-none" loading="lazy" />
+                <Label>After</Label>
+              </div>
+            </div>
+          ) : (
+            <div className="flex flex-col gap-2.5 h-full">
+              <div className="relative flex-1 rounded-2xl overflow-hidden ring-1 ring-black/[0.06]">
+                <img src={c.before} alt={`${c.name} before`} draggable={false} className="w-full h-full object-cover pointer-events-none select-none" loading="lazy" />
+                <Label>Before</Label>
+              </div>
+              <div className="relative flex-1 rounded-2xl overflow-hidden ring-1 ring-black/[0.06]">
                 <img src={c.after} alt={`${c.name} after`} draggable={false} className="w-full h-full object-cover pointer-events-none select-none" loading="lazy" />
                 <Label>After</Label>
               </div>
