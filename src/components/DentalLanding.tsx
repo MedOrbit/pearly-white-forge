@@ -447,46 +447,46 @@ export default function DentalLanding() {
       <div className="h-14 sm:h-16" />
 
       {/* HERO */}
-      <section className="relative px-5 sm:px-6 pt-2 lg:pt-2 pb-7 lg:pb-6">
+      <section className="relative px-5 sm:px-6 pt-1 lg:pt-1 pb-3 lg:pb-3">
         <div className="absolute top-32 -left-20 size-80 bg-accent/10 rounded-full blur-3xl pointer-events-none" />
         <div className="absolute bottom-0 right-0 size-96 bg-primary/10 rounded-full blur-3xl pointer-events-none" />
 
         <div className="max-w-7xl mx-auto grid lg:grid-cols-[0.88fr_1.12fr] gap-10 lg:gap-12 items-start relative">
           <div className="animate-fade-up">
             {/* Reviews — moved to top */}
-            <div className="flex items-center gap-4 mb-4 lg:mb-2">
+            <div className="flex items-center gap-4 mb-3 lg:mb-2">
               <div className="flex -space-x-3">
-                <img src={reviewPriya} alt="" className="size-9 rounded-full border-2 border-background object-cover" />
-                <img src={reviewRahul} alt="" className="size-9 rounded-full border-2 border-background object-cover" />
-                <img src={reviewAnjali} alt="" className="size-9 rounded-full border-2 border-background object-cover" />
-                <div className="size-9 rounded-full border-2 border-background bg-primary text-primary-foreground text-[10px] font-bold flex items-center justify-center">500+</div>
+                <img src={reviewPriya} alt="" className="size-8 rounded-full border-2 border-background object-cover" />
+                <img src={reviewRahul} alt="" className="size-8 rounded-full border-2 border-background object-cover" />
+                <img src={reviewAnjali} alt="" className="size-8 rounded-full border-2 border-background object-cover" />
+                <div className="size-8 rounded-full border-2 border-background bg-primary text-primary-foreground text-[10px] font-bold flex items-center justify-center">500+</div>
               </div>
               <div className="text-sm">
                 <div className="flex items-center gap-1 text-accent">
-                  {[...Array(5)].map((_, i) => <Star key={i} className="size-3.5 fill-current" />)}
+                  {[...Array(5)].map((_, i) => <Star key={i} className="size-3 fill-current" />)}
                   <span className="text-foreground font-semibold ml-1">4.9</span>
                 </div>
                 <div className="text-xs text-muted-foreground">492+ verified Google reviews</div>
               </div>
             </div>
 
-            <h1 className="font-display text-[2.75rem] sm:text-6xl lg:text-[4.3rem] xl:text-[4.7rem] font-medium leading-[1.02] tracking-tight text-balance mb-5 lg:mb-4">
+            <h1 className="font-display text-[2.5rem] sm:text-5xl lg:text-[3.5rem] xl:text-[3.8rem] font-medium leading-[1.05] tracking-tight text-balance mb-3 lg:mb-3">
               Rajkot's most trusted{" "}
               <span className="italic text-primary relative">
                 dental home
-                <svg className="absolute -bottom-2 left-0 w-full" viewBox="0 0 200 12" fill="none">
+                <svg className="absolute -bottom-1.5 left-0 w-full" viewBox="0 0 200 12" fill="none">
                   <path d="M2 9 Q 100 -2 198 7" stroke="currentColor" strokeWidth="3" strokeLinecap="round" className="text-accent" />
                 </svg>
               </span>
               {" "}since 2012.
             </h1>
-            <p className="text-lg lg:text-base xl:text-lg text-muted-foreground max-w-[52ch] mb-6 lg:mb-6 leading-relaxed">
+            <p className="text-base lg:text-sm xl:text-base text-muted-foreground max-w-[52ch] mb-4 lg:mb-4 leading-relaxed">
               Painless implants, single-visit root canals, smile designing and full-mouth rehabilitation by
               <span className="text-foreground font-medium"> Dr. Vipul Patel (FICOI)</span> — trusted by 500+ Rajkot families and rated 4.9★ on Google.
             </p>
 
-            <div className="flex flex-wrap gap-3 mb-5 lg:mb-5">
-              <a href="#book" className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-4 rounded-full text-sm font-semibold hover:opacity-90 transition shadow-lg shadow-primary/20">
+            <div className="flex flex-wrap gap-3 mb-3 lg:mb-3">
+              <a href="#book" className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-5 py-3 rounded-full text-sm font-semibold hover:opacity-90 transition shadow-lg shadow-primary/20">
                 <CalendarCheck className="size-4" /> Book A Call
               </a>
             </div>
@@ -505,7 +505,7 @@ export default function DentalLanding() {
           </div>
 
           {/* Doctor image — desktop only */}
-          <div className="hidden lg:block animate-fade-up overflow-hidden rounded-2xl h-[480px] xl:h-[520px]">
+          <div className="hidden lg:block animate-fade-up overflow-hidden rounded-2xl h-[380px] xl:h-[420px]">
             <img
               src={heroPatient}
               alt="Dr. Vipul Patel — Patel Dental Hospital, Rajkot"
@@ -517,7 +517,7 @@ export default function DentalLanding() {
         </div>
 
         {/* Before & After — Above the fold */}
-        <div className="max-w-7xl mx-auto mt-6 lg:mt-3">
+        <div className="max-w-7xl mx-auto mt-4 lg:mt-2">
           <CompactBeforeAfter />
         </div>
       </section>
