@@ -336,9 +336,9 @@ function CompactBeforeAfter() {
               <div
                 key={i}
                 ref={(el) => { desktopItemRefs.current[i] = el; }}
-                className="w-[345px] xl:w-[385px] shrink-0 rounded-2xl bg-card p-2 shadow-sm ring-1 ring-black/[0.05] snap-center"
+                className="w-[350px] xl:w-[390px] shrink-0 rounded-2xl bg-card p-2 shadow-sm ring-1 ring-black/[0.05] snap-center"
               >
-                <div className="grid grid-cols-2 gap-1.5 h-[128px] xl:h-[142px]">
+                <div className="grid grid-cols-2 gap-1.5 h-[132px] xl:h-[148px]">
                   <div className="relative rounded-xl overflow-hidden">
                     <img src={c.before} alt={`${c.name} before`} className="w-full h-full object-cover" draggable={false} loading="lazy" />
                     <span className="absolute bottom-1 left-1/2 -translate-x-1/2 bg-card text-foreground text-[9px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full shadow-sm">Before</span>
@@ -511,7 +511,7 @@ export default function DentalLanding() {
               alt="Dr. Vipul Patel — Patel Dental Hospital, Rajkot"
               width={1080}
               height={1600}
-              className="w-full h-[600px] xl:h-[660px] object-contain object-center"
+              className="w-full h-[610px] xl:h-[670px] object-contain object-center"
             />
           </div>
         </div>
