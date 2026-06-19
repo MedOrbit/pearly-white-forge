@@ -31,8 +31,8 @@ import {
   MessagesSquare,
 } from "lucide-react";
 
-import heroPatientAsset from "@/assets/clinic/dr-henny-hero-transparent.png.asset.json";
-const heroPatient = heroPatientAsset.url;
+import doctorHeroAsset from "@/assets/clinic/doctor-hero.png.asset.json";
+const heroPatient = doctorHeroAsset.url;
 
 import drHenryAsset from "@/assets/clinic/dr-henry.png.asset.json";
 const drHenry = drHenryAsset.url;
@@ -504,14 +504,14 @@ export default function DentalLanding() {
             </div>
           </div>
 
-          {/* Doctor image — desktop only, fill available height */}
-          <div className="hidden lg:flex animate-fade-up overflow-hidden rounded-2xl items-end justify-center h-full">
+          {/* Doctor image — desktop only */}
+          <div className="hidden lg:block animate-fade-up overflow-hidden rounded-2xl h-[340px] xl:h-[380px]">
             <img
               src={heroPatient}
               alt="Dr. Vipul Patel — Patel Dental Hospital, Rajkot"
               width={1080}
               height={1600}
-              className="w-full h-full object-contain object-top max-h-[85%]"
+              className="w-full h-full object-cover object-top"
             />
           </div>
         </div>
