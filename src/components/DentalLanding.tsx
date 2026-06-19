@@ -354,7 +354,7 @@ function CompactBeforeAfter() {
           </div>
         </div>
         {/* Dot indicators */}
-        <div className="flex justify-center gap-1.5 mt-1">
+        <div className="flex justify-center gap-1.5 mt-0.5">
           {showCases.map((_, i) => (
             <div
               key={i}
@@ -451,8 +451,8 @@ export default function DentalLanding() {
         <div className="absolute top-32 -left-20 size-80 bg-accent/10 rounded-full blur-3xl pointer-events-none" />
         <div className="absolute bottom-0 right-0 size-96 bg-primary/10 rounded-full blur-3xl pointer-events-none" />
 
-        <div className="max-w-7xl mx-auto grid lg:grid-cols-[0.88fr_1.12fr] gap-10 lg:gap-12 items-stretch flex-1">
-          <div className="animate-fade-up flex flex-col justify-center lg:py-6">
+        <div className="max-w-7xl mx-auto grid lg:grid-cols-[0.88fr_1.12fr] gap-10 lg:gap-12 items-center flex-1">
+          <div className="animate-fade-up flex flex-col justify-center lg:py-2">
             {/* Reviews — moved to top */}
             <div className="flex items-center gap-4 mb-3 lg:mb-2">
               <div className="flex -space-x-3">
@@ -470,7 +470,7 @@ export default function DentalLanding() {
               </div>
             </div>
 
-            <h1 className="font-display text-[2.5rem] sm:text-5xl lg:text-[3.5rem] xl:text-[3.8rem] font-medium leading-[1.05] tracking-tight text-balance mb-3 lg:mb-3">
+            <h1 className="font-display text-[2.5rem] sm:text-5xl lg:text-[3.5rem] xl:text-[3.8rem] font-medium leading-[1.05] tracking-tight text-balance mb-2 lg:mb-2">
               Rajkot's most trusted{" "}
               <span className="italic text-primary relative">
                 dental home
@@ -505,7 +505,7 @@ export default function DentalLanding() {
           </div>
 
           {/* Doctor image — desktop only */}
-          <div className="hidden lg:flex animate-fade-up overflow-hidden rounded-2xl items-center justify-center">
+          <div className="hidden lg:flex animate-fade-up overflow-hidden rounded-2xl items-center justify-center max-h-[320px] xl:max-h-[360px]">
             <img
               src={heroPatient}
               alt="Dr. Vipul Patel — Patel Dental Hospital, Rajkot"
@@ -517,7 +517,7 @@ export default function DentalLanding() {
         </div>
 
         {/* Before & After — Above the fold (full-bleed) */}
-        <div className="mt-3 lg:mt-1 -mx-5 sm:-mx-6">
+        <div className="mt-1 lg:-mt-1 -mx-5 sm:-mx-6">
           <CompactBeforeAfter />
         </div>
       </section>
