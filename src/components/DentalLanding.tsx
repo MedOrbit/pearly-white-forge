@@ -453,6 +453,23 @@ export default function DentalLanding() {
 
         <div className="max-w-7xl mx-auto grid lg:grid-cols-[0.88fr_1.12fr] gap-10 lg:gap-12 items-start relative">
           <div className="animate-fade-up">
+            {/* Reviews — moved to top */}
+            <div className="flex items-center gap-4 mb-4 lg:mb-2">
+              <div className="flex -space-x-3">
+                <img src={reviewPriya} alt="" className="size-9 rounded-full border-2 border-background object-cover" />
+                <img src={reviewRahul} alt="" className="size-9 rounded-full border-2 border-background object-cover" />
+                <img src={reviewAnjali} alt="" className="size-9 rounded-full border-2 border-background object-cover" />
+                <div className="size-9 rounded-full border-2 border-background bg-primary text-primary-foreground text-[10px] font-bold flex items-center justify-center">500+</div>
+              </div>
+              <div className="text-sm">
+                <div className="flex items-center gap-1 text-accent">
+                  {[...Array(5)].map((_, i) => <Star key={i} className="size-3.5 fill-current" />)}
+                  <span className="text-foreground font-semibold ml-1">4.9</span>
+                </div>
+                <div className="text-xs text-muted-foreground">492+ verified Google reviews</div>
+              </div>
+            </div>
+
             <h1 className="font-display text-[2.75rem] sm:text-6xl lg:text-[4.3rem] xl:text-[4.7rem] font-medium leading-[1.02] tracking-tight text-balance mb-5 lg:mb-4">
               Rajkot's most trusted{" "}
               <span className="italic text-primary relative">
@@ -487,34 +504,15 @@ export default function DentalLanding() {
             </div>
           </div>
 
-          {/* Right column: Reviews + Doctor image */}
-          <div className="hidden lg:flex flex-col animate-fade-up">
-            {/* Reviews — aligned with top of right column */}
-            <div className="flex items-center gap-4 mb-5">
-              <div className="flex -space-x-3">
-                <img src={reviewPriya} alt="" className="size-9 rounded-full border-2 border-background object-cover" />
-                <img src={reviewRahul} alt="" className="size-9 rounded-full border-2 border-background object-cover" />
-                <img src={reviewAnjali} alt="" className="size-9 rounded-full border-2 border-background object-cover" />
-                <div className="size-9 rounded-full border-2 border-background bg-primary text-primary-foreground text-[10px] font-bold flex items-center justify-center">500+</div>
-              </div>
-              <div className="text-sm">
-                <div className="flex items-center gap-1 text-accent">
-                  {[...Array(5)].map((_, i) => <Star key={i} className="size-3.5 fill-current" />)}
-                  <span className="text-foreground font-semibold ml-1">4.9</span>
-                </div>
-                <div className="text-xs text-muted-foreground">492+ verified Google reviews</div>
-              </div>
-            </div>
-
-            <div className="overflow-hidden rounded-2xl h-[480px] xl:h-[520px]">
-              <img
-                src={heroPatient}
-                alt="Dr. Vipul Patel — Patel Dental Hospital, Rajkot"
-                width={1080}
-                height={1600}
-                className="w-full h-full object-contain object-top"
-              />
-            </div>
+          {/* Doctor image — desktop only */}
+          <div className="hidden lg:block animate-fade-up overflow-hidden rounded-2xl h-[480px] xl:h-[520px]">
+            <img
+              src={heroPatient}
+              alt="Dr. Vipul Patel — Patel Dental Hospital, Rajkot"
+              width={1080}
+              height={1600}
+              className="w-full h-full object-contain object-top"
+            />
           </div>
         </div>
 
