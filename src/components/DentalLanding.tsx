@@ -422,11 +422,11 @@ export default function DentalLanding() {
       <div className="h-14 sm:h-16" />
 
       {/* HERO */}
-      <section className="relative px-5 sm:px-6 pt-2 lg:pt-3 pb-3 lg:pb-4">
+      <section className="relative px-5 sm:px-6 pt-2 lg:pt-3 pb-3 lg:pb-4 lg:min-h-[calc(100svh-4rem)] lg:flex lg:flex-col">
         <div className="absolute top-32 -left-20 size-80 bg-accent/10 rounded-full blur-3xl pointer-events-none" />
         <div className="absolute bottom-0 right-0 size-96 bg-primary/10 rounded-full blur-3xl pointer-events-none" />
 
-        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-6 lg:gap-10 items-start relative">
+        <div className="w-full max-w-7xl mx-auto grid lg:grid-cols-2 gap-6 lg:gap-10 items-start relative">
           <div className="animate-fade-up">
             {/* Reviews */}
             <div className="flex items-center gap-3 mb-3">
@@ -492,7 +492,7 @@ export default function DentalLanding() {
         </div>
 
         {/* Before & After — below hero on all screens */}
-        <div className="max-w-7xl mx-auto mt-3">
+        <div className="w-full max-w-7xl mx-auto mt-3 lg:mt-auto lg:pb-4">
           <CompactBeforeAfter />
         </div>
       </section>
