@@ -427,9 +427,9 @@ export default function DentalLanding() {
         <div className="absolute bottom-0 right-0 size-96 bg-primary/10 rounded-full blur-3xl pointer-events-none" />
 
         <div className="w-full max-w-7xl mx-auto grid lg:grid-cols-2 gap-10 lg:gap-10 lg:items-stretch lg:flex-1 relative">
-          <div className="animate-fade-up">
+          <div className="animate-fade-up lg:flex lg:flex-col">
             {/* Reviews */}
-            <div className="flex items-center gap-3 mb-6 lg:mb-2">
+            <div className="flex items-center gap-3 mb-6 lg:mb-3">
               <div className="flex -space-x-2.5">
                 <img src={reviewPriya} alt="" className="size-9 rounded-full border-2 border-background object-cover" />
                 <img src={reviewRahul} alt="" className="size-9 rounded-full border-2 border-background object-cover" />
@@ -445,7 +445,7 @@ export default function DentalLanding() {
               </div>
             </div>
 
-            <h1 className="font-display text-[2.75rem] sm:text-6xl lg:text-[3.25rem] font-medium leading-[1.02] lg:leading-[1.05] tracking-tight text-balance mb-6 lg:mb-2">
+            <h1 className="font-display text-[2.75rem] sm:text-6xl lg:text-[3.25rem] font-medium leading-[1.02] lg:leading-[1.05] tracking-tight text-balance mb-6 lg:mb-3">
               Rajkot's most trusted{" "}
               <span className="italic text-primary relative">
                 dental home
@@ -455,12 +455,12 @@ export default function DentalLanding() {
               </span>
               {" "}since 2012.
             </h1>
-            <p className="text-base text-muted-foreground max-w-[52ch] mb-4 lg:mb-2 leading-relaxed">
+            <p className="text-base text-muted-foreground max-w-[52ch] mb-4 lg:mb-3 leading-relaxed">
               Painless implants, single-visit root canals, smile designing and full-mouth rehabilitation by
               <span className="text-foreground font-medium"> Dr. Vipul Patel (FICOI)</span> — trusted by 500+ Rajkot families and rated 4.9★ on Google.
             </p>
 
-            <div className="flex flex-wrap gap-3 mb-6 lg:mb-2">
+            <div className="flex flex-wrap gap-3 mb-6 lg:mb-3">
               <a href="#book" className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-4 lg:px-5 lg:py-3 rounded-full text-sm font-semibold hover:opacity-90 transition shadow-lg shadow-primary/20">
                 <CalendarCheck className="size-4" /> Book A Call
               </a>
@@ -480,13 +480,13 @@ export default function DentalLanding() {
           </div>
 
           {/* Doctor image — desktop only */}
-          <div className="hidden lg:flex animate-fade-up justify-center">
+          <div className="hidden lg:flex animate-fade-up items-end justify-center">
             <img
               src={heroPatient}
               alt="Dr. Vipul Patel — Patel Dental Hospital, Rajkot"
               width={1080}
               height={1600}
-              className="w-auto max-h-[360px] lg:max-h-[260px] object-contain object-center"
+              className="w-auto max-h-[360px] lg:max-h-[520px] object-contain object-center"
             />
           </div>
         </div>
