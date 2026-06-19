@@ -336,7 +336,7 @@ function CompactBeforeAfter() {
               <div
                 key={i}
                 ref={(el) => { desktopItemRefs.current[i] = el; }}
-                className="w-[300px] xl:w-[320px] shrink-0 rounded-2xl bg-card p-2 shadow-sm ring-1 ring-black/[0.05] snap-center"
+                className="w-[340px] xl:w-[380px] shrink-0 rounded-2xl bg-card p-2 shadow-sm ring-1 ring-black/[0.05] snap-center"
               >
                 <div className="grid grid-cols-2 gap-1.5 aspect-[2/1]">
                   <div className="relative rounded-xl overflow-hidden">
@@ -354,7 +354,7 @@ function CompactBeforeAfter() {
           </div>
         </div>
         {/* Dot indicators */}
-        <div className="flex justify-center gap-1.5 mt-0.5">
+        <div className="flex justify-center gap-1.5 mt-1">
           {showCases.map((_, i) => (
             <div
               key={i}
@@ -447,12 +447,12 @@ export default function DentalLanding() {
       <div className="h-14 sm:h-16" />
 
       {/* HERO */}
-      <section className="relative px-5 sm:px-6 pt-1 lg:pt-6 pb-1 lg:pb-0">
+      <section className="relative px-5 sm:px-6 pt-1 lg:pt-1 pb-1 lg:pb-0 lg:min-h-[calc(100vh-4rem)] lg:flex lg:flex-col lg:justify-between">
         <div className="absolute top-32 -left-20 size-80 bg-accent/10 rounded-full blur-3xl pointer-events-none" />
         <div className="absolute bottom-0 right-0 size-96 bg-primary/10 rounded-full blur-3xl pointer-events-none" />
 
-        <div className="max-w-7xl mx-auto grid lg:grid-cols-[0.95fr_1.05fr] gap-8 lg:gap-10 items-center">
-          <div className="animate-fade-up flex flex-col justify-center lg:py-0">
+        <div className="max-w-7xl mx-auto grid lg:grid-cols-[0.88fr_1.12fr] gap-10 lg:gap-12 items-stretch flex-1">
+          <div className="animate-fade-up flex flex-col justify-center lg:py-6">
             {/* Reviews — moved to top */}
             <div className="flex items-center gap-4 mb-3 lg:mb-2">
               <div className="flex -space-x-3">
@@ -470,7 +470,7 @@ export default function DentalLanding() {
               </div>
             </div>
 
-            <h1 className="font-display text-[2.5rem] sm:text-5xl lg:text-[3.25rem] xl:text-[3.55rem] font-medium leading-[1.04] tracking-tight text-balance mb-2 lg:mb-2">
+            <h1 className="font-display text-[2.5rem] sm:text-5xl lg:text-[3.5rem] xl:text-[3.8rem] font-medium leading-[1.05] tracking-tight text-balance mb-3 lg:mb-3">
               Rajkot's most trusted{" "}
               <span className="italic text-primary relative">
                 dental home
@@ -480,7 +480,7 @@ export default function DentalLanding() {
               </span>
               {" "}since 2012.
             </h1>
-            <p className="text-base lg:text-sm xl:text-base text-muted-foreground max-w-[52ch] mb-3 lg:mb-3 leading-relaxed">
+            <p className="text-base lg:text-sm xl:text-base text-muted-foreground max-w-[52ch] mb-4 lg:mb-4 leading-relaxed">
               Painless implants, single-visit root canals, smile designing and full-mouth rehabilitation by
               <span className="text-foreground font-medium"> Dr. Vipul Patel (FICOI)</span> — trusted by 500+ Rajkot families and rated 4.9★ on Google.
             </p>
@@ -505,19 +505,19 @@ export default function DentalLanding() {
           </div>
 
           {/* Doctor image — desktop only */}
-          <div className="hidden lg:flex animate-fade-up items-end justify-center h-[400px] xl:h-[430px] self-end overflow-hidden rounded-2xl">
+          <div className="hidden lg:flex animate-fade-up overflow-hidden rounded-2xl items-center justify-center">
             <img
               src={heroPatient}
               alt="Dr. Vipul Patel — Patel Dental Hospital, Rajkot"
               width={1080}
               height={1600}
-              className="block w-full h-full object-cover object-top"
+              className="w-full h-full object-cover object-[center_15%]"
             />
           </div>
         </div>
 
         {/* Before & After — Above the fold (full-bleed) */}
-        <div className="mt-1 lg:mt-4 -mx-5 sm:-mx-6">
+        <div className="mt-3 lg:mt-1 -mx-5 sm:-mx-6">
           <CompactBeforeAfter />
         </div>
       </section>
