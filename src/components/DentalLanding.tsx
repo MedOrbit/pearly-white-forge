@@ -65,6 +65,12 @@ import reviewAmelia from "@/assets/reviews/amelia.png.asset.json";
 import reviewOlive from "@/assets/reviews/olive.png.asset.json";
 import reviewAntoine from "@/assets/reviews/antoine.png.asset.json";
 import reviewErielle from "@/assets/reviews/erielle.png.asset.json";
+const reviewPierreUrl = reviewPierre.url;
+const reviewBarbaraUrl = reviewBarbara.url;
+const reviewAmeliaUrl = reviewAmelia.url;
+const reviewOliveUrl = reviewOlive.url;
+const reviewAntoineUrl = reviewAntoine.url;
+const reviewErielleUrl = reviewErielle.url;
 import txSmile from "@/assets/tx-smile.jpg";
 import txCrowns from "@/assets/tx-crowns.jpg";
 import txFillings from "@/assets/tx-fillings.jpg";
@@ -219,12 +225,12 @@ const faqs = [
 ];
 
 const testimonials = [
-  { name: "Govani Ashok", treatment: "Single-Visit Root Canal", img: reviewRahul, quote: "Painless procedure. Doctor is humble and the treatment was done in a single visit. I'm so happy with the result." },
-  { name: "Harsha Shingala", treatment: "Implant-Supported Bridge", img: reviewAnjali, quote: "I had no teeth in my upper jaw. They placed implants and gave me a ceramic bridge. I can chew anything now — the doctor is so good." },
-  { name: "Dhiraj Bhimani", treatment: "Dental Implant", img: reviewPriya, quote: "Nice experience. Dr. Vipul Patel is good in nature, reasonable in price, and gives quality treatment. Highly recommended." },
-  { name: "Khushal Vaghela", treatment: "Root Canal Treatment", img: reviewRahul, quote: "Painless, single visit and time-saving. Humble and honorable doctors and staff. Best dental hospital in Rajkot." },
-  { name: "Manubhai Shangani", treatment: "Full Mouth Restoration", img: reviewPriya, quote: "They changed my smile completely and gave me beautiful white teeth. Thank you Patel Dental Hospital team." },
-  { name: "Barkatbhai Dharani", treatment: "Batrisi Denture", img: reviewAnjali, quote: "Dr. Vipul Patel made a complete denture for me. It's comfortable and I can chew everything — finally smiling again." },
+  { name: "Govani Ashok", treatment: "Single-Visit Root Canal", img: reviewPierreUrl, quote: "Painless procedure. Doctor is humble and the treatment was done in a single visit. I'm so happy with the result." },
+  { name: "Harsha Shingala", treatment: "Implant-Supported Bridge", img: reviewBarbaraUrl, quote: "I had no teeth in my upper jaw. They placed implants and gave me a ceramic bridge. I can chew anything now — the doctor is so good." },
+  { name: "Dhiraj Bhimani", treatment: "Dental Implant", img: reviewAmeliaUrl, quote: "Nice experience. Dr. Vipul Patel is good in nature, reasonable in price, and gives quality treatment. Highly recommended." },
+  { name: "Khushal Vaghela", treatment: "Root Canal Treatment", img: reviewOliveUrl, quote: "Painless, single visit and time-saving. Humble and honorable doctors and staff. Best dental hospital in Rajkot." },
+  { name: "Manubhai Shangani", treatment: "Full Mouth Restoration", img: reviewAntoineUrl, quote: "They changed my smile completely and gave me beautiful white teeth. Thank you Patel Dental Hospital team." },
+  { name: "Barkatbhai Dharani", treatment: "Batrisi Denture", img: reviewErielleUrl, quote: "Dr. Vipul Patel made a complete denture for me. It's comfortable and I can chew everything — finally smiling again." },
 ];
 
 
@@ -456,9 +462,9 @@ export default function DentalLanding() {
             {/* Reviews — moved to top */}
             <div className="flex items-center gap-4 mt-4 mb-5 lg:mt-0 lg:mb-2">
               <div className="flex -space-x-3">
-                <img src={reviewPriya} alt="" className="size-8 rounded-full border-2 border-background object-cover" />
-                <img src={reviewRahul} alt="" className="size-8 rounded-full border-2 border-background object-cover" />
-                <img src={reviewAnjali} alt="" className="size-8 rounded-full border-2 border-background object-cover" />
+                <img src={reviewPierreUrl} alt="" className="size-8 rounded-full border-2 border-background object-cover" />
+                <img src={reviewBarbaraUrl} alt="" className="size-8 rounded-full border-2 border-background object-cover" />
+                <img src={reviewAmeliaUrl} alt="" className="size-8 rounded-full border-2 border-background object-cover" />
                 <div className="size-8 rounded-full border-2 border-background bg-primary text-primary-foreground text-[10px] font-bold flex items-center justify-center">500+</div>
               </div>
               <div className="text-sm">
