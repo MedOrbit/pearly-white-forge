@@ -225,12 +225,12 @@ const faqs = [
 ];
 
 const testimonials = [
-  { name: "Govani Ashok", treatment: "Single-Visit Root Canal", img: reviewRahul, quote: "Painless procedure. Doctor is humble and the treatment was done in a single visit. I'm so happy with the result." },
-  { name: "Harsha Shingala", treatment: "Implant-Supported Bridge", img: reviewAnjali, quote: "I had no teeth in my upper jaw. They placed implants and gave me a ceramic bridge. I can chew anything now — the doctor is so good." },
-  { name: "Dhiraj Bhimani", treatment: "Dental Implant", img: reviewPriya, quote: "Nice experience. Dr. Vipul Patel is good in nature, reasonable in price, and gives quality treatment. Highly recommended." },
-  { name: "Khushal Vaghela", treatment: "Root Canal Treatment", img: reviewRahul, quote: "Painless, single visit and time-saving. Humble and honorable doctors and staff. Best dental hospital in Rajkot." },
-  { name: "Manubhai Shangani", treatment: "Full Mouth Restoration", img: reviewPriya, quote: "They changed my smile completely and gave me beautiful white teeth. Thank you Patel Dental Hospital team." },
-  { name: "Barkatbhai Dharani", treatment: "Batrisi Denture", img: reviewAnjali, quote: "Dr. Vipul Patel made a complete denture for me. It's comfortable and I can chew everything — finally smiling again." },
+  { name: "Govani Ashok", treatment: "Single-Visit Root Canal", img: reviewPierreUrl, quote: "Painless procedure. Doctor is humble and the treatment was done in a single visit. I'm so happy with the result." },
+  { name: "Harsha Shingala", treatment: "Implant-Supported Bridge", img: reviewBarbaraUrl, quote: "I had no teeth in my upper jaw. They placed implants and gave me a ceramic bridge. I can chew anything now — the doctor is so good." },
+  { name: "Dhiraj Bhimani", treatment: "Dental Implant", img: reviewAmeliaUrl, quote: "Nice experience. Dr. Vipul Patel is good in nature, reasonable in price, and gives quality treatment. Highly recommended." },
+  { name: "Khushal Vaghela", treatment: "Root Canal Treatment", img: reviewOliveUrl, quote: "Painless, single visit and time-saving. Humble and honorable doctors and staff. Best dental hospital in Rajkot." },
+  { name: "Manubhai Shangani", treatment: "Full Mouth Restoration", img: reviewAntoineUrl, quote: "They changed my smile completely and gave me beautiful white teeth. Thank you Patel Dental Hospital team." },
+  { name: "Barkatbhai Dharani", treatment: "Batrisi Denture", img: reviewErielleUrl, quote: "Dr. Vipul Patel made a complete denture for me. It's comfortable and I can chew everything — finally smiling again." },
 ];
 
 
