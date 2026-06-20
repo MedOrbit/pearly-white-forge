@@ -462,9 +462,9 @@ export default function DentalLanding() {
             {/* Reviews — moved to top */}
             <div className="flex items-center gap-4 mt-4 mb-5 lg:mt-0 lg:mb-2">
               <div className="flex -space-x-3">
-                <img src={reviewPriya} alt="" className="size-8 rounded-full border-2 border-background object-cover" />
-                <img src={reviewRahul} alt="" className="size-8 rounded-full border-2 border-background object-cover" />
-                <img src={reviewAnjali} alt="" className="size-8 rounded-full border-2 border-background object-cover" />
+                <img src={reviewPierreUrl} alt="" className="size-8 rounded-full border-2 border-background object-cover" />
+                <img src={reviewBarbaraUrl} alt="" className="size-8 rounded-full border-2 border-background object-cover" />
+                <img src={reviewAmeliaUrl} alt="" className="size-8 rounded-full border-2 border-background object-cover" />
                 <div className="size-8 rounded-full border-2 border-background bg-primary text-primary-foreground text-[10px] font-bold flex items-center justify-center">500+</div>
               </div>
               <div className="text-sm">
