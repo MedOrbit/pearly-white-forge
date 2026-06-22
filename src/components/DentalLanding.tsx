@@ -477,18 +477,10 @@ export default function DentalLanding() {
             </div>
 
             <h1 className="font-display text-[2.75rem] sm:text-6xl lg:text-[4rem] xl:text-[4.5rem] font-bold leading-[1.05] tracking-tight text-balance mb-5 lg:mb-3">
-              Plano, Texas's most trusted{" "}
-              <span className="italic text-primary relative">
-                dental home
-                <svg className="absolute -bottom-1.5 left-0 w-full" viewBox="0 0 200 12" fill="none">
-                  <path d="M2 9 Q 100 -2 198 7" stroke="currentColor" strokeWidth="3" strokeLinecap="round" className="text-accent" />
-                </svg>
-              </span>
-              {" "}since 2012.
+              Your Healthiest, Most Confident Smile — From a Dentist You'll Actually Look Forward to Seeing
             </h1>
             <p className="text-base lg:text-sm xl:text-base text-muted-foreground max-w-[52ch] mb-6 lg:mb-4 leading-relaxed">
-              Painless implants, single-visit root canals, smile designing and full-mouth rehabilitation by
-              <span className="text-foreground font-medium"> Dr. Vipul Patel (FICOI)</span> — trusted by 500+ Plano, Texas families and rated 4.9★ on Google.
+              No more dreading the dentist, no more surprise bills, no more feeling judged. Our gentle team in Plano, Texas gives you honest care, clear pricing, and same-week appointments — so a healthy smile finally feels easy.
             </p>
 
             <div className="flex flex-wrap gap-3 mb-5 lg:mb-3">
