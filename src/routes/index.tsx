@@ -1,17 +1,17 @@
 import { createFileRoute } from "@tanstack/react-router";
 import DentalLanding from "@/components/DentalLanding";
 
-const TITLE = "Patel Dental Hospital — Best Dental Clinic in Rajkot | Implants, RCT, Smile Designing";
+const TITLE = "Gorgeous Smiles — Best Dental Clinic in Plano, Texas | Implants, RCT, Smile Designing";
 const DESCRIPTION =
-  "Patel Dental Hospital, Rajkot — FICOI-certified implants, painless single-visit root canals, smile designing, laser dentistry & full-mouth rehabilitation by Dr. Vipul Patel. ₹100 consultation. Rated 4.9★ on Google.";
+  "Gorgeous Smiles, Plano, Texas — FICOI-certified implants, painless single-visit root canals, smile designing, laser dentistry & full-mouth rehabilitation by Dr. Vipul Patel. ₹100 consultation. Rated 4.9★ on Google.";
 const KEYWORDS =
-  "dentist Rajkot, best dental clinic Rajkot, dental implants Rajkot, root canal Bhaktinagar, laser dentistry Rajkot, cosmetic dentist Rajkot, implantologist Rajkot, full mouth rehabilitation Rajkot, zirconia crown Rajkot, smile designing Rajkot, BruxZir Rajkot, dental clinic Mavdi, dental hospital Gayatri Nagar, Dr Vipul Patel dentist, Patel Dental Hospital";
+  "dentist Plano, Texas, best dental clinic Plano, Texas, dental implants Plano, Texas, root canal Bhaktinagar, laser dentistry Plano, Texas, cosmetic dentist Plano, Texas, implantologist Plano, Texas, full mouth rehabilitation Plano, Texas, zirconia crown Plano, Texas, smile designing Plano, Texas, BruxZir Plano, Texas, dental clinic Mavdi, dental hospital Gayatri Nagar, Dr Vipul Patel dentist, Gorgeous Smiles";
 
 const faqEntities = [
-  { q: "How much does a consultation cost at Patel Dental Hospital?", a: "A complete consultation with Dr. Vipul Patel is just ₹100 — including a detailed oral examination and a transparent treatment plan with no hidden charges." },
-  { q: "Where are your clinics located in Rajkot?", a: "Two branches: the main Bhaktinagar clinic at 1st Floor, Rameshwar Complex, Gayatri Nagar Main Road (Opp. SBI Bank, Jalaram Chowk) and our second branch at Sahjanand Complex, Mavdi, Rajkot." },
+  { q: "How much does a consultation cost at Gorgeous Smiles?", a: "A complete consultation with Dr. Vipul Patel is just ₹100 — including a detailed oral examination and a transparent treatment plan with no hidden charges." },
+  { q: "Where are your clinics located in Plano, Texas?", a: "Two branches: the main Bhaktinagar clinic at 1st Floor, Rameshwar Complex, Gayatri Nagar Main Road (Opp. SBI Bank, Jalaram Chowk) and our second branch at Sahjanand Complex, Mavdi, Plano, Texas." },
   { q: "Do you finish root canals in a single visit?", a: "Yes. Using rotary endodontics and apex locators, Dr. Vipul Patel completes most root canals in one 60–90 minute appointment without compromising on quality." },
-  { q: "Can dental implants replace a full mouth of missing teeth?", a: "Yes. Patel Dental Hospital has been performing full-mouth implants since 2016. Dr. Vipul Patel is FICOI-certified and has placed thousands of implants for Rajkot patients." },
+  { q: "Can dental implants replace a full mouth of missing teeth?", a: "Yes. Gorgeous Smiles has been performing full-mouth implants since 2016. Dr. Vipul Patel is FICOI-certified and has placed thousands of implants for Plano, Texas patients." },
   { q: "What payment methods do you accept?", a: "We accept Cash, UPI and all major debit/credit cards. EMI options on larger treatments are available on request." },
   { q: "Do you offer emergency dental appointments?", a: "Yes. For severe pain, swelling, broken or knocked-out teeth call +91 95103 97046 and we will fit you in the same day wherever possible." },
 ];
@@ -22,11 +22,11 @@ export const Route = createFileRoute("/")({
       { title: TITLE },
       { name: "description", content: DESCRIPTION },
       { name: "keywords", content: KEYWORDS },
-      { name: "author", content: "Patel Dental Hospital" },
+      { name: "author", content: "Gorgeous Smiles" },
       { name: "robots", content: "index, follow, max-image-preview:large" },
       { name: "theme-color", content: "#0D4C44" },
       { name: "geo.region", content: "IN-GJ" },
-      { name: "geo.placename", content: "Rajkot" },
+      { name: "geo.placename", content: "Plano, Texas" },
       { name: "geo.position", content: "22.27555;70.80431" },
       { name: "ICBM", content: "22.27555, 70.80431" },
 
@@ -34,7 +34,7 @@ export const Route = createFileRoute("/")({
       { property: "og:description", content: DESCRIPTION },
       { property: "og:url", content: "/" },
       { property: "og:type", content: "website" },
-      { property: "og:site_name", content: "Patel Dental Hospital" },
+      { property: "og:site_name", content: "Gorgeous Smiles" },
       { property: "og:locale", content: "en_IN" },
 
       { name: "twitter:card", content: "summary_large_image" },
@@ -49,7 +49,7 @@ export const Route = createFileRoute("/")({
           "@context": "https://schema.org",
           "@type": ["Dentist", "LocalBusiness", "MedicalBusiness"],
           "@id": "/#patel-dental-hospital",
-          name: "Patel Dental Hospital",
+          name: "Gorgeous Smiles",
           alternateName: "Patel Dental Clinic And Implant Center",
           description: DESCRIPTION,
           url: "/",
@@ -62,7 +62,7 @@ export const Route = createFileRoute("/")({
           address: {
             "@type": "PostalAddress",
             streetAddress: "1st Floor, Rameshwar Complex, Gayatri Nagar Main Road, Opp. SBI Bank, Jalaram Chowk, Near Bhaktinagar Circle",
-            addressLocality: "Rajkot",
+            addressLocality: "Plano, Texas",
             addressRegion: "GJ",
             postalCode: "360002",
             addressCountry: "IN",
@@ -75,11 +75,11 @@ export const Route = createFileRoute("/")({
           location: [
             {
               "@type": "Place",
-              name: "Patel Dental Hospital — Bhaktinagar (Main)",
+              name: "Gorgeous Smiles — Bhaktinagar (Main)",
               address: {
                 "@type": "PostalAddress",
                 streetAddress: "1st Floor, Rameshwar Complex, Gayatri Nagar Main Road, Opp. SBI Bank, Jalaram Chowk, Near Bhaktinagar Circle",
-                addressLocality: "Rajkot",
+                addressLocality: "Plano, Texas",
                 addressRegion: "GJ",
                 postalCode: "360002",
                 addressCountry: "IN",
@@ -88,11 +88,11 @@ export const Route = createFileRoute("/")({
             },
             {
               "@type": "Place",
-              name: "Patel Dental Hospital — Mavdi Branch",
+              name: "Gorgeous Smiles — Mavdi Branch",
               address: {
                 "@type": "PostalAddress",
                 streetAddress: "Sahjanand Complex, Ground Floor, Opp. Virat Waybridge, Opp. Jithariya Hanuman, Mavdi",
-                addressLocality: "Rajkot",
+                addressLocality: "Plano, Texas",
                 addressRegion: "GJ",
                 postalCode: "360004",
                 addressCountry: "IN",
@@ -101,7 +101,7 @@ export const Route = createFileRoute("/")({
             },
           ],
           areaServed: [
-            { "@type": "City", name: "Rajkot" },
+            { "@type": "City", name: "Plano, Texas" },
             { "@type": "City", name: "Morbi" },
             { "@type": "City", name: "Jamnagar" },
             { "@type": "City", name: "Junagadh" },

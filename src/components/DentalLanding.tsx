@@ -210,16 +210,16 @@ const treatments = [
 ];
 
 const faqs = [
-  { q: "How much does a consultation cost at Patel Dental Hospital?", a: "A complete consultation with Dr. Vipul Patel is just ₹100 — including a detailed oral examination and a transparent treatment plan with no hidden charges." },
-  { q: "Where are your clinics located in Rajkot?", a: "We have two branches: the main Bhaktinagar clinic at 1st Floor, Rameshwar Complex, Gayatri Nagar Main Road (Opp. SBI Bank, Jalaram Chowk) and our second branch at Sahjanand Complex, Mavdi, Rajkot. Choose whichever is closer." },
+  { q: "How much does a consultation cost at Gorgeous Smiles?", a: "A complete consultation with Dr. Vipul Patel is just ₹100 — including a detailed oral examination and a transparent treatment plan with no hidden charges." },
+  { q: "Where are your clinics located in Plano, Texas?", a: "We have two branches: the main Bhaktinagar clinic at 1st Floor, Rameshwar Complex, Gayatri Nagar Main Road (Opp. SBI Bank, Jalaram Chowk) and our second branch at Sahjanand Complex, Mavdi, Plano, Texas. Choose whichever is closer." },
   { q: "Are your treatments really painless?", a: "Yes. We use modern painless anaesthesia, single-visit rotary RCT and laser dentistry wherever possible. Most patients describe their visit as surprisingly comfortable — see our verified Google reviews." },
   { q: "Do you really finish root canals in a single visit?", a: "Yes. Using rotary endodontics and apex locators, Dr. Vipul Patel completes most root canals in one 60–90 minute appointment without compromising on quality." },
-  { q: "Can dental implants replace a full mouth of missing teeth?", a: "Absolutely. We've been performing full-mouth implants since 2016. Dr. Vipul Patel is FICOI-certified (Fellowship of the International Congress of Oral Implantologists) and has placed thousands of implants for Rajkot patients." },
+  { q: "Can dental implants replace a full mouth of missing teeth?", a: "Absolutely. We've been performing full-mouth implants since 2016. Dr. Vipul Patel is FICOI-certified (Fellowship of the International Congress of Oral Implantologists) and has placed thousands of implants for Plano, Texas patients." },
   { q: "How long will my first appointment take?", a: "Plan for 45–60 minutes for your first visit — examination, digital X-rays if required, and a clear discussion of your treatment options and pricing before anything begins." },
   { q: "Do you treat children and senior citizens?", a: "Yes — from a child's first dental visit (we have a dedicated pediatric setup with pulpectomy, sealants and fluoride) to advanced prosthodontic care like Batrisi dentures for seniors." },
   { q: "What payment methods do you accept?", a: "We accept Cash, UPI and all major debit/credit cards. EMI options on larger treatments are available — please ask our front desk." },
   { q: "What sterilisation protocols do you follow?", a: "Every instrument is autoclaved between patients, single-use disposables are used wherever required, and our clinic is centrally air-conditioned with strict hygiene SOPs." },
-  { q: "How long do dental implants last?", a: "With good oral hygiene and regular check-ups, implants placed at Patel Dental Hospital can last 20+ years — often a lifetime. We use globally trusted implant systems." },
+  { q: "How long do dental implants last?", a: "With good oral hygiene and regular check-ups, implants placed at Gorgeous Smiles can last 20+ years — often a lifetime. We use globally trusted implant systems." },
   { q: "Do you offer emergency dental appointments?", a: "Yes. For severe pain, swelling, broken teeth or knocked-out teeth, call +91 95103 97046 and we will fit you in the same day wherever possible." },
   { q: "How can I book an appointment quickly?", a: "Call or WhatsApp us on +91 95103 97046, or fill the form on this page — our team will confirm your slot within minutes during clinic hours (Mon–Sat, 9:00 AM – 9:00 PM)." },
 ];
@@ -228,8 +228,8 @@ const testimonials = [
   { name: "Govani Ashok", treatment: "Single-Visit Root Canal", img: reviewPierreUrl, quote: "Painless procedure. Doctor is humble and the treatment was done in a single visit. I'm so happy with the result." },
   { name: "Harsha Shingala", treatment: "Implant-Supported Bridge", img: reviewBarbaraUrl, quote: "I had no teeth in my upper jaw. They placed implants and gave me a ceramic bridge. I can chew anything now — the doctor is so good." },
   { name: "Dhiraj Bhimani", treatment: "Dental Implant", img: reviewAmeliaUrl, quote: "Nice experience. Dr. Vipul Patel is good in nature, reasonable in price, and gives quality treatment. Highly recommended." },
-  { name: "Khushal Vaghela", treatment: "Root Canal Treatment", img: reviewOliveUrl, quote: "Painless, single visit and time-saving. Humble and honorable doctors and staff. Best dental hospital in Rajkot." },
-  { name: "Manubhai Shangani", treatment: "Full Mouth Restoration", img: reviewAntoineUrl, quote: "They changed my smile completely and gave me beautiful white teeth. Thank you Patel Dental Hospital team." },
+  { name: "Khushal Vaghela", treatment: "Root Canal Treatment", img: reviewOliveUrl, quote: "Painless, single visit and time-saving. Humble and honorable doctors and staff. Best dental hospital in Plano, Texas." },
+  { name: "Manubhai Shangani", treatment: "Full Mouth Restoration", img: reviewAntoineUrl, quote: "They changed my smile completely and gave me beautiful white teeth. Thank you Gorgeous Smiles team." },
   { name: "Barkatbhai Dharani", treatment: "Batrisi Denture", img: reviewErielleUrl, quote: "Dr. Vipul Patel made a complete denture for me. It's comfortable and I can chew everything — finally smiling again." },
 ];
 
@@ -433,7 +433,7 @@ export default function DentalLanding() {
       <header className="fixed top-0 left-0 right-0 z-50 bg-[#FDFCFB]/95 backdrop-blur-md border-b border-[#0D4C44]/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 h-16 sm:h-20 flex items-center justify-between">
           <a href="#" className="flex items-center">
-            <img src={logoUrl} alt="Patel Dental Hospital" className="h-10 sm:h-14 w-auto object-contain" />
+            <img src={logoUrl} alt="Gorgeous Smiles" className="h-10 sm:h-14 w-auto object-contain" />
           </a>
           <div className="flex items-center gap-3 sm:gap-4">
             <a href={`tel:${PHONE_PRIMARY_TEL}`} className="hidden sm:flex items-center gap-2 text-base font-medium text-[#0D4C44]/90 hover:text-[#0D4C44] transition">
@@ -477,7 +477,7 @@ export default function DentalLanding() {
             </div>
 
             <h1 className="font-display text-[2.75rem] sm:text-6xl lg:text-[4rem] xl:text-[4.5rem] font-bold leading-[1.05] tracking-tight text-balance mb-5 lg:mb-3">
-              Rajkot's most trusted{" "}
+              Plano, Texas's most trusted{" "}
               <span className="italic text-primary relative">
                 dental home
                 <svg className="absolute -bottom-1.5 left-0 w-full" viewBox="0 0 200 12" fill="none">
@@ -488,7 +488,7 @@ export default function DentalLanding() {
             </h1>
             <p className="text-base lg:text-sm xl:text-base text-muted-foreground max-w-[52ch] mb-6 lg:mb-4 leading-relaxed">
               Painless implants, single-visit root canals, smile designing and full-mouth rehabilitation by
-              <span className="text-foreground font-medium"> Dr. Vipul Patel (FICOI)</span> — trusted by 500+ Rajkot families and rated 4.9★ on Google.
+              <span className="text-foreground font-medium"> Dr. Vipul Patel (FICOI)</span> — trusted by 500+ Plano, Texas families and rated 4.9★ on Google.
             </p>
 
             <div className="flex flex-wrap gap-3 mb-5 lg:mb-3">
@@ -514,7 +514,7 @@ export default function DentalLanding() {
           <div className="hidden lg:flex animate-fade-up overflow-hidden rounded-2xl items-center justify-center">
             <img
               src={heroPatient}
-              alt="Dr. Vipul Patel — Patel Dental Hospital, Rajkot"
+              alt="Dr. Vipul Patel — Gorgeous Smiles, Plano, Texas"
               width={1080}
               height={1600}
               className="w-full h-full object-cover object-[center_15%]"
@@ -630,7 +630,7 @@ export default function DentalLanding() {
             You've been avoiding the dentist because the last one hurt. <span className="italic text-[#0D4C44]">This won't.</span>
           </h2>
           <p className="mt-6 text-base sm:text-lg text-[#1a1a1a]/70 leading-relaxed">
-            If a painful past visit has you dreading the chair, you're not alone — and the longer you wait, the bigger the problem gets. At Patel Dental Hospital, genuinely painless techniques and a team that explains every step mean you finally get it sorted — calmly, and for good.
+            If a painful past visit has you dreading the chair, you're not alone — and the longer you wait, the bigger the problem gets. At Gorgeous Smiles, genuinely painless techniques and a team that explains every step mean you finally get it sorted — calmly, and for good.
           </p>
           <a
             href="#book"
@@ -648,7 +648,7 @@ export default function DentalLanding() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center max-w-2xl mx-auto mb-14">
             <p className="text-xs font-mono uppercase tracking-widest text-accent mb-3">
-              Patel Dental Hospital — Dental Clinic in Rajkot
+              Gorgeous Smiles — Dental Clinic in Plano, Texas
             </p>
             <h2 className="font-display text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-primary">
               We love to see <span className="italic">people smile.</span>
@@ -664,7 +664,7 @@ export default function DentalLanding() {
               { Icon: Users,         val: "500+",  label: "Happy Families" },
               { Icon: Smile,          val: "800+",  label: "Smile Makeovers" },
               { Icon: Syringe,        val: "2000+", label: "Root Canals" },
-              { Icon: CalendarDays,  val: "13+",   label: "Years in Rajkot" },
+              { Icon: CalendarDays,  val: "13+",   label: "Years in Plano, Texas" },
               { Icon: Building2,     val: "2",     label: "Convenient Branches" },
               { Icon: BadgeCheck,     val: "2",     label: "FICOI Certified Dentists" },
               { Icon: Star,           val: "4.9★",  label: "Google Rating" },
@@ -753,7 +753,7 @@ export default function DentalLanding() {
       <section className="py-20 lg:py-28 px-5 sm:px-6">
         <div className="max-w-7xl mx-auto">
           <div className="relative rounded-[2rem] overflow-hidden">
-            <img src={clinicInterior} alt="Patel Dental Hospital — modern, centrally air-cooled clinic interior, Rajkot"
+            <img src={clinicInterior} alt="Gorgeous Smiles — modern, centrally air-cooled clinic interior, Plano, Texas"
               loading="lazy" width={1920} height={1080}
               className="w-full h-[420px] lg:h-[560px] object-cover" />
             <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/40 to-transparent" />
@@ -765,7 +765,7 @@ export default function DentalLanding() {
                 </h2>
                 <p className="text-primary-foreground/80 leading-relaxed mb-6 max-w-md">
                   Centrally air-conditioned, fully sterilised, with the latest dental technology. Two locations
-                  in Rajkot so quality care is always close to home.
+                  in Plano, Texas so quality care is always close to home.
                 </p>
                 <a href="#branches" className="inline-flex items-center gap-2 bg-accent text-accent-foreground px-5 py-3 rounded-full text-sm font-semibold hover:opacity-95 transition">
                   See our branches <ArrowRight className="size-4" />
@@ -792,28 +792,28 @@ export default function DentalLanding() {
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4">
             <figure className="relative col-span-2 md:col-span-2 md:row-span-2 group rounded-3xl overflow-hidden">
-              <img src={clinicTreatmentRoom} alt="Treatment room with premium dental chair at Patel Dental Hospital, Rajkot" loading="lazy" width={1280} height={960}
+              <img src={clinicTreatmentRoom} alt="Treatment room with premium dental chair at Gorgeous Smiles, Plano, Texas" loading="lazy" width={1280} height={960}
                 className="w-full h-full aspect-[4/3] md:aspect-auto object-cover group-hover:scale-105 transition-transform duration-700" />
               <figcaption className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-foreground/80 to-transparent text-background p-5 font-mono text-[11px] uppercase tracking-widest">
                 Treatment room
               </figcaption>
             </figure>
             <figure className="relative group rounded-3xl overflow-hidden">
-              <img src={clinicConsultation} alt="Operatory with premium dental chair and glass partition at Patel Dental Hospital" loading="lazy" width={1280} height={960}
+              <img src={clinicConsultation} alt="Operatory with premium dental chair and glass partition at Gorgeous Smiles" loading="lazy" width={1280} height={960}
                 className="w-full aspect-[4/3] object-cover group-hover:scale-105 transition-transform duration-700" />
               <figcaption className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-foreground/80 to-transparent text-background p-4 font-mono text-[10px] uppercase tracking-widest">
                 Operatory
               </figcaption>
             </figure>
             <figure className="relative group rounded-3xl overflow-hidden">
-              <img src={clinicSterilization} alt="Digital panoramic OPG X-ray imaging suite at Patel Dental Hospital, Rajkot" loading="lazy" width={1280} height={960}
+              <img src={clinicSterilization} alt="Digital panoramic OPG X-ray imaging suite at Gorgeous Smiles, Plano, Texas" loading="lazy" width={1280} height={960}
                 className="w-full aspect-[4/3] object-cover group-hover:scale-105 transition-transform duration-700" />
               <figcaption className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-foreground/80 to-transparent text-background p-4 font-mono text-[10px] uppercase tracking-widest">
                 Digital X-Ray suite
               </figcaption>
             </figure>
             <figure className="relative col-span-2 group rounded-3xl overflow-hidden">
-              <img src={clinicExterior} alt="Pediatric-friendly dental treatment room with garden-facing window at Patel Dental Hospital, Rajkot" loading="lazy" width={1280} height={960}
+              <img src={clinicExterior} alt="Pediatric-friendly dental treatment room with garden-facing window at Gorgeous Smiles, Plano, Texas" loading="lazy" width={1280} height={960}
                 className="w-full aspect-[16/9] object-cover group-hover:scale-105 transition-transform duration-700" />
               <figcaption className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-foreground/80 to-transparent text-background p-5 font-mono text-[11px] uppercase tracking-widest">
                 Pediatric room
@@ -863,9 +863,9 @@ export default function DentalLanding() {
       <section className="py-20 lg:py-28 px-5 sm:px-6 bg-primary text-primary-foreground">
         <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
           <div>
-            <p className="text-xs font-mono uppercase tracking-widest text-accent mb-3">Why Patel Dental Hospital</p>
+            <p className="text-xs font-mono uppercase tracking-widest text-accent mb-3">Why Gorgeous Smiles</p>
             <h2 className="font-display text-5xl sm:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-              The Rajkot difference, <span className="italic">since 2012.</span>
+              The Plano, Texas difference, <span className="italic">since 2012.</span>
             </h2>
             <p className="text-primary-foreground/70 mb-8 leading-relaxed max-w-md">
               While most clinics chase numbers, we focus on long-term oral health — combining FICOI-certified
@@ -880,7 +880,7 @@ export default function DentalLanding() {
               ["FICOI-certified implantologist", "Dr. Vipul Patel is a Fellow of the International Congress of Oral Implantologists — full-mouth implants since 2016."],
               ["Painless single-visit RCT", "Rotary endodontics and modern anaesthesia — most root canals completed in a single comfortable appointment."],
               ["Transparent ₹100 consultation", "Honest pricing, written estimates, no hidden charges. Pay only for what you need."],
-              ["Two convenient Rajkot branches", "Visit us at Bhaktinagar (main) or Mavdi — both centrally air-conditioned with full diagnostics."],
+              ["Two convenient Plano, Texas branches", "Visit us at Bhaktinagar (main) or Mavdi — both centrally air-conditioned with full diagnostics."],
               ["Strict sterilisation protocols", "Autoclaved instruments, single-use disposables, surface disinfection between every patient."],
               ["Modern laser dentistry", "Sutureless gum care, faster healing and less bleeding using soft-tissue lasers."],
             ].map(([title, body]) => (
@@ -932,7 +932,7 @@ export default function DentalLanding() {
               Precision tools, <span className="italic text-primary">gentle hands.</span>
             </h2>
             <p className="text-muted-foreground mt-5 leading-relaxed">
-              Every diagnosis and treatment at Patel Dental Hospital is backed by modern equipment — faster results, less discomfort.
+              Every diagnosis and treatment at Gorgeous Smiles is backed by modern equipment — faster results, less discomfort.
             </p>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
@@ -963,7 +963,7 @@ export default function DentalLanding() {
               Quality care, <span className="italic text-primary">honest pricing.</span>
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-8 max-w-md">
-              At Patel Dental Hospital we believe price should never come in the way of good dental health.
+              At Gorgeous Smiles we believe price should never come in the way of good dental health.
               Every patient gets a written estimate before treatment begins — no hidden charges, ever.
             </p>
             <div className="space-y-4">
@@ -1011,7 +1011,7 @@ export default function DentalLanding() {
               </h2>
             </div>
             <p className="text-primary-foreground/70 max-w-sm text-pretty">
-              Verified credentials, registered specialists and an unbroken 13-year track record in Rajkot.
+              Verified credentials, registered specialists and an unbroken 13-year track record in Plano, Texas.
             </p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-5">
@@ -1019,7 +1019,7 @@ export default function DentalLanding() {
               { title: "FICOI Certified", body: "Fellowship — Intl. Congress of Oral Implantologists" },
               { title: "Reg. A7495", body: "Gujarat State Dental Council, 2012" },
               { title: "4.9★ on Google", body: "From 492+ verified reviews" },
-              { title: "Established 2012", body: "13+ years serving Rajkot families" },
+              { title: "Established 2012", body: "13+ years serving Plano, Texas families" },
             ].map((a) => (
               <div key={a.title} className="border border-primary-foreground/15 rounded-3xl p-6 hover:bg-primary-foreground/5 transition">
                 <Award className="size-7 text-accent mb-4" />
@@ -1038,7 +1038,7 @@ export default function DentalLanding() {
             <div>
               <p className="text-xs font-mono uppercase tracking-widest text-accent mb-3">Patient stories</p>
               <h2 className="font-display text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight max-w-xl">
-                Real reviews, <span className="italic text-primary">real Rajkot smiles.</span>
+                Real reviews, <span className="italic text-primary">real Plano, Texas smiles.</span>
               </h2>
             </div>
             <div className="flex items-center gap-3">
@@ -1083,7 +1083,7 @@ export default function DentalLanding() {
           <div className="text-center mb-14 max-w-2xl mx-auto">
             <p className="text-xs font-mono uppercase tracking-widest text-accent mb-3">Visit us</p>
             <h2 className="font-display text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight">
-              Two clinics across <span className="italic text-primary">Rajkot.</span>
+              Two clinics across <span className="italic text-primary">Plano, Texas.</span>
             </h2>
             <p className="text-muted-foreground mt-5 leading-relaxed">
               Choose the branch that's closest to you — both offer the full range of treatments.
@@ -1094,17 +1094,17 @@ export default function DentalLanding() {
               {
                 name: "Bhaktinagar — Main Branch",
                 tag: "Since 2012",
-                address: "1st Floor, Rameshwar Complex, Gayatri Nagar Main Road, Opp. SBI Bank, Jalaram Chowk, Near Bhaktinagar Circle, Rajkot — 360002",
+                address: "1st Floor, Rameshwar Complex, Gayatri Nagar Main Road, Opp. SBI Bank, Jalaram Chowk, Near Bhaktinagar Circle, Plano, Texas — 360002",
                 hours: "Mon – Sat · 9:00 AM – 9:00 PM",
                 sundayClosed: true,
                 mapUrl: "https://www.google.com/maps?q=22.27555506494667,70.8043098449707&hl=en&z=17&output=embed",
                 directionsUrl: "https://www.google.com/maps/dir/?api=1&destination=22.27555506494667,70.8043098449707",
-                note: "1.9 km from Main Bus Stand · 4.6 km from Rajkot Railway Station",
+                note: "1.9 km from Main Bus Stand · 4.6 km from Plano, Texas Railway Station",
               },
               {
                 name: "Mavdi Branch",
                 tag: "Opened 2020",
-                address: "Sahjanand Complex, Ground Floor, Opp. Virat Waybridge, Opp. Jithariya Hanuman, Mavdi, Rajkot — 360004",
+                address: "Sahjanand Complex, Ground Floor, Opp. Virat Waybridge, Opp. Jithariya Hanuman, Mavdi, Plano, Texas — 360004",
                 hours: "Mon – Sat · 9:00 AM – 1:00 PM and 4:00 PM – 8:30 PM",
                 sundayClosed: true,
                 mapUrl: "https://www.google.com/maps?q=22.26266058395677,70.78252628445625&hl=en&z=17&output=embed",
@@ -1203,9 +1203,9 @@ export default function DentalLanding() {
           <div className="grid lg:grid-cols-4 gap-10 mb-16">
             <div className="lg:col-span-2">
               <img src={logoUrl} alt="Gorgeous Smiles" className="h-10 sm:h-12 w-auto object-contain mb-3" />
-              <p className="text-xs font-mono uppercase tracking-widest text-accent mb-4">We take care of your teeth · Rajkot, Gujarat</p>
+              <p className="text-xs font-mono uppercase tracking-widest text-accent mb-4">We take care of your teeth · Plano, Texas, Gujarat</p>
               <p className="text-primary-foreground/60 max-w-sm leading-relaxed mb-6">
-                Rajkot's trusted dental home since 2012 — implants, root canals, smile designing and complete family
+                Plano, Texas's trusted dental home since 2012 — implants, root canals, smile designing and complete family
                 dentistry, delivered with FICOI-certified expertise.
               </p>
               <div className="flex flex-wrap gap-3">
@@ -1234,7 +1234,7 @@ export default function DentalLanding() {
             </div>
           </div>
           <div className="pt-8 border-t border-primary-foreground/10 flex flex-col sm:flex-row gap-4 justify-between items-center text-[11px] uppercase tracking-widest text-primary-foreground/50 font-mono text-center sm:text-left">
-            <p>© {new Date().getFullYear()} Patel Dental Hospital, Rajkot. All rights reserved.</p>
+            <p>© {new Date().getFullYear()} Gorgeous Smiles, Plano, Texas. All rights reserved.</p>
             <div className="flex gap-6">
               <a href="https://www.facebook.com/PatelDentalHospital/" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition">Facebook</a>
               <a href="#" className="hover:text-accent transition">Privacy</a>
